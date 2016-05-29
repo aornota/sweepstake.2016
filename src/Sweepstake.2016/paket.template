@@ -1,0 +1,25 @@
+type project
+title
+    Sweepstake.2016
+owners
+    Author not set
+authors 
+    Author not set
+projectUrl
+    http://github.com/aornota/Sweepstake.2016
+iconUrl
+    https://raw.githubusercontent.com/aornota/Sweepstake.2016/master/docs/files/img/logo.png
+licenseUrl
+    http://github.com/aornota/Sweepstake.2016/blob/master/LICENSE.txt
+requireLicenseAcceptance
+    false
+copyright
+    Copyright 2015
+tags
+    
+summary
+    The world-famous Euro 2016 sweepstake
+description
+    Description not set
+
+
