@@ -31,7 +31,7 @@ module Domain =
     type Squad = { Team: Team; Players: Player list }
 
     type MatchEvent = | Goal of player: Player * at: int<min> option * assistedBy: Player option
-                      | Penalty of player: Player * at: int<min> option // TBC: no 'assistedBy' for Penalty?...
+                      | Penalty of player: Player * at: int<min> option * assistedBy: Player option
                       | OwnGoal of player: Player * at: int<min> option
                       | MissedPenalty of player: Player * at: int<min> option
                       | SavedPenalty of goalkeeper: Player * at: int<min> option

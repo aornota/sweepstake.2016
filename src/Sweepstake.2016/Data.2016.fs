@@ -403,7 +403,7 @@ module ``Data 2016`` =
                                                YellowCard (skulasonAriFreyr, Some 29<min>) (* iceland *)
                                                SavedPenalty (halldorssonHannesThor, Some 66<min>)
                                                Goal (gudjohnsenEidur, Some 81<min>, Some sigurdssonGylfi)
-                                               Penalty (sigurdssonGylfi, Some 87<min>)
+                                               Penalty (sigurdssonGylfi, Some 87<min>, Some sigurdssonGylfi)
                                                CleanSheet (halldorssonHannesThor, None) (* ...TEMP *) ] }
 
     let groupFIcelandVsHungary = { Team1Score = TeamMatchScore (iceland, 0<goal>, None); Team2Score = TeamMatchScore (hungary, 0<goal>, None)
