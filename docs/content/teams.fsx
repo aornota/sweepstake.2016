@@ -17,7 +17,9 @@ Teams and fixtures/results
 (*** include-value: lastUpdated ***)
 
 (**
-## Sunday 29th May
+## Please note that any data on this page is _**temporary test data**_ only...
+
+## Monday 30th May
 
 Coming soon...
 

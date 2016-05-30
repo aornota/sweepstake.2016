@@ -17,7 +17,9 @@ Latest news
 (*** include-value: lastUpdated ***)
 
 (**
-## Sunday 29th May
+## Please note that any data on this page is _**temporary test data**_ only...
+
+## Monday 30th May
 
 So, eighteen years after the 1996 World Cup, it's time for another major football tournament in France - and therefore time for another sweepstake ;)
 

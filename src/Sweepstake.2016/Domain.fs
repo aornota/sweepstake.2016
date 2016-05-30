@@ -8,6 +8,8 @@ module Domain =
     type min
     [<Measure>]
     type goal
+    [<Measure>]
+    type shootoutPenalty
 
     type TeamStatus = | Active | Eliminated
 
@@ -30,17 +32,16 @@ module Domain =
 
     type Squad = { Team: Team; Players: Player list }
 
-    type MatchEvent = | Goal of player: Player * at: int<min> option * assistedBy: Player option
-                      | Penalty of player: Player * at: int<min> option * assistedBy: Player option
-                      | OwnGoal of player: Player * at: int<min> option
-                      | MissedPenalty of player: Player * at: int<min> option
-                      | SavedPenalty of goalkeeper: Player * at: int<min> option
+    type MatchEvent = | Goal of player: Player * at: int<min> option * assistedBy: Player option // note: assistedBy (if specified) must be *same* Team as player (but *cannot* be the same Player)
+                      | OwnGoal of goalFor: Team * player: Player * at: int<min> option // note: player must be *opposing* Team to goalFor
+                      | Penalty of player: Player * successful: bool * at: int<min> option * wonBy: Player option * savedBy: Player option // note: wonBy (if specified) must be *same* Team as player (and *can* be the same Player) - and savedBy (if specified) must be *opposing* Team (and will *usually* be Goalkeeper) and must only be specified (but does *not* have to be specified, e.g. a penalty can be "missed" without being "saved") if not successful
                       | YellowCard of player: Player * at: int<min> option
                       | RedCard of player: Player * at: int<min> option
-                      | CleanSheet of goalkeeper: Player * sharedWith: Player option
+                      | CleanSheet of goalkeeper: Player * sharedWith: Player option // note: sharedWith (if specified) must be *same* Team as goalkeeper (but *cannot* be the same Player) - and goalkeeper (and sharedWith, if specified) will *usually* be Goalkeeper(s)
                       | ManOfTheMatch of player: Player
+                      | ShootoutPenalty of player: Player * successful: bool
 
-    type TeamMatchScore = | TeamMatchScore of team: Team * goals: int<goal> * shootoutPenalties: int<goal> option
+    type TeamMatchScore = | TeamMatchScore of team: Team * goals: int<goal> * shootoutPenalties: int<shootoutPenalty> option
 
     type Match = { Team1Score: TeamMatchScore; Team2Score: TeamMatchScore; Number: int; Stage: Stage; KickOff: DateTime; Events: MatchEvent list }
 
@@ -48,26 +49,41 @@ module Domain =
     let getGoals teamMatchScore = match teamMatchScore with | TeamMatchScore (_, goals, _) -> goals
     let getShootoutPenalties teamMatchScore = match teamMatchScore with | TeamMatchScore (_, _, shootoutPenalties) -> shootoutPenalties
 
-    (* let getTeamForMatchEvent matchEvent = match matchEvent with
-                                          | Try (player, _) -> player.Team
-                                          | PenaltyTry (team, _) -> team
-                                          | Conversion player | Penalty player | DropGoal player -> player.Team
-                                          | MissedConversion player | MissedPenalty player -> player.Team
-                                          | YellowCard (player, _) | RedCard (player, _) | ManOfTheMatch player -> player.Team
+    let getTeamForMatchEvent matchEvent = match matchEvent with
+                                          | Goal (player, _, _) -> player.Team
+                                          | OwnGoal (_, player, _) -> player.Team
+                                          | Penalty (player, _, _, _, _) -> player.Team
+                                          | YellowCard (player, _) -> player.Team
+                                          | RedCard (player, _) -> player.Team
+                                          | CleanSheet (goalkeeper, _) -> goalkeeper.Team
+                                          | ManOfTheMatch player -> player.Team
+                                          | ShootoutPenalty (player, _) -> player.Team
 
-    let getTeamGoalsFromMatchEvents ``match`` =
-        let getPoints team matchEvents =
+    let getOtherTeamForMatchEvent matchEvent = match matchEvent with
+                                               | OwnGoal (goalFor, _, _) -> Some goalFor
+                                               | Penalty (_, _, _, _, Some savedBy) -> Some savedBy.Team
+                                               | _ -> None
+
+    let getTeamMatchScoresFromMatchEvents ``match`` =
+        let getGoals team matchEvents =
             matchEvents
             |> List.map (fun matchEvent -> match matchEvent with
-                                           | Try (player, _) when player.Team = team -> 5<point>
-                                           | PenaltyTry (team', _) when team' = team -> 5<point>
-                                           | Conversion player when player.Team = team -> 2<point>
-                                           | Penalty player when player.Team = team -> 3<point>
-                                           | DropGoal player when player.Team = team -> 3<point>
-                                           | _ -> 0<point>)
+                                           | Goal (player, _, _) when player.Team = team -> 1<goal>
+                                           | OwnGoal (goalFor, _, _) when goalFor = team -> 1<goal>
+                                           | Penalty (player, successful, _, _, _) when successful && player.Team = team -> 1<goal>
+                                           | _ -> 0<goal>)
             |> List.sum
-        let team1, team2 = getTeam ``match``.Team1Points, getTeam ``match``.Team2Points
-        let team1Points = TeamPoints (team1, getPoints team1 ``match``.Events)
-        let team2Points = TeamPoints (team2, getPoints team2 ``match``.Events)
-        team1Points, team2Points *)
+        let getShootoutPenalties team matchEvents =
+            let sum = matchEvents
+                      |> List.map (fun matchEvent -> match matchEvent with
+                                                     | ShootoutPenalty (player, successful) when successful && player.Team = team -> 1<shootoutPenalty>
+                                                     | _ -> 0<shootoutPenalty>)
+                      |> List.sum
+            match sum with
+            | 0<shootoutPenalty> -> None
+            | sum' -> Some sum'
+        let team1, team2 = getTeam ``match``.Team1Score, getTeam ``match``.Team2Score
+        let team1MatchScore = TeamMatchScore (team1, getGoals team1 ``match``.Events, getShootoutPenalties team1 ``match``.Events)
+        let team2MatchScore = TeamMatchScore (team2, getGoals team2 ``match``.Events, getShootoutPenalties team2 ``match``.Events)
+        team1MatchScore, team2MatchScore
 

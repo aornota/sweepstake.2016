@@ -42,20 +42,20 @@ module Content =
     [<Literal>]
     let requiredGoalkeepers = 1
     [<Literal>]
-    let requiredOther = 10
+    let requiredOutfieldPlayers = 10
 
     let getLastUpdated () = para (italic (sprintf "Last updated: %s" (DateTime.Now.ToString ("dd-MMM-yyyy HH:mm:ss"))))
 
-    (* let getStage stage = match stage with | Group (label, _) -> sprintf "Group %c" label
+    let getStage stage = match stage with | Group (label, _) -> sprintf "Group %c" label
+                                          | RoundOf16 ordinal -> sprintf "Round of 16 (%d)" ordinal
                                           | QuarterFinal ordinal -> sprintf "Quarter-final %d" ordinal
                                           | SemiFinal ordinal -> sprintf "Semi-final %d" ordinal
-                                          | BronzeFinal -> "Bronze final"
                                           | Final -> "Final"
 
     let getGroupLabel group = match group with | Group (label, _) -> string label | _ -> ""
     let getGroupTeams group = match group with | Group (_, teams) -> teams | _ -> []
 
-    let getTeamSeeding team = match team.Seeding with | Some seeding -> sprintf "%d" seeding | None -> "N/A"
+    let getTeamSeeding team = sprintf "%d" team.Seeding
     let getTeamNameWithSeeding (team: Team) = sprintf "%s (%s)" team.Name (getTeamSeeding team)
     let getTeamNameWithCoach (team: Team) = sprintf "%s (%s)" team.Name team.Coach
     let getTeamTextWithStrike (team: Team) text = match team.Status with | Active -> text | Eliminated -> strike text
@@ -70,7 +70,7 @@ module Content =
         match getPlayerIsActive player with
         | true -> player.Name
         | false -> strike player.Name
-    let getPlayerType player = match player.Type with | Forward -> "Forward" | Back -> "Back"
+    let getPlayerType player = match player.Type with | Goalkeeper -> "Goalkeeper" | Defender -> "Defender" | Midfielder -> "Midfielder" | Forward -> "Forward"
     let getPlayerStatus player = match player.Status with
                                  | Withdrawn date when date.IsSome -> Some (sprintf "Withdrawn (%s)" (date.Value.ToString ("dd-MMM")))
                                  | Withdrawn _ -> Some "Withdrawn"
@@ -81,6 +81,7 @@ module Content =
         match getPlayerStatus player with | Some status -> sprintf "%s - %s" (getPlayerType player) status
                                           | None -> (getPlayerType player)
 
+    (*
     let teamScores2015 = getTotalScorePerTeam ``Data 2016``.teams ``Data 2016``.matches
     let getTeamScore (teamScores: (Team * int<score>) list) (team: Team) =
         match teamScores |> List.filter (fun (team', _) -> team'.Name = team.Name) with
@@ -133,5 +134,6 @@ module Content =
         | None -> getPlayerScoreText2015 player
 
     let groups2015 = [ ``Data 2016``.groupA; ``Data 2016``.groupB; ``Data 2016``.groupC; ``Data 2016``.groupD ]
-    let matches2015 = ``Data 2016``.matches *)
+    let matches2015 = ``Data 2016``.matches
+    *)
 

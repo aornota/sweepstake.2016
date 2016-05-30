@@ -19,68 +19,101 @@ module Sweepstake =
 
     let extractParticipant participant = match participant with | Participant name -> name
     let getParticipant sweepstaker = extractParticipant sweepstaker.Participant
+    
+    let getYellowScores usePlayerScore ``match`` =
+        let perYellow = match usePlayerScore with | true -> -2<score> | false -> -1<score>
+        let equivalentToRed = match usePlayerScore with | true -> -6<score> | false -> -3<score>
+        let getPlayerYellowScore player matchEvents =
+            let yellows = matchEvents |> List.filter (fun matchEvent -> match matchEvent with | YellowCard (player', _) when player' = player -> true | _ -> false)
+                                      |> List.length
+            let reds = matchEvents |> List.filter (fun matchEvent -> match matchEvent with | RedCard (player', _) when player' = player -> true | _ -> false)
+                                   |> List.length
+            match yellows, reds with | 0, _ -> 0<score>
+                                     | 1, _ -> perYellow
+                                     | 2, reds' when reds' <> 0 -> failwith (sprintf "%s has two yellow cards and a red card for match %d." player.Name ``match``.Number)
+                                     | 2, _ -> equivalentToRed
+                                     | _ -> failwith (sprintf "%s has an invalid number (%d) of yellow cards for match %d." player.Name yellows ``match``.Number)
+        let yellowPlayers = ``match``.Events |> List.map (fun matchEvent -> match matchEvent with | YellowCard (player, _) -> Some player | _ -> None)
+                                             |> List.choose (fun player -> player)
+                                             |> List.distinct
+        yellowPlayers |> List.map (fun player -> player, getPlayerYellowScore player ``match``.Events)
 
-    (* let getTeamScoreForMatch team ``match`` =
-        let getMatchEventScore team matchEvents =
-            matchEvents
-            |> List.map (fun matchEvent -> match matchEvent with
-                                           | PenaltyTry (team', _) when team' = team -> 6<score>
-                                           | YellowCard (player, _) when player.Team = team -> -2<score>
-                                           | RedCard (player, _) when player.Team = team -> -4<score>
-                                           | _ -> 0<score>)
-            |> List.sum
-        let getResultScore team team1 team2 ``match`` =
-            let isTop8 team = match team.Seeding with | Some seeding when seeding <= 8 -> true | _ -> false
-            let teamIsTop8 = isTop8 team
+    let getYellowPlayerScores = getYellowScores true
+    let getYellowTeamScores = getYellowScores false
+
+    let getTeamScoreForMatch team ``match`` =
+        let matchEventScore =
+            ``match``.Events |> List.map (fun matchEvent -> match matchEvent with
+                                                            // Note: YellowCards handled separately.
+                                                            | RedCard (player, _) when player.Team = team -> -3<score>
+                                                            | _ -> 0<score>)
+                             |> List.sum
+        let yellowScore = 
+            getYellowTeamScores ``match`` |> List.filter (fun (player, _) -> player.Team = team)
+                                          |> List.map (fun (_, score) -> score)
+                                          |> List.sum
+        let getResultScore team1 team2 =
+            let isTop12 team = team.Seeding <= 12
+            let teamIsTop12 = isTop12 team
             let opponent = if team = team1 then team2 else team1
-            let opponentIsTop8 = isTop8 opponent
-            let team1Points = getPoints ``match``.Team1Points
-            let team2Points = getPoints ``match``.Team2Points
-            let teamPoints = if team = team1 then team1Points else team2Points
-            let opponentPoints = if opponent = team1 then team1Points else team2Points
-            let matchResult = if teamPoints > opponentPoints then Win
-                              else if teamPoints = opponentPoints then Draw
-                              else Lose
-            let matchResultScore = match matchResult, teamIsTop8, opponentIsTop8 with
-                                   | Win, false, true -> 10<score>
-                                   | Win, true, false -> 6<score>
-                                   | Win, _, _ -> 8<score>
-                                   | Draw, false, true -> 5<score>
-                                   | Draw, true, false -> 3<score>
-                                   | Draw, _, _ -> 4<score>
-                                   | _ -> 0<score>
-            let (_, team1BonusCount), (_, team2BonusCount) = getTeamBonusCounts ``match``
-            let teamBonusCount = if team = team1 then team1BonusCount else team2BonusCount
-            let bonusMultiplier = match teamIsTop8, opponentIsTop8 with
-                                  | false, true -> 3<score>
-                                  | true, false -> 1<score>
-                                  | _ -> 2<score>
-            let bonusPointScore = teamBonusCount * bonusMultiplier
-            matchResultScore + bonusPointScore
-        let team1, team2 = getTeam ``match``.Team1Points, getTeam ``match``.Team2Points
+            let opponentIsTop12 = isTop12 opponent
+            let team1Goals = getGoals ``match``.Team1Score
+            let team1ShootoutPenalties = getShootoutPenalties ``match``.Team1Score
+            let team2Goals = getGoals ``match``.Team2Score
+            let team2ShootoutPenalties = getShootoutPenalties ``match``.Team2Score
+            let teamPoints = if team = team1 then team1Goals else team2Goals
+            let teamShootoutPenalties = if team = team1 then team1ShootoutPenalties else team2ShootoutPenalties
+            let opponentPoints = if opponent = team1 then team1Goals else team2Goals
+            let opponentShootoutPenalities = if opponent = team1 then team1ShootoutPenalties else team2ShootoutPenalties
+            let matchResult = match teamPoints, opponentPoints, isKnockout ``match``.Stage, teamShootoutPenalties, opponentShootoutPenalities with
+                              | teamPoints, opponentPoints, _, _, _ when teamPoints > opponentPoints -> Win
+                              | teamPoints, opponentPoints, false, _, _ when teamPoints = opponentPoints -> Draw
+                              | teamPoints, opponentPoints, true, Some teamShootoutPenalties', Some opponentShootoutPenalities' when teamPoints = opponentPoints && teamShootoutPenalties' > opponentShootoutPenalities' -> Win
+                              | teamPoints, opponentPoints, true, _, _ when teamPoints = opponentPoints -> failwith (sprintf "Missing penalty shootout information for knockout match %d." ``match``.Number)
+                              | _ -> Lose
+            match matchResult, teamIsTop12, opponentIsTop12 with | Win, false, true -> 10<score>
+                                                                 | Win, true, false -> 6<score>
+                                                                 | Win, _, _ -> 8<score>
+                                                                 | Draw, false, true -> 5<score>
+                                                                 | Draw, true, false -> 3<score>
+                                                                 | Draw, _, _ -> 4<score>
+                                                                 | _ -> 0<score>
+        let team1, team2 = getTeam ``match``.Team1Score, getTeam ``match``.Team2Score
         if team <> team1 && team <> team2 then 0<score>
         else if ``match``.KickOff > DateTime.Now then 0<score>
-        else getMatchEventScore team ``match``.Events + getResultScore team team1 team2 ``match``
-
+        else if ``match``.Events |> List.length = 0 then 0<score> // note: should be safe because however uneventful the match, there will always be a ManOfTheMatch (and CleanSheets if no Goals/Penalties &c.)
+        else matchEventScore + yellowScore + getResultScore team1 team2
+    
     let getPlayerScoreForMatch (player: Player) (onlyScoresFrom: DateTime option) ``match`` =
-        let getScore player matchEvents =
-            matchEvents
-            |> List.map (fun matchEvent -> match matchEvent with
-                                           | Try (player', _) when player' = player -> 9<score>
-                                           | Conversion player' when player' = player -> 2<score>
-                                           | Penalty player' when player' = player -> 3<score>
-                                           | DropGoal player' when player' = player -> 3<score>
-                                           | ManOfTheMatch player' when player' = player -> 10<score>
-                                           | MissedConversion player' when player' = player -> -1<score>
-                                           | MissedPenalty player' when player' = player -> -2<score>
-                                           | YellowCard (player', _) when player' = player -> -3<score>
-                                           | RedCard (player', _) when player' = player -> -6<score>
-                                           | _ -> 0<score>)
-            |> List.sum
-        let team1, team2 = getTeam ``match``.Team1Points, getTeam ``match``.Team2Points
+        let matchEventScore = 
+            ``match``.Events |> List.map (fun matchEvent -> match matchEvent with
+                                                            // Note: For Goal, player and assistedBy *cannot* be the same Player.
+                                                            | Goal (player', _, _) when player' = player -> 8<score>
+                                                            | Goal (_, _, Some assistedBy) when assistedBy = player -> 2<score>
+                                                            | OwnGoal (_, player', _) when player' = player -> -4<score>
+                                                            // Note: For Penalty, player and wonBy *can* be the same Player.
+                                                            | Penalty (player', true, _, Some wonBy, _) when player' = player && wonBy = player -> 10<score> // note: 8 + 2
+                                                            | Penalty (player', false, _, Some wonBy, _) when player' = player && wonBy = player -> -2<score> // note: -4 + 2
+                                                            | Penalty (player', true, _, _, _) when player' = player -> 8<score>
+                                                            | Penalty (player', false, _, _, _) when player' = player -> -4<score>
+                                                            | Penalty (_, _, _, Some wonBy, _) when wonBy = player -> 2<score>
+                                                            | Penalty (_, _, _, _, Some savedBy) when savedBy = player -> 8<score>
+                                                            // Note: YellowCards handled separately.
+                                                            | RedCard (player', _) when player' = player -> -6<score>
+                                                            // Note: For CleanSheet, goalkeeper and sharedWith *cannot* be the same Player.
+                                                            | CleanSheet (goalkeeper, Some sharedWith) when goalkeeper = player || sharedWith = player -> 4<score>
+                                                            | CleanSheet (goalkeeper, _) when goalkeeper = player -> 8<score>
+                                                            | ManOfTheMatch player' when player' = player -> 10<score>
+                                                            | _ -> 0<score>)
+                        |> List.sum
+        let yellowScore = 
+            getYellowPlayerScores ``match`` |> List.filter (fun (player', _) -> player' = player)
+                                            |> List.map (fun (_, score) -> score)
+                                            |> List.sum
+        let team1, team2 = getTeam ``match``.Team1Score, getTeam ``match``.Team2Score
         if player.Team <> team1 && player.Team <> team2 then 0<score>
         else if onlyScoresFrom.IsSome && ``match``.KickOff < onlyScoresFrom.Value then 0<score>
-        else getScore player ``match``.Events
+        else matchEventScore + yellowScore
 
     let getTotalScorePerTeam teams matches =
         teams |> List.map (fun team -> let score = matches |> List.map (getTeamScoreForMatch team)
@@ -93,5 +126,5 @@ module Sweepstake =
                                                                          |> List.map (getPlayerScoreForMatch player onlyScoresFrom)
                                                                          |> List.sum
                                                              player, score)
-                |> List.sortBy (fun (_, score) -> -score) *)
+                |> List.sortBy (fun (_, score) -> -score)
 

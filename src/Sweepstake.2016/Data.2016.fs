@@ -389,22 +389,23 @@ module ``Data 2016`` =
                                    Number = 11; Stage = groupF; KickOff = DateTime (2016, 06, 14, 17, 00, 00)
                                    Events = [ (* austria *) (* hungary *) ] }
                                            
-    let groupFPortugalVsIceland = { Team1Score = TeamMatchScore (portugal, 0<goal>, None); Team2Score = TeamMatchScore (iceland, 3<goal>, None)
-                                    Number = 12; Stage = groupF; KickOff = (* TEMP... *) DateTime (2016, 01, 11, 20, 00, 00) (* DateTime (2016, 06, 14, 20, 00, 00) ...TEMP *)
+    let groupFPortugalVsIceland = { Team1Score = TeamMatchScore (portugal, (* TEMP... *) 0<goal> (* <0>goal ...TEMP *), None)
+                                    Team2Score = TeamMatchScore (iceland, (* TEMP... *) 3<goal> (* <0>goal ...TEMP *), None)
+                                    Number = 12; Stage = groupF; KickOff = (* TEMP... *) DateTime (2016, 05, 06, 20, 00, 00) (* DateTime (2016, 06, 14, 20, 00, 00) ...TEMP *)
                                     Events = [ (* portugal *) (* iceland *)                                                
                                  (* TEMP... *) ManOfTheMatch sigurdssonGylfi
-                                               OwnGoal (ronaldoCristiano, Some 3<min>) (* portugal *)
-                                               YellowCard (ronaldoCristiano, Some 4<min>)
+                                               YellowCard (ronaldoCristiano, Some 4<min>) (* portugal *)                                             
                                                YellowCard (carvalhoRicardo, Some 16<min>)
+                                               Penalty (ronaldoCristiano, false, Some 37<min>, None, Some halldorssonHannesThor)
                                                YellowCard (moutinhoJoao, Some 61<min>)
-                                               MissedPenalty (ronaldoCristiano, Some 66<min>)
                                                YellowCard (ronaldoCristiano, Some 82<min>)
+                                 (* TEMP... *) RedCard (ronaldoCristiano, Some 82<min>) (* ...TEMP *)
                                                RedCard (fonteJose, Some 86<min>)
-                                               YellowCard (skulasonAriFreyr, Some 29<min>) (* iceland *)
-                                               SavedPenalty (halldorssonHannesThor, Some 66<min>)
+                                               OwnGoal (iceland, ronaldoCristiano, Some 3<min>) (* iceland *)
+                                               YellowCard (skulasonAriFreyr, Some 29<min>)
                                                Goal (gudjohnsenEidur, Some 81<min>, Some sigurdssonGylfi)
-                                               Penalty (sigurdssonGylfi, Some 87<min>, Some sigurdssonGylfi)
-                                               CleanSheet (halldorssonHannesThor, None) (* ...TEMP *) ] }
+                                               Penalty (sigurdssonGylfi, true, Some 87<min>, Some sigurdssonGylfi, None)
+                                               CleanSheet (halldorssonHannesThor, Some kristinssonOgmundur) (* ...TEMP *) ] }
 
     let groupFIcelandVsHungary = { Team1Score = TeamMatchScore (iceland, 0<goal>, None); Team2Score = TeamMatchScore (hungary, 0<goal>, None)
                                    Number = 23; Stage = groupF; KickOff = DateTime (2016, 06, 18, 17, 00, 00)
@@ -476,9 +477,27 @@ module ``Data 2016`` =
                         Number = 39; Stage = RoundOf16 3; KickOff = DateTime (2016, 06, 25, 20, 00, 00)
                         Events = [ (* winnerD *) (* thirdBEF *) ] }
 
-    let match40XVsY = { Team1Score = TeamMatchScore (winnerA, 0<goal>, None); Team2Score = TeamMatchScore (thirdCDE, 0<goal>, None)
-                        Number = 40; Stage = RoundOf16 4; KickOff = DateTime (2016, 06, 26, 14, 00, 00)
-                        Events = [ (* winnerA *) (* thirdCDE *) ] }
+    let match40XVsY = { Team1Score = TeamMatchScore ((* TEMP... *) france (* winnerA ...TEMP *), (* TEMP... *) 1<goal> (* <0>goal ...TEMP *), Some 4<shootoutPenalty>)
+                        Team2Score = TeamMatchScore ((* TEMP... *) iceland (* thirdCDE ...TEMP *), (* TEMP... *) 1<goal> (* <0>goal ...TEMP *), (* TEMP... *) None (* Some 2<shootoutPenalty> ...TEMP *))
+                        Number = 40; Stage = RoundOf16 4; KickOff = (* TEMP... *) DateTime (2016, 05, 20, 14, 00, 00) (* DateTime (2016, 06, 26, 14, 00, 00) ...TEMP *)
+                        Events = [ (* winnerA *) (* thirdCDE *)
+                     (* TEMP... *) ManOfTheMatch kanteNGolo
+                                   YellowCard (koscielnyLaurent, Some 38<min>) (* france *)                                             
+                                   Penalty (giroudOlivier, false, Some 48<min>, Some payetDimitri, None)
+                                   YellowCard (martialAnthony, Some 75<min>)
+                                   Goal (griezmannAntoine, Some 118<min>, Some cabayeYohan)
+                                   ShootoutPenalty (pogbaPaul, true)
+                                   ShootoutPenalty (cabayeYohan, true)
+                                   ShootoutPenalty (giroudOlivier, false)
+                                   ShootoutPenalty (griezmannAntoine, true)
+                                   ShootoutPenalty (payetDimitri, true)
+                                   YellowCard (saevarssonBirkirMar, Some 47<min>) (* iceland *)
+                                   YellowCard (gunnarssonAron, Some 94<min>)                                  
+                                   Goal (sigurdssonGylfi, Some 107<min>, Some sigurjonssonRunarMar)
+                                   ShootoutPenalty (gudjohnsenEidur, true)
+                                   ShootoutPenalty (sigurdssonGylfi, true)
+                                   ShootoutPenalty (sigurjonssonRunarMar, false)
+                                   ShootoutPenalty (saevarssonBirkirMar, false) (* ...TEMP *) ] }
 
     let match41XVsY = { Team1Score = TeamMatchScore (winnerC, 0<goal>, None); Team2Score = TeamMatchScore (thirdABF, 0<goal>, None)
                         Number = 41; Stage = RoundOf16 5; KickOff = DateTime (2016, 06, 26, 17, 00, 00)

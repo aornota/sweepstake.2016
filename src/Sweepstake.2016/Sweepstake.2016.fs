@@ -8,8 +8,6 @@ open AOrNotA.Sweepstake2016.Sweepstake
 
 module ``Sweepstake 2016`` =
 
-    let ``to do`` = ()
-
     // TODO: Invite Amanda | Vuk | Josh | ...
 
     // TEMP...
@@ -24,46 +22,31 @@ module ``Sweepstake 2016`` =
 
     let sweepstakers0 = [ jackPicks0; nephPicks0; rosiePicks0 ]
 
-    // Before second draft...
-
-    let jackPicks1 = { Participant = jack
-                       CoachTeam = Some france
-                       Picks = [ { Player = pogbaPaul; OnlyScoresFrom = None }
-                                 { Player = giroudOlivier; OnlyScoresFrom = None } ] }
-
-    let nephPicks1 = { Participant = neph
-                       CoachTeam = Some iceland
-                       Picks = [ { Player = griezmannAntoine; OnlyScoresFrom = None }
-                                 { Player = llorisHugo (* Goalkeeper *); OnlyScoresFrom = None } ] }
-
-    let rosiePicks1 = { Participant = rosie
-                        CoachTeam = Some portugal
-                        Picks = [ { Player = payetDimitri; OnlyScoresFrom = None }
-                                  { Player = martialAnthony; OnlyScoresFrom = None } ] }
-
-    let sweepstakers1 = [ jackPicks1; nephPicks1; rosiePicks1 ]
+    // TODO (if required): Before second draft?...
 
     // Final teams...
+    let jackPicksFinal = { Participant = jack
+                           CoachTeam = Some france
+                           Picks = [ { Player = halldorssonHannesThor (* Goalkeeper *); OnlyScoresFrom = None }
+                                     { Player = giroudOlivier; OnlyScoresFrom = None }
+                                     { Player = gudjohnsenEidur; OnlyScoresFrom = None } ] }
 
-    let jackPicks2 = { Participant = jack
-                       CoachTeam = Some france
-                       Picks = [ { Player = pogbaPaul; OnlyScoresFrom = None }
-                                 { Player = giroudOlivier; OnlyScoresFrom = None } ] }
+    let nephPicksFinal = { Participant = neph
+                           CoachTeam = Some iceland
+                           Picks = [ { Player = llorisHugo (* Goalkeeper *); OnlyScoresFrom = None }
+                                     { Player = griezmannAntoine; OnlyScoresFrom = None } 
+                                     { Player = sigurdssonGylfi; OnlyScoresFrom = None } ] }
 
-    let nephPicks2 = { Participant = neph
-                       CoachTeam = Some iceland
-                       Picks = [ { Player = griezmannAntoine; OnlyScoresFrom = None }
-                                 { Player = llorisHugo (* Goalkeeper *); OnlyScoresFrom = None } ] }
+    let rosiePicksFinal = { Participant = rosie
+                            CoachTeam = Some portugal
+                            Picks = [ { Player = payetDimitri; OnlyScoresFrom = None }
+                                      { Player = martialAnthony; OnlyScoresFrom = None }
+                                      { Player = ronaldoCristiano; OnlyScoresFrom = None } ] }
 
-    let rosiePicks2 = { Participant = rosie
-                        CoachTeam = Some portugal
-                        Picks = [ { Player = payetDimitri; OnlyScoresFrom = None }
-                                  { Player = martialAnthony; OnlyScoresFrom = None } ] }
-
-    let sweepstakers2 = [ jackPicks2; nephPicks2; rosiePicks2 ]
+    let sweepstakersFinal = [ jackPicksFinal; nephPicksFinal; rosiePicksFinal ]
     // ...TEMP
 
-    let sweepstakers = sweepstakers2
+    let sweepstakers = sweepstakersFinal
 
     let pickedPlayers = sweepstakers |> List.collect (fun sweepstaker -> let participant = getParticipant sweepstaker
                                                                          sweepstaker.Picks |> List.map (fun pick -> pick, participant))

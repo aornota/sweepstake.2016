@@ -15,482 +15,46 @@ module DraftContent =
 
     type SweepstakerDraft = { Participant: Participant; DraftPicks: DraftPick list }
 
-    (* // First draft...
-    let chad1 = { Participant = chad
-                  DraftPicks = [ Player smithAaron
-                                 Player saveaJulian
-                                 Player milnerSkudderNehe
-                                 Player carterDan
-                                 Player deAllendeDamian
-                                 Player habanaBryan
-                                 Player kirchnerZane
-                                 Player josephJonathan
-                                 Player watsonAnthony
-                                 Player fordGeorge
-                                 Player folauIsrael
-                                 Player hooperMichael
-                                 Player giteauMatt
-                                 Player sextonJonathan
-                                 Player murrayConor
-                                 Player madiganIan
-                                 Player cuthbertAlex
-                                 Player northGeorge
-                                 Player nadoloNemani
-                                 Player matavesiJosh ] }
-
-    let chris1 = { Participant = chris
-                   DraftPicks = [ CoachTeam newZealand
-                                  Player saveaJulian
-                                  Player milnerSkudderNehe
-                                  Player smithBen
-                                  Player naholoWaisake
-                                  Player carterDan
-                                  Player habanaBryan
-                                  CoachTeam england
-                                  CoachTeam australia
-                                  Player folauIsrael
-                                  Player barrettBeauden
-                                  Player fordGeorge
-                                  Player pollardHandre
-                                  Player sextonJonathan
-                                  Player leRouxWillie
-                                  Player watsonAnthony
-                                  Player nonuMa'a
-                                  Player hugetYoann
-                                  Player giteauMatt
-                                  Player mvovoLwazi ] }
-
-    let denis1 = { Participant = denis
-                   DraftPicks = [ CoachTeam ireland
-                                  Player sextonJonathan
-                                  Player readKieran
-                                  Player northGeorge
-                                  Player lambiePat
-                                  Player o'BrienSean
-                                  Player healyCian
-                                  Player folauIsrael
-                                  Player brownMike
-                                  Player picamolesLouis
-                                  Player hendersonIain
-                                  Player zeboSimon
-                                  Player fofanaWesley
-                                  Player franksOwen
-                                  Player dentonDavid
-                                  Player williamsLiam
-                                  Player woodTom
-                                  Player pocockDavid
-                                  Player o'ConnellPaul
-                                  Player fitzgeraldLuke ] }
-
-    let hugh1 = { Participant = hugh
-                  DraftPicks = [ Player saveaJulian
-                                 Player milnerSkudderNehe
-                                 Player biggarDan
-                                 Player habanaBryan
-                                 Player leRouxWillie
-                                 Player folauIsrael
-                                 Player northGeorge
-                                 Player watsonAnthony
-                                 Player speightHenry
-                                 Player josephJonathan
-                                 Player hugetYoann
-                                 Player russellFinn
-                                 Player sextonJonathan
-                                 Player nakaitaciNoa
-                                 Player smithBen
-                                 Player carterDan
-                                 Player smithAaron
-                                 Player mvovoLwazi
-                                 Player krielJesse
-                                 Player mayJonny ] }
-
+    // TEMP...
+    // First draft...
     let jack1 = { Participant = jack
-                  DraftPicks = [ Player pollardHandre
-                                 CoachTeam england
-                                 Player sanchezNicolas
-                                 Player mayJonny
-                                 Player toomuaMatt
-                                 Player nonuMa'a
-                                 Player habanaBryan
-                                 Player pietersenJP
-                                 Player leRouxWillie
-                                 Player pocockDavid
-                                 Player folauIsrael
-                                 Player vermeulenDuane
-                                 Player williamsSonnyBill
-                                 Player ashleyCooperAdam
-                                 Player youngsBen
-                                 Player kainoJerome
-                                 Player brownMike
-                                 Player hooperMichael
-                                 Player readKieran
-                                 Player watsonAnthony ] }
-
-    let jem1 = { Participant = jem
-                 DraftPicks = [ Player saveaJulian
-                                Player pietersenJP
-                                Player pollardHandre
-                                Player michalakFrederic
-                                Player folauIsrael
-                                Player barrettBeauden
-                                Player sextonJonathan
-                                CoachTeam france
-                                Player pocockDavid
-                                Player picamolesLouis
-                                Player o'BrienSean
-                                Player readKieran
-                                Player dusautoirThierry
-                                Player vitoVictor
-                                Player etzebethEben
-                                Player parisseSergio ] }
-
-    let martyn1 = { Participant = martyn
-                    DraftPicks = [ CoachTeam newZealand
-                                   Player carterDan
-                                   Player lambiePat
-                                   Player farrellOwen
-                                   Player cooperQuade
-                                   Player folauIsrael
-                                   Player milnerSkudderNehe
-                                   Player saveaJulian
-                                   Player pietersenJP
-                                   Player mvovoLwazi
-                                   Player smithBen
-                                   Player kirchnerZane
-                                   CoachTeam southAfrica
-                                   CoachTeam england
-                                   CoachTeam australia
-                                   Player smithAaron
-                                   Player geniaWill
-                                   Player pienaarRuan
-                                   Player readKieran
-                                   Player kainoJerome ] }
+                  DraftPicks = [ Player giroudOlivier
+                                 CoachTeam france
+                                 Player martialAnthony
+                                 Player gudjohnsenEidur
+                                 Player halldorssonHannesThor ] }
 
     let neph1 = { Participant = neph
-                  DraftPicks = [ Player carterDan
-                                 Player sextonJonathan
-                                 CoachTeam southAfrica
-                                 Player nonuMa'a
-                                 Player milnerSkudderNehe
-                                 Player ashleyCooperAdam
-                                 Player mayJonny
-                                 Player smithConrad
-                                 Player josephJonathan
-                                 Player folauIsrael
-                                 Player biggarDan
-                                 Player michalakFrederic
-                                 CoachTeam argentina
-                                 Player smithBen
-                                 Player nadoloNemani
-                                 Player williamsScott
-                                 Player hugetYoann
-                                 Player deAllendeDamian
-                                 Player louwFrancois
-                                 Player picamolesLouis ] }
+                  DraftPicks = [ Player llorisHugo
+                                 Player griezmannAntoine
+                                 CoachTeam france
+                                 Player sigurdssonGylfi
+                                 CoachTeam iceland ] }
 
     let rosie1 = { Participant = rosie
-                   DraftPicks = [ CoachTeam southAfrica
-                                  Player habanaBryan
-                                  Player folauIsrael
-                                  Player naholoWaisake
-                                  Player saveaJulian
-                                  Player fordGeorge
-                                  Player leRouxWillie
-                                  Player duPlessisBismarck
-                                  Player barrettBeauden
-                                  Player pollardHandre
-                                  Player ayerzaMarcos
-                                  Player masNicolas
-                                  CoachTeam argentina
-                                  Player milnerSkudderNehe
-                                  Player josephJonathan
-                                  Player lambiePat
-                                  Player sanchezNicolas
-                                  Player giteauMatt
-                                  Player murrayConor
-                                  Player tuilagiAlesana ] }
+                   DraftPicks = [ CoachTeam portugal
+                                  Player payetDimitri
+                                  Player griezmannAntoine
+                                  Player martialAnthony
+                                  Player ronaldoCristiano ] }
 
-    let susie1 = { Participant = susie
-                   DraftPicks = [ CoachTeam newZealand
-                                  Player carterDan
-                                  Player fordGeorge
-                                  Player josephJonathan
-                                  Player hernandezJuanMartin
-                                  Player habanaBryan
-                                  Player laidlawGreig
-                                  Player boweTommy
-                                  Player coleDan
-                                  Player jonesAlunWyn
-                                  Player grayRichie
-                                  Player mooreStephen
-                                  Player heaslipJamie
-                                  Player nyangaYannick
-                                  Player retallickBrodie
-                                  Player creevyAgustin ] }
+    let draft1 = [ jack1; neph1; rosie1 ]
 
-    let draft1 = [ chad1; chris1; denis1; hugh1; jack1; jem1; martyn1; neph1; rosie1; susie1 ]
+    // TODO (if needed): Second draft...
 
-    // Second draft...
-    let chad2 = { Participant = chad
-                  DraftPicks = [ CoachTeam wales
-                                 CoachTeam fiji
-                                 Player haskellJames
-                                 Player vunipolaBilly
-                                 Player messamLiam
-                                 Player caneSam
-                                 Player mcCalmanBen
-                                 Player mcMahonSean
-                                 Player qeraAkapusi
-                                 Player nakarawaLeone
-                                 Player henryChris
-                                 Player robshawChris
-                                 Player franksBen
-                                 Player faletauTaulupe
-                                 Player albertsWillem
-                                 Player papePascal ] }
-
-    let chris2 = { Participant = chris
-                   DraftPicks = [ Player mcCawRichie
-                                  Player imhoffJuan
-                                  Player parraMorgan
-                                  Player colesDane
-                                  Player fekitoaMalakai
-                                  Player perenaraTJ
-                                  Player krielJesse
-                                  Player tomaneJoe
-                                  Player kuridraniTevita
-                                  Player whitelockSam
-                                  Player nowellJack
-                                  Player earlsKeith
-                                  Player bealeKurtley
-                                  Player foleyBernard
-                                  Player skeltonWill
-                                  Player sladeHenry
-                                  Player steynMorne
-                                  Player robshawChris
-                                  Player sioScott
-                                  Player kockottRory
-                                  Player guitouneSofiane
-                                  Player dulinBrice
-                                  Player burgerSchalk
-                                  Player morganBen
-                                  Player faletauTaulupe
-                                  Player straussJosh
-                                  Player tonerDevin
-                                  Player vunipolaBilly
-                                  Player faosilivaAlafoti
-                                  Player manoaSamu
-                                  Player vunisaSamuela
-                                  Player duToitPieterSteph
-                                  Player pereniseAnthony ] }
-
-    let denis2 = { Participant = denis
-                   DraftPicks = [ Player priestlandRhys
-                                  Player parraMorgan
-                                  Player sladeColin
-                                  Player hoggStuart
-                                  Player fotuali'iKahn
-                                  Player steynMorne
-                                  Player bealeKurtley
-                                  Player robertsJamie
-                                  Player gonevaVereniki
-                                  Player barrittBrad ] }
-
-    let hugh2 = { Participant = hugh
-                  DraftPicks = [ CoachTeam scotland
-                                 CoachTeam wales
-                                 Player robshawChris
-                                 Player mcCawRichie
-                                 Player mcCalmanBen
-                                 Player vunipolaBilly
-                                 Player caneSam
-                                 Player paluWycliff
-                                 Player lawesCourtney
-                                 Player burgerSchalk
-                                 Player warburtonSam
-                                 Player faletauTaulupe
-                                 Player haskellJames
-                                 Player messamLiam
-                                 Player fardyScott
-                                 Player senatoreLeonardo
-                                 Player taleiNetani
-                                 Player leitchMichael
-                                 Player manoaSamu
-                                 CoachTeam samoa ] }
-
-    let jack2 = { Participant = jack
-                  DraftPicks = [ Player hoggStuart
-                                 Player burgerSchalk
-                                 Player sladeColin
-                                 Player mcCawRichie 
-                                 Player faletauTaulupe
-                                 Player o'MahonyPeter
-                                 Player bestRory
-                                 Player lobbeJuanMartinFernandez
-                                 Player gorgodzeMamuka
-                                 Player messamLiam
-                                 Player morganBen
-                                 Player tipuricJustin
-                                 Player vunipolaBilly
-                                 Player leguizamonJuanManuel
-                                 Player papePascal ] }
-
-    let jem2 = { Participant = jem
-                 DraftPicks = [ Player kuridraniTevita
-                                Player pisiGeorge
-                                Player krielJesse
-                                Player imhoffJuan
-                                Player albertsWillem
-                                Player choulyDamien
-                                Player vunipolaBilly
-                                Player lawesCourtney
-                                Player sladeColin
-                                Player steynMorne
-                                Player horneRob
-                                Player pisiKen
-                                Player parraMorgan
-                                Player skeltonWill
-                                Player cudmoreJamie
-                                Player guiradoGuilhem
-                                Player messamLiam
-                                Player deJagerLood ] }
-
-    let martyn2 = { Participant = martyn
-                    DraftPicks = [ CoachTeam wales
-                                   CoachTeam samoa
-                                   CoachTeam fiji
-                                   CoachTeam unitedStates
-                                   CoachTeam italy
-                                   CoachTeam scotland
-                                   CoachTeam canada
-                                   Player krielJesse
-                                   Player kuridraniTevita
-                                   Player burgessSam
-                                   Player horneRob
-                                   Player mitchellDrew
-                                   Player fekitoaMalakai
-                                   Player steynMorne
-                                   Player duPreezFourie
-                                   Player deVilliersJean
-                                   Player bealeKurtley
-                                   Player tomaneJoe
-                                   Player sladeHenry
-                                   Player barrittBrad
-                                   Player kerrBarlowTawera
-                                   Player perenaraTJ
-                                   Player sladeColin
-                                   Player paigeRudy
-                                   Player mcCawRichie
-                                   Player messamLiam
-                                   Player colesDane
-                                   Player paluWycliff
-                                   Player fardyScott
-                                   Player robshawChris
-                                   Player haskellJames
-                                   Player vunipolaBilly
-                                   Player leRouxBernard
-                                   Player romanoLuke
-                                   Player woodcockTony
-                                   Player crockettWyatt
-                                   Player caneSam
-                                   Player burgerSchalk
-                                   Player albertsWillem
-                                   Player kolisiSiya
-                                   Player mcCalmanBen
-                                   Player mcMahonSean
-                                   Player morganBen
-                                   Player choulyDamien
-                                   Player duPlessisJannie
-                                   Player straussAdriaan
-                                   Player henryChris
-                                   Player murphyJordi
-                                   Player o'MahonyPeter
-                                   Player franksBen
-                                   Player faumuinaCharlie
-                                   Player mealamuKeven
-                                   Player whitelockSam
-                                   Player taylorCodie
-                                   Player skeltonWill
-                                   Player simmonsRob
-                                   Player kruisGeorge
-                                   Player launchburyJoe ] }
-
-    let neph2 = { Participant = neph
-                  DraftPicks = [ Player mcCalmanBen
-                                 Player morganBen
-                                 Player lobbeJuanMartinFernandez
-                                 Player albertsWillem
-                                 Player faletauTaulupe
-                                 Player mcCawRichie
-                                 Player guiradoGuilhem
-                                 Player leguizamonJuanManuel
-                                 Player gorgodzeMamuka
-                                 Player leitchMichael
-                                 Player o'MahonyPeter
-                                 Player swinsonTim
-                                 Player furnoJoshua
-                                 Player jenkinsGethin
-                                 Player sioScott
-                                 Player vunipolaMako
-                                 Player messamLiam
-                                 Player burgerSchalk
-                                 Player tipuricJustin
-                                 Player zanniAlessandro
-                                 Player warburtonSam
-                                 Player mummDean
-                                 Player lydiateDan
-                                 Player vunipolaBilly ] }
-
-    let rosie2 = { Participant = rosie
-                   DraftPicks = [ Player parraMorgan
-                                  Player steynMorne
-                                  Player foleyBernard
-                                  Player messamLiam
-                                  Player sladeHenry
-                                  Player kockottRory
-                                  Player krielJesse
-                                  Player vunipolaBilly
-                                  Player imhoffJuan
-                                  Player perenaraTJ
-                                  Player mcCawRichie
-                                  Player whiteNathan
-                                  Player albertsWillem
-                                  Player faletauTaulupe
-                                  Player straussAdriaan
-                                  Player fordRoss
-                                  Player choulyDamien
-                                  Player swinsonTim
-                                  Player kuridraniTevita
-                                  Player nowellJack
-                                  Player guiradoGuilhem
-                                  Player flanquartAlexandre
-                                  Player kearneyDavid
-                                  Player visserTim
-                                  Player hoggStuart ] }
-
-    let susie2 = { Participant = susie
-                   DraftPicks = [ Player fotuali'iKahn
-                                  Player speddingScott
-                                  Player kearneyRob
-                                  Player sladeColin
-                                  Player steynMorne
-                                  Player horneRob
-                                  Player pisiKen
-                                  Player parraMorgan
-                                  Player careDanny
-                                  Player wigglesworthRichard ] }
-
-    let draft2 = [ chad2; chris2; denis2; hugh2; jack2; jem2; martyn2; neph2; rosie2; susie2 ]
+    // ...TEMP
 
     let getDraftPickText draftPick = match draftPick with | CoachTeam team -> sprintf "%s (%s)" team.Name team.Coach
                                                           | Player player -> sprintf "%s (%s)" player.Name player.Team.Name
 
     let isCoachTeamNeeded sweepstaker = match sweepstaker.CoachTeam with | Some _ -> false | None -> true
     let isPlayerTypeNeeded sweepstaker playerType =
-        let picksOfType = sweepstaker.Picks |> List.filter (fun pick -> pick.Player.Type = playerType)
-                                            |> List.length
-        match playerType with | Forward -> picksOfType < requiredForwards
-                              | Back -> picksOfType < requiredBacks
+        let goalkeeperPicks = sweepstaker.Picks |> List.filter (fun pick -> pick.Player.Type = Goalkeeper)
+                                                |> List.length
+        let outfieldPicks = sweepstaker.Picks |> List.filter (fun pick -> pick.Player.Type <> Goalkeeper)
+                                              |> List.length
+        match playerType with | Goalkeeper -> goalkeeperPicks < requiredGoalkeepers
+                              | _ -> outfieldPicks < requiredOutfieldPlayers
 
     let isCoachTeamAvailable sweepstakers team =
         match sweepstakers |> List.choose (fun sweepstaker -> sweepstaker.CoachTeam)
@@ -530,8 +94,8 @@ module DraftContent =
             let reason = match unneeded, draftPick with
                          | true, CoachTeam _ -> "a team/coach has already been picked"
                          | true, Player player -> match player.Type with
-                                                  | Forward -> "8 forwards have already been picked"
-                                                  | Back -> "7 backs have already been picked"
+                                                  | Goalkeeper -> sprintf "The required number (%d) of goalkeepers has already been picked" requiredGoalkeepers
+                                                  | _ -> sprintf "The requied number (%d) of outfield players has already been picked" requiredOutfieldPlayers
                          | false, _ -> sprintf "%s was picked in an earlier draft / round" (getDraftPickText draftPick)
             let reason' = match unneeded with
                           | true -> sprintf "Removed %s for %s: %s" (getDraftPickText draftPick) (extractParticipant participant) reason
@@ -710,24 +274,24 @@ module DraftContent =
         sweepstakers', processHtml
     
     let sweepstakerHtml sweepstaker =
-        let isForward pick = match pick.Player.Type with | Forward -> true | Back -> false
+        let isGoalkeeper pick = match pick.Player.Type with | Goalkeeper -> true | _ -> false
         let pluralize noun count = if count = 1 then noun else sprintf "%ss" noun
         let getCoachTeamText (team: Team option) = match team with | Some team' -> sprintf "Team/coach: %s (%s)" team'.Name team'.Coach
                                                                    | None -> italic "Team/coach still to be picked..."
         let playersHtml =
             let playerHtml player = para (sprintf "%s (%s): %s" player.Name player.Team.Name (getPlayerType player))
-            let forwards = sweepstaker.Picks |> List.filter (fun pick -> isForward pick)
-            let backs = sweepstaker.Picks |> List.filter (fun pick -> not (isForward pick))
-            let forwardsHtml = forwards |> List.map (fun pick -> playerHtml pick.Player)
-            let backsHtml = backs |> List.map (fun pick -> playerHtml pick.Player)
-            let forwardsToPick = requiredForwards - (forwards |> List.length)
-            let backsToPick = requiredBacks - (backs |> List.length)
-            let toPickHtml = match forwardsToPick, backsToPick with
-                             | 0, 0 -> [ para (italic "The required number of backs and forwards have been picked") ]
-                             | _, 0 -> [ para (italic (sprintf "%d %s still to be picked..." forwardsToPick (pluralize "forward" forwardsToPick))) ]
-                             | 0, _ -> [ para (italic (sprintf "%d %s still to be picked..." backsToPick (pluralize "back" backsToPick))) ]
-                             | _ -> [ para (italic (sprintf "%d %s and %d %s still to be picked..." forwardsToPick (pluralize "forward" forwardsToPick) backsToPick (pluralize "back" backsToPick))) ]
-            forwardsHtml @ backsHtml @ toPickHtml
+            let goalkeepers = sweepstaker.Picks |> List.filter (fun pick -> isGoalkeeper pick)
+            let outfieldPlayers = sweepstaker.Picks |> List.filter (fun pick -> not (isGoalkeeper pick))
+            let goalkeepersHtml = goalkeepers |> List.map (fun pick -> playerHtml pick.Player)
+            let outfieldPlayersHtml = outfieldPlayers |> List.map (fun pick -> playerHtml pick.Player)
+            let goalkeepersToPick = requiredGoalkeepers - (goalkeepers |> List.length)
+            let outfieldPlayersToPick = requiredOutfieldPlayers - (outfieldPlayers |> List.length)
+            let toPickHtml = match goalkeepersToPick, outfieldPlayersToPick with
+                             | 0, 0 -> [ para (italic "The required number of players have been picked") ]
+                             | _, 0 -> [ para (italic (sprintf "%d %s still to be picked..." goalkeepersToPick (pluralize "goalkeeper" goalkeepersToPick))) ]
+                             | 0, _ -> [ para (italic (sprintf "%d %s still to be picked..." outfieldPlayersToPick (pluralize "outfield player" outfieldPlayersToPick))) ]
+                             | _ -> [ para (italic (sprintf "%d %s and %d %s still to be picked..." goalkeepersToPick (pluralize "goalkeeper" goalkeepersToPick) outfieldPlayersToPick (pluralize "outfield player" outfieldPlayersToPick))) ]
+            goalkeepersHtml @ outfieldPlayersHtml @ toPickHtml
         [ h3 (sprintf "%s" (getParticipant sweepstaker)) ] @
         [ para (getCoachTeamText sweepstaker.CoachTeam) ] @
         playersHtml
@@ -750,11 +314,7 @@ module DraftContent =
         sweepstakersPostDraftHtml ordinal sweepstakers'
 
     let getDraft1Html () = draftPicksHtml 1 draft1 @
-                           draftProcessHtml 1 (Some 41428672) sweepstakers0 draft1
+                           draftProcessHtml 1 (Some 24689465) sweepstakers0 draft1
                            |> concatenateWithNewLine
-
-    let getDraft2Html () = draftPicksHtml 2 draft2 @
-                           draftProcessHtml 2 (Some 973974) sweepstakers1 draft2
-                           |> concatenateWithNewLine *)
 
                            

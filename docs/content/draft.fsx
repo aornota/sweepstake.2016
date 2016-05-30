@@ -6,8 +6,8 @@ open AOrNotA.Sweepstake2016.Content
 open AOrNotA.Sweepstake2016.DraftContent
 
 let lastUpdated = getLastUpdated ()
-//let draft2Html = getDraft2Html ()
-//let draft1Html = getDraft1Html ()
+// TODO (if needed): let draft2Html = getDraft2Html ()
+let draft1Html = getDraft1Html ()
 
 (**
 Draft details
@@ -17,8 +17,12 @@ Draft details
 (*** include-value: lastUpdated ***)
 
 (**
-## Sunday 29th May
+## Please note that any data on this page is _**temporary test data**_ only...
+
+## Monday 30th May
 
 Coming soon...
 *)
+
+(*** include-value: draft1Html ***)
 

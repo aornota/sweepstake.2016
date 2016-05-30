@@ -14,7 +14,7 @@ Scoring system
 (*** include-value: lastUpdated ***)
 
 (**
-## Sunday 29th May
+## Monday 30th May
 
 **Please note that the following is all subject to confirmation...**
 
@@ -30,7 +30,7 @@ The **team/coach** will score (or lose) points for:
  - a team player receiving a **yellow card**: **-1**
  - a team player receiving a **red card**: **-3**
 
-(If a player receives 2 yellow cards in a match, this will be scored as a red card instead.)
+(If a player receives a second yellow card in a match, this will be scored as a red card instead; however, if a player receives a yellow card followed by a "straight" red card, both will be scored.)
 
 Where multiple possible scores are given above, the score will depend on whether the team and their opponents are in the top 12 seeds:
 
@@ -42,7 +42,7 @@ Note that the top 12 seeds are (in order): Germany; Spain; England; Portugal; Be
 
 (The remaining teams are: Czech Republic; Sweden; Poland; Romania; Slovakia; Hungary; Turkey; Republic of Ireland; Iceland; Wales; Albania; and Northern Ireland.)
 
-**All** players will score (or lose) points for:
+**All players** will score (or lose) points for:
 
  - being named **man-of-the-match**: **10**
  - _**scoring**_ a **goal**: **8**
@@ -50,10 +50,12 @@ Note that the top 12 seeds are (in order): Germany; Spain; England; Portugal; Be
  - _**scoring**_ a **penalty**: **8**
  - _**winning**_ a **penalty**: **2**
  - _**missing**_ a **penalty**: **-4**
+ - _**scoring**_ an **own goal**: **-4**
  - receiving a **yellow card**: **-2**
  - receiving a **red card**: **-6**
 
-(A penalty will be considered as "missed" irrespective of whether the goalkeeper touched the ball.)
+(A penalty will be considered as "missed" irrespective of whether the goalkeeper touched the ball. And again, if a player receives a second yellow card in a match, this will be scored as a red card 
+instead; however, if a player receives a yellow card followed by a "straight" red card, both will be scored.)
 
 In addition, **goalkeepers** will score points for:
 
