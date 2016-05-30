@@ -16,12 +16,10 @@ module Domain =
     type Team = { Name: string; Status: TeamStatus; Seeding: int; Coach: string }
 
     type Stage = | Group of label: char * teams: Team list
-                 | RoundOf16 of ordinal: int
+                 | RoundOf16 of matchNumber: int
                  | QuarterFinal of ordinal: int
                  | SemiFinal of ordinal: int
                  | Final
-
-    let isKnockout stage = match stage with | Group _ -> false | _ -> true
 
     type PlayerType = | Goalkeeper | Defender | Midfielder | Forward
 
@@ -45,43 +43,39 @@ module Domain =
 
     type Match = { Team1Score: TeamMatchScore; Team2Score: TeamMatchScore; Number: int; Stage: Stage; KickOff: DateTime; Events: MatchEvent list }
 
+    let isKnockout ``match`` = match ``match``.Stage with | Group _ -> false | _ -> true
+
     let getTeam teamMatchScore = match teamMatchScore with | TeamMatchScore (team, _, _) -> team
     let getGoals teamMatchScore = match teamMatchScore with | TeamMatchScore (_, goals, _) -> goals
     let getShootoutPenalties teamMatchScore = match teamMatchScore with | TeamMatchScore (_, _, shootoutPenalties) -> shootoutPenalties
 
-    let getTeamForMatchEvent matchEvent = match matchEvent with
-                                          | Goal (player, _, _) -> player.Team
-                                          | OwnGoal (_, player, _) -> player.Team
-                                          | Penalty (player, _, _, _, _) -> player.Team
-                                          | YellowCard (player, _) -> player.Team
-                                          | RedCard (player, _) -> player.Team
-                                          | CleanSheet (goalkeeper, _) -> goalkeeper.Team
-                                          | ManOfTheMatch player -> player.Team
-                                          | ShootoutPenalty (player, _) -> player.Team
+    let getTeamForMatchEvent matchEvent = match matchEvent with | Goal (player, _, _) -> player.Team
+                                                                | OwnGoal (_, player, _) -> player.Team
+                                                                | Penalty (player, _, _, _, _) -> player.Team
+                                                                | YellowCard (player, _) -> player.Team
+                                                                | RedCard (player, _) -> player.Team
+                                                                | CleanSheet (goalkeeper, _) -> goalkeeper.Team
+                                                                | ManOfTheMatch player -> player.Team
+                                                                | ShootoutPenalty (player, _) -> player.Team
 
-    let getOtherTeamForMatchEvent matchEvent = match matchEvent with
-                                               | OwnGoal (goalFor, _, _) -> Some goalFor
-                                               | Penalty (_, _, _, _, Some savedBy) -> Some savedBy.Team
-                                               | _ -> None
+    let getOtherTeamForMatchEvent matchEvent = match matchEvent with | OwnGoal (goalFor, _, _) -> Some goalFor
+                                                                     | Penalty (_, _, _, _, Some savedBy) -> Some savedBy.Team
+                                                                     | _ -> None
 
     let getTeamMatchScoresFromMatchEvents ``match`` =
-        let getGoals team matchEvents =
-            matchEvents
-            |> List.map (fun matchEvent -> match matchEvent with
-                                           | Goal (player, _, _) when player.Team = team -> 1<goal>
-                                           | OwnGoal (goalFor, _, _) when goalFor = team -> 1<goal>
-                                           | Penalty (player, successful, _, _, _) when successful && player.Team = team -> 1<goal>
-                                           | _ -> 0<goal>)
-            |> List.sum
+        let getGoals team matchEvents = matchEvents |> List.map (fun matchEvent -> match matchEvent with
+                                                                                   | Goal (player, _, _) when player.Team = team -> 1<goal>
+                                                                                   | OwnGoal (goalFor, _, _) when goalFor = team -> 1<goal>
+                                                                                   | Penalty (player, successful, _, _, _) when successful && player.Team = team -> 1<goal>
+                                                                                   | _ -> 0<goal>)
+                                                    |> List.sum
         let getShootoutPenalties team matchEvents =
-            let sum = matchEvents
-                      |> List.map (fun matchEvent -> match matchEvent with
-                                                     | ShootoutPenalty (player, successful) when successful && player.Team = team -> 1<shootoutPenalty>
-                                                     | _ -> 0<shootoutPenalty>)
-                      |> List.sum
-            match sum with
-            | 0<shootoutPenalty> -> None
-            | sum' -> Some sum'
+            let sum = matchEvents |> List.map (fun matchEvent -> match matchEvent with
+                                                                 | ShootoutPenalty (player, successful) when successful && player.Team = team -> 1<shootoutPenalty>
+                                                                 | _ -> 0<shootoutPenalty>)
+                                  |> List.sum
+            match sum with | 0<shootoutPenalty> -> None
+                           | sum' -> Some sum'
         let team1, team2 = getTeam ``match``.Team1Score, getTeam ``match``.Team2Score
         let team1MatchScore = TeamMatchScore (team1, getGoals team1 ``match``.Events, getShootoutPenalties team1 ``match``.Events)
         let team2MatchScore = TeamMatchScore (team2, getGoals team2 ``match``.Events, getShootoutPenalties team2 ``match``.Events)

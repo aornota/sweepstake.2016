@@ -17,11 +17,7 @@ Draft details
 (*** include-value: lastUpdated ***)
 
 (**
-## Please note that any data on this page is _**temporary test data**_ only...
-
-## Monday 30th May
-
-Coming soon...
+## This is _**temporary test data**_ only...
 *)
 
 (*** include-value: draft1Html ***)

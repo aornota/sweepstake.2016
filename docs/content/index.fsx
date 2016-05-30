@@ -6,8 +6,8 @@ open AOrNotA.Sweepstake2016.Content
 open AOrNotA.Sweepstake2016.IndexContent
 
 let lastUpdated = getLastUpdated ()
-//let indexStandingsAndLinksHtml = getIndexStandingsAndLinksHtml ()
-//let indexHtml = getIndexHtml ()
+let indexStandingsAndLinksHtml = getIndexStandingsAndLinksHtml ()
+let indexHtml = getIndexHtml ()
 
 (**
 Latest news
@@ -17,8 +17,12 @@ Latest news
 (*** include-value: lastUpdated ***)
 
 (**
-## Please note that any data on this page is _**temporary test data**_ only...
+## This is _**temporary test data**_ only...
+*)
 
+(*** include-value: indexStandingsAndLinksHtml ***)
+
+(**
 ## Monday 30th May
 
 So, eighteen years after the 1996 World Cup, it's time for another major football tournament in France - and therefore time for another sweepstake ;)
@@ -50,4 +54,10 @@ Please note that a player who is unavailable for disciplinary reasons cannot be 
 If anyone wants to check that the drafting algorithm is above board, please feel free to take a look at 
 [all of the code](https://github.com/aornota/sweepstake.2016).
 *)
+
+(**
+## This is _**temporary test data**_ only...
+*)
+
+(*** include-value: indexHtml ***)
 

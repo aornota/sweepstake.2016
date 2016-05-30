@@ -6,8 +6,10 @@ open System
 open AOrNotA.Sweepstake2016.``Data 2016``
 open AOrNotA.Sweepstake2016.Domain
 open AOrNotA.Sweepstake2016.DraftContent
+open AOrNotA.Sweepstake2016.IndexContent
 open AOrNotA.Sweepstake2016.Sweepstake
 open AOrNotA.Sweepstake2016.``Sweepstake 2016``
+open AOrNotA.Sweepstake2016.TeamsContent
 
 module Console =
 

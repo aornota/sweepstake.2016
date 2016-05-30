@@ -69,6 +69,5 @@ Please note that although we intend to score assists as outlined above, this may
 
 As always, points can only be scored for goals / assists / penalties / &c. during normal time and extra time. **Penalty shootouts do not contribute to the scoring** (except to the extent 
 that they determine who wins the match) - well, unless a player manages to get booked or sent-off during the shootout...
-
 *)
 
