@@ -118,6 +118,12 @@
           </td>
           <td class="xmldoc"></td>
         </tr>
+        <tr>
+          <td class="type-name">
+            <a href="aornota-sweepstake2016-domain-shootoutpenalty.html">shootoutPenalty</a>
+          </td>
+          <td class="xmldoc"></td>
+        </tr>
     </tbody>
   </table>
 
@@ -132,29 +138,11 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '240', 240)" onmouseover="showTip(event, '240', 240)">
+          <code onmouseout="hideTip(event, '253', 253)" onmouseover="showTip(event, '253', 253)">
             getGoals teamMatchScore
           </code>
-          <div class="tip" id="240">
+          <div class="tip" id="253">
             <strong>Signature:</strong> teamMatchScore:TeamMatchScore -&gt; int&lt;MeasureProduct&lt;goal,MeasureOne&gt;&gt;<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-            <a href="http://github.com/aornota/Sweepstake.2016/tree/master/src/Sweepstake.2016/Domain.fs#L48-48" class="github-link">
-              <img src="../content/img/github.png" class="normal" />
-              <img src="../content/img/github-blue.png" class="hover" />
-            </a>
-          
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '241', 241)" onmouseover="showTip(event, '241', 241)">
-            getShootoutPenalties teamMatchScore
-          </code>
-          <div class="tip" id="241">
-            <strong>Signature:</strong> teamMatchScore:TeamMatchScore -&gt; int&lt;MeasureProduct&lt;goal,MeasureOne&gt;&gt; option<br />
                       </div>
         </td>
         <td class="xmldoc">
@@ -168,15 +156,15 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '242', 242)" onmouseover="showTip(event, '242', 242)">
-            getTeam teamMatchScore
+          <code onmouseout="hideTip(event, '254', 254)" onmouseover="showTip(event, '254', 254)">
+            getOtherTeamForMatchEvent matchEvent
           </code>
-          <div class="tip" id="242">
-            <strong>Signature:</strong> teamMatchScore:TeamMatchScore -&gt; Team<br />
+          <div class="tip" id="254">
+            <strong>Signature:</strong> matchEvent:MatchEvent -&gt; Team option<br />
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/aornota/Sweepstake.2016/tree/master/src/Sweepstake.2016/Domain.fs#L47-47" class="github-link">
+            <a href="http://github.com/aornota/Sweepstake.2016/tree/master/src/Sweepstake.2016/Domain.fs#L62-62" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -186,15 +174,87 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '243', 243)" onmouseover="showTip(event, '243', 243)">
+          <code onmouseout="hideTip(event, '255', 255)" onmouseover="showTip(event, '255', 255)">
+            getShootoutPenalties teamMatchScore
+          </code>
+          <div class="tip" id="255">
+            <strong>Signature:</strong> teamMatchScore:TeamMatchScore -&gt; int&lt;MeasureProduct&lt;shootoutPenalty,MeasureOne&gt;&gt; option<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/aornota/Sweepstake.2016/tree/master/src/Sweepstake.2016/Domain.fs#L50-50" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '256', 256)" onmouseover="showTip(event, '256', 256)">
+            getTeam teamMatchScore
+          </code>
+          <div class="tip" id="256">
+            <strong>Signature:</strong> teamMatchScore:TeamMatchScore -&gt; Team<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/aornota/Sweepstake.2016/tree/master/src/Sweepstake.2016/Domain.fs#L48-48" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '257', 257)" onmouseover="showTip(event, '257', 257)">
+            getTeamForMatchEvent matchEvent
+          </code>
+          <div class="tip" id="257">
+            <strong>Signature:</strong> matchEvent:MatchEvent -&gt; Team<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/aornota/Sweepstake.2016/tree/master/src/Sweepstake.2016/Domain.fs#L52-52" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '258', 258)" onmouseover="showTip(event, '258', 258)">
+            getTeamMatchScoresFromMatchEvents match
+          </code>
+          <div class="tip" id="258">
+            <strong>Signature:</strong> match:Match -&gt; TeamMatchScore * TeamMatchScore<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/aornota/Sweepstake.2016/tree/master/src/Sweepstake.2016/Domain.fs#L67-67" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '259', 259)" onmouseover="showTip(event, '259', 259)">
             isKnockout stage
           </code>
-          <div class="tip" id="243">
+          <div class="tip" id="259">
             <strong>Signature:</strong> stage:Stage -&gt; bool<br />
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/aornota/Sweepstake.2016/tree/master/src/Sweepstake.2016/Domain.fs#L22-22" class="github-link">
+            <a href="http://github.com/aornota/Sweepstake.2016/tree/master/src/Sweepstake.2016/Domain.fs#L24-24" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>

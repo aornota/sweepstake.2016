@@ -90,10 +90,10 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '245', 245)" onmouseover="showTip(event, '245', 245)">
+          <code onmouseout="hideTip(event, '290', 290)" onmouseover="showTip(event, '290', 290)">
             extractParticipant participant
           </code>
-          <div class="tip" id="245">
+          <div class="tip" id="290">
             <strong>Signature:</strong> participant:Participant -&gt; string<br />
                       </div>
         </td>
@@ -108,15 +108,141 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '246', 246)" onmouseover="showTip(event, '246', 246)">
+          <code onmouseout="hideTip(event, '291', 291)" onmouseover="showTip(event, '291', 291)">
             getParticipant sweepstaker
           </code>
-          <div class="tip" id="246">
+          <div class="tip" id="291">
             <strong>Signature:</strong> sweepstaker:Sweepstaker -&gt; string<br />
                       </div>
         </td>
         <td class="xmldoc">
             <a href="http://github.com/aornota/Sweepstake.2016/tree/master/src/Sweepstake.2016/Sweepstake.fs#L21-21" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '292', 292)" onmouseover="showTip(event, '292', 292)">
+            getPlayerScoreForMatch (...)
+          </code>
+          <div class="tip" id="292">
+            <strong>Signature:</strong> player:Player -&gt; onlyScoresFrom:DateTime option -&gt; match:Match -&gt; int&lt;MeasureProduct&lt;score,MeasureOne&gt;&gt;<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/aornota/Sweepstake.2016/tree/master/src/Sweepstake.2016/Sweepstake.fs#L87-87" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '293', 293)" onmouseover="showTip(event, '293', 293)">
+            getTeamScoreForMatch team match
+          </code>
+          <div class="tip" id="293">
+            <strong>Signature:</strong> team:Team -&gt; match:Match -&gt; int&lt;MeasureProduct&lt;score,MeasureOne&gt;&gt;<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/aornota/Sweepstake.2016/tree/master/src/Sweepstake.2016/Sweepstake.fs#L44-44" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '294', 294)" onmouseover="showTip(event, '294', 294)">
+            getTotalScorePerPlayer players matches
+          </code>
+          <div class="tip" id="294">
+            <strong>Signature:</strong> players:(Player * DateTime option) list -&gt; matches:Match list -&gt; (Player * int&lt;MeasureProduct&lt;score,MeasureOne&gt;&gt;) list<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/aornota/Sweepstake.2016/tree/master/src/Sweepstake.2016/Sweepstake.fs#L124-124" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '295', 295)" onmouseover="showTip(event, '295', 295)">
+            getTotalScorePerTeam teams matches
+          </code>
+          <div class="tip" id="295">
+            <strong>Signature:</strong> teams:Team list -&gt; matches:Match list -&gt; (Team * int&lt;MeasureProduct&lt;score,MeasureOne&gt;&gt;) list<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/aornota/Sweepstake.2016/tree/master/src/Sweepstake.2016/Sweepstake.fs#L118-118" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '296', 296)" onmouseover="showTip(event, '296', 296)">
+            getYellowPlayerScores 
+          </code>
+          <div class="tip" id="296">
+            <strong>Signature:</strong> Match -&gt; (Player * int&lt;MeasureProduct&lt;score,MeasureOne&gt;&gt;) list<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/aornota/Sweepstake.2016/tree/master/src/Sweepstake.2016/Sweepstake.fs#L41-41" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '297', 297)" onmouseover="showTip(event, '297', 297)">
+            getYellowScores usePlayerScore match
+          </code>
+          <div class="tip" id="297">
+            <strong>Signature:</strong> usePlayerScore:bool -&gt; match:Match -&gt; (Player * int&lt;MeasureProduct&lt;score,MeasureOne&gt;&gt;) list<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/aornota/Sweepstake.2016/tree/master/src/Sweepstake.2016/Sweepstake.fs#L23-23" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '298', 298)" onmouseover="showTip(event, '298', 298)">
+            getYellowTeamScores 
+          </code>
+          <div class="tip" id="298">
+            <strong>Signature:</strong> Match -&gt; (Player * int&lt;MeasureProduct&lt;score,MeasureOne&gt;&gt;) list<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/aornota/Sweepstake.2016/tree/master/src/Sweepstake.2016/Sweepstake.fs#L42-42" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>

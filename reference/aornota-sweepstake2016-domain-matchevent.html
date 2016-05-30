@@ -47,10 +47,10 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '273', 273)" onmouseover="showTip(event, '273', 273)">
+          <code onmouseout="hideTip(event, '320', 320)" onmouseover="showTip(event, '320', 320)">
             CleanSheet(goalkeeper,sharedWith)
           </code>
-          <div class="tip" id="273">
+          <div class="tip" id="320">
             <strong>Signature:</strong> Player * Player option<br />
                       </div>
         </td>
@@ -65,15 +65,15 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '274', 274)" onmouseover="showTip(event, '274', 274)">
+          <code onmouseout="hideTip(event, '321', 321)" onmouseover="showTip(event, '321', 321)">
             Goal(player,at,assistedBy)
           </code>
-          <div class="tip" id="274">
+          <div class="tip" id="321">
             <strong>Signature:</strong> Player * int&lt;MeasureProduct&lt;min,MeasureOne&gt;&gt; option * Player option<br />
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/aornota/Sweepstake.2016/tree/master/src/Sweepstake.2016/Domain.fs#L33-33" class="github-link">
+            <a href="http://github.com/aornota/Sweepstake.2016/tree/master/src/Sweepstake.2016/Domain.fs#L35-35" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -83,10 +83,10 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '275', 275)" onmouseover="showTip(event, '275', 275)">
+          <code onmouseout="hideTip(event, '322', 322)" onmouseover="showTip(event, '322', 322)">
             ManOfTheMatch(player)
           </code>
-          <div class="tip" id="275">
+          <div class="tip" id="322">
             <strong>Signature:</strong> Player<br />
                       </div>
         </td>
@@ -101,11 +101,11 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '276', 276)" onmouseover="showTip(event, '276', 276)">
-            MissedPenalty(player,at)
+          <code onmouseout="hideTip(event, '323', 323)" onmouseover="showTip(event, '323', 323)">
+            OwnGoal(goalFor,player,at)
           </code>
-          <div class="tip" id="276">
-            <strong>Signature:</strong> Player * int&lt;MeasureProduct&lt;min,MeasureOne&gt;&gt; option<br />
+          <div class="tip" id="323">
+            <strong>Signature:</strong> Team * Player * int&lt;MeasureProduct&lt;min,MeasureOne&gt;&gt; option<br />
                       </div>
         </td>
         <td class="xmldoc">
@@ -119,15 +119,15 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '277', 277)" onmouseover="showTip(event, '277', 277)">
-            OwnGoal(player,at)
+          <code onmouseout="hideTip(event, '324', 324)" onmouseover="showTip(event, '324', 324)">
+            Penalty(...)
           </code>
-          <div class="tip" id="277">
-            <strong>Signature:</strong> Player * int&lt;MeasureProduct&lt;min,MeasureOne&gt;&gt; option<br />
+          <div class="tip" id="324">
+            <strong>Signature:</strong> Player * bool * int&lt;MeasureProduct&lt;min,MeasureOne&gt;&gt; option * Player option * Player option<br />
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/aornota/Sweepstake.2016/tree/master/src/Sweepstake.2016/Domain.fs#L35-35" class="github-link">
+            <a href="http://github.com/aornota/Sweepstake.2016/tree/master/src/Sweepstake.2016/Domain.fs#L37-37" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -137,28 +137,10 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '278', 278)" onmouseover="showTip(event, '278', 278)">
-            Penalty(player,at,assistedBy)
-          </code>
-          <div class="tip" id="278">
-            <strong>Signature:</strong> Player * int&lt;MeasureProduct&lt;min,MeasureOne&gt;&gt; option * Player option<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-            <a href="http://github.com/aornota/Sweepstake.2016/tree/master/src/Sweepstake.2016/Domain.fs#L34-34" class="github-link">
-              <img src="../content/img/github.png" class="normal" />
-              <img src="../content/img/github-blue.png" class="hover" />
-            </a>
-          
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '279', 279)" onmouseover="showTip(event, '279', 279)">
+          <code onmouseout="hideTip(event, '325', 325)" onmouseover="showTip(event, '325', 325)">
             RedCard(player,at)
           </code>
-          <div class="tip" id="279">
+          <div class="tip" id="325">
             <strong>Signature:</strong> Player * int&lt;MeasureProduct&lt;min,MeasureOne&gt;&gt; option<br />
                       </div>
         </td>
@@ -173,15 +155,15 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '280', 280)" onmouseover="showTip(event, '280', 280)">
-            SavedPenalty(goalkeeper,at)
+          <code onmouseout="hideTip(event, '326', 326)" onmouseover="showTip(event, '326', 326)">
+            ShootoutPenalty(player,successful)
           </code>
-          <div class="tip" id="280">
-            <strong>Signature:</strong> Player * int&lt;MeasureProduct&lt;min,MeasureOne&gt;&gt; option<br />
+          <div class="tip" id="326">
+            <strong>Signature:</strong> Player * bool<br />
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/aornota/Sweepstake.2016/tree/master/src/Sweepstake.2016/Domain.fs#L37-37" class="github-link">
+            <a href="http://github.com/aornota/Sweepstake.2016/tree/master/src/Sweepstake.2016/Domain.fs#L42-42" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -191,10 +173,10 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '281', 281)" onmouseover="showTip(event, '281', 281)">
+          <code onmouseout="hideTip(event, '327', 327)" onmouseover="showTip(event, '327', 327)">
             YellowCard(player,at)
           </code>
-          <div class="tip" id="281">
+          <div class="tip" id="327">
             <strong>Signature:</strong> Player * int&lt;MeasureProduct&lt;min,MeasureOne&gt;&gt; option<br />
                       </div>
         </td>
