@@ -17,25 +17,46 @@ Latest news
 (*** include-value: lastUpdated ***)
 
 (**
-## This is _**temporary test data**_ only...
-*)
+## Tuesday 31st May
 
-(*** include-value: indexStandingsAndLinksHtml ***)
+So, eighteen years after the 1998 World Cup, it's time for another major football tournament in France - and therefore time for another sweepstake ;)
 
-(**
-## Monday 30th May
+Squad lists can be found [here](teams.html). (Please note that the final squads should have been announced by the end of Tuesday 31st May and will be updated here soon afterwards.)
 
-So, eighteen years after the 1996 World Cup, it's time for another major football tournament in France - and therefore time for another sweepstake ;)
+Entry into the sweepstake costs a tenner. The payout structure will be confirmed once the number of entrants is known - and yes, there will hopefully be a "wooden spoon" prize.
 
-Please note that the final squads should be known by the end of Tuesday 31st May.
+### Scoring summary
 
-It is anticipated that two or three drafts will be required, as outlined in this **provisional** schedule:
+Each sweepstake team will consist of a team/coach, 1 goalkeeper and 10 outfield players.
+
+The team/coach will score points for winning or drawing matches - but lose points for yellow and red cards received by its players (irrespective of whether those players are part of the 
+sweepstake team, e.g. if you have picked France as your team, you will lose points for cards received by _any_ French team players during the tournament).
+
+The outfield players and goalkeeper will score points for scoring goals / penalties, assisting goals, winning penalties, keeping a clean sheet, saving penalties and being named man-of-the-match - 
+but lose points for receiving yellow and red cards, missing penalties and scoring own goals.
+
+As always, goals / penalties / assists / &c. only count during normal time and extra time. **Penalty shootouts do not contribute to the scoring.**
+
+Please see the [scoring](scoring.html) page for more details.
+
+### Draft process summary
+
+Sweepstake teams will be picked by a series of drafts.
+
+For each draft, sweepstakers will submit an **ordered** list of their choices (which can be any combination of teams/coaches, goalkeepers and outfield players) by e-mail - and a drafting algorithm 
+will figure out who gets what.
+
+(The algorithm is best explained by example, so please see this [test example](draft.html).)
+
+Depending on the number of entrants (and the extent to which everyone tries to pick the same players &c.), it is anticipated that two or three drafts will be required, as per the following 
+**provisional** schedule:
 
  - First draft picks will need to be submitted by 22:00 BST on Sunday 5th June
  - Second draft picks will need to be submitted by 16:00 BST on Thursday 9th June
  - Third draft picks (if required) will need to be submitted by 19:00 BST on Friday 10th June
 
-**More information to follow...**
+This schedule - and a suggestion of how many choices to submit for each draft - will be confirmed in due course. (For now, assume that for the first draft, you should be aiming to submit a list of 
+25 to 30 choices - or even more if you wish.)
 
 #### A brief note on replacements
 
@@ -58,6 +79,8 @@ If anyone wants to check that the drafting algorithm is above board, please feel
 (**
 ## This is _**temporary test data**_ only...
 *)
+
+(*** include-value: indexStandingsAndLinksHtml ***)
 
 (*** include-value: indexHtml ***)
 

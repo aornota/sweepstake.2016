@@ -76,7 +76,7 @@ module IndexContent =
         let sweepstakerHtml sweepstaker =
             let coachHtml sweepstaker =
                 match sweepstaker.CoachTeam with
-                | Some team -> table (Some 50) (tr ( [ td (bold "Team/coach")
+                | Some team -> table (Some 70) (tr ( [ td (bold "Team/coach")
                                                        td (bold "Seeding")
                                                        td (bold "Score") ] ) @
                                                 tr ( [ td (getTeamWithCoach sweepstaker)

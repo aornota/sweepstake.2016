@@ -21,7 +21,7 @@ Teams and fixtures/results
 *)
 
 (**
-Please note that the final squads should be known by the end of Tuesday 31st May.
+Please note that the final squads should have been announced by the end of Tuesday 31st May and will be updated here soon afterwards.
 *)
 
 (*** include-value: teamsLinksHtml ***)

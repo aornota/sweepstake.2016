@@ -22,21 +22,24 @@ module DraftContent =
                                  CoachTeam france
                                  Player martialAnthony
                                  Player gudjohnsenEidur
-                                 Player halldorssonHannesThor ] }
+                                 Player halldorssonHannesThor
+                                 Player akinfeevIgor ] }
 
     let neph1 = { Participant = neph
                   DraftPicks = [ Player llorisHugo
                                  Player griezmannAntoine
                                  CoachTeam france
                                  Player sigurdssonGylfi
-                                 CoachTeam iceland ] }
+                                 CoachTeam iceland
+                                 Player gyomberNorbert ] }
 
     let rosie1 = { Participant = rosie
                    DraftPicks = [ CoachTeam portugal
                                   Player payetDimitri
                                   Player griezmannAntoine
                                   Player martialAnthony
-                                  Player ronaldoCristiano ] }
+                                  Player ronaldoCristiano
+                                  CoachTeam england ] }
 
     let draft1 = [ jack1; neph1; rosie1 ]
 

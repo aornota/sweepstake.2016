@@ -8,7 +8,7 @@ open AOrNotA.Sweepstake2016.Sweepstake
 
 module ``Sweepstake 2016`` =
 
-    // TODO: Invite Amanda | Vuk | Tom D | Josh | ...
+    // TODO: Invite Amanda | Vuk | Tom D | Josh | Rob | ...
 
     // TEMP...
     let jack = Participant "Jack"
@@ -35,7 +35,8 @@ module ``Sweepstake 2016`` =
                            CoachTeam = Some iceland
                            Picks = [ { Player = llorisHugo (* Goalkeeper *); OnlyScoresFrom = None }
                                      { Player = griezmannAntoine; OnlyScoresFrom = None } 
-                                     { Player = sigurdssonGylfi; OnlyScoresFrom = None } ] }
+                                     { Player = sigurdssonGylfi; OnlyScoresFrom = None } 
+                                     { Player = gyomberNorbert; OnlyScoresFrom = None } ] }
 
     let rosiePicksFinal = { Participant = rosie
                             CoachTeam = Some portugal

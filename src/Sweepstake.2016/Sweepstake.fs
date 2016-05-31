@@ -75,12 +75,12 @@ module Sweepstake =
                               | teamPoints, opponentPoints, true, Some teamShootoutPenalties', Some opponentShootoutPenalities' when teamPoints = opponentPoints && teamShootoutPenalties' = opponentShootoutPenalities' -> failwith (sprintf "Penalty shootout cannot be a draw for knockout match %d" ``match``.Number)
                               | teamPoints, opponentPoints, true, _, _ when teamPoints = opponentPoints -> failwith (sprintf "Missing penalty shootout information for knockout match %d." ``match``.Number)
                               | _ -> Lose
-            match matchResult, teamIsTop12, opponentIsTop12 with | Win, false, true -> 10<score>
-                                                                 | Win, true, false -> 6<score>
-                                                                 | Win, _, _ -> 8<score>
-                                                                 | Draw, false, true -> 5<score>
-                                                                 | Draw, true, false -> 3<score>
-                                                                 | Draw, _, _ -> 4<score>
+            match matchResult, teamIsTop12, opponentIsTop12 with | Win, false, true -> 20<score>
+                                                                 | Win, true, false -> 12<score>
+                                                                 | Win, _, _ -> 16<score>
+                                                                 | Draw, false, true -> 8<score>
+                                                                 | Draw, true, false -> 4<score>
+                                                                 | Draw, _, _ -> 6<score>
                                                                  | _ -> 0<score>
         let team1, team2 = getTeam ``match``.Team1Score, getTeam ``match``.Team2Score
         if team <> team1 && team <> team2 then 0<score>
@@ -90,22 +90,22 @@ module Sweepstake =
     let getPlayerScoreForMatch (player: Player) (onlyScoresFrom: DateTime option) ``match`` =
         let matchEventScore = ``match``.Events |> List.map (fun matchEvent -> match matchEvent with
                                                                               // Note: For Goal, player and assistedBy *cannot* be the same Player.
-                                                                              | Goal (player', _, _) when player' = player -> 8<score>
-                                                                              | Goal (_, _, Some assistedBy) when assistedBy = player -> 2<score>
-                                                                              | OwnGoal (_, player', _) when player' = player -> -4<score>
+                                                                              | Goal (player', _, _) when player' = player -> 12<score>
+                                                                              | Goal (_, _, Some assistedBy) when assistedBy = player -> 3<score>
+                                                                              | OwnGoal (_, player', _) when player' = player -> -6<score>
                                                                               // Note: For Penalty, player and wonBy *can* be the same Player.
-                                                                              | Penalty (player', true, _, Some wonBy, _) when player' = player && wonBy = player -> 10<score> // note: 8 + 2
-                                                                              | Penalty (player', false, _, Some wonBy, _) when player' = player && wonBy = player -> -2<score> // note: -4 + 2
-                                                                              | Penalty (player', true, _, _, _) when player' = player -> 8<score>
-                                                                              | Penalty (player', false, _, _, _) when player' = player -> -4<score>
-                                                                              | Penalty (_, _, _, Some wonBy, _) when wonBy = player -> 2<score>
-                                                                              | Penalty (_, _, _, _, Some savedBy) when savedBy = player -> 8<score>
+                                                                              | Penalty (player', true, _, Some wonBy, _) when player' = player && wonBy = player -> 15<score> // note: 12 + 3
+                                                                              | Penalty (player', false, _, Some wonBy, _) when player' = player && wonBy = player -> -3<score> // note: -6 + 3
+                                                                              | Penalty (player', true, _, _, _) when player' = player -> 12<score>
+                                                                              | Penalty (player', false, _, _, _) when player' = player -> -6<score>
+                                                                              | Penalty (_, _, _, Some wonBy, _) when wonBy = player -> 3<score>
+                                                                              | Penalty (_, _, _, _, Some savedBy) when savedBy = player -> 12<score>
                                                                               // Note: YellowCards handled separately.
                                                                               | RedCard (player', _) when player' = player -> -6<score>
                                                                               // Note: For CleanSheet, goalkeeper and sharedWith *cannot* be the same Player.
-                                                                              | CleanSheet (goalkeeper, Some sharedWith) when goalkeeper = player || sharedWith = player -> 4<score>
-                                                                              | CleanSheet (goalkeeper, _) when goalkeeper = player -> 8<score>
-                                                                              | ManOfTheMatch player' when player' = player -> 10<score>
+                                                                              | CleanSheet (goalkeeper, Some sharedWith) when goalkeeper = player || sharedWith = player -> 6<score>
+                                                                              | CleanSheet (goalkeeper, _) when goalkeeper = player -> 12<score>
+                                                                              | ManOfTheMatch player' when player' = player -> 15<score>
                                                                               | _ -> 0<score>)
                                                |> List.sum
         let yellowScore = getYellowPlayerScores ``match`` |> List.filter (fun (player', _) -> player' = player)
