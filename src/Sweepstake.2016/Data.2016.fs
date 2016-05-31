@@ -215,13 +215,33 @@ module ``Data 2016`` =
                           Players = [ muchaJan; kozacikMatus; novotnaJan; skrtelMartin; duricaJan; pekarikPeter; hubocanTomas; salataKornel; sventoDusan; gyomberNorbert; skriniarMilan; hamsikMarek
                                       sestakStanislav; stochMiroslav; weissVladimir; kuckaJuraj; pecovskyViktor; makRobert; dudaOndrej; hrosovskyPatrik; gregusJan; durisMichal; nemecAdam ] }
 
-    (* let a = { Name = ""; Team = b; Type = Goalkeeper; Status = OriginalSquad }
-    let a = { Name = ""; Team = b; Type = Defender; Status = OriginalSquad }
-    let a = { Name = ""; Team = b; Type = Midfielder; Status = OriginalSquad }
-    let a = { Name = ""; Team = b; Type = Forward; Status = OriginalSquad } *)
+    let hennesseyWayne = { Name = "Wayne Hennessey"; Team = wales; Type = Goalkeeper; Status = OriginalSquad }
+    let williamsOwainFon = { Name = "Owain Fôn Williams"; Team = wales; Type = Goalkeeper; Status = OriginalSquad }
+    let wardDanny = { Name = "Danny Ward"; Team = wales; Type = Goalkeeper; Status = OriginalSquad }
+    let gunterChris = { Name = "Chris Gunter"; Team = wales; Type = Defender; Status = OriginalSquad }
+    let williamsAshley = { Name = "Ashley Williams"; Team = wales; Type = Defender; Status = OriginalSquad }
+    let collinsJames = { Name = "James Collins"; Team = wales; Type = Defender; Status = OriginalSquad }
+    let taylorNeil = { Name = "Neil Taylor"; Team = wales; Type = Defender; Status = OriginalSquad }
+    let daviesBen = { Name = "Ben Davies"; Team = wales; Type = Defender; Status = OriginalSquad }
+    let chesterJames = { Name = "James Chester"; Team = wales; Type = Defender; Status = OriginalSquad }
+    let richardsJazz = { Name = "Jazz Richards"; Team = wales; Type = Defender; Status = OriginalSquad }
+    let ledleyJoe = { Name = "Joe Ledley"; Team = wales; Type = Midfielder; Status = OriginalSquad }
+    let vaughanDavid = { Name = "David Vaughan"; Team = wales; Type = Midfielder; Status = OriginalSquad }
+    let ramseyAaron = { Name = "Aaron Ramsey"; Team = wales; Type = Midfielder; Status = OriginalSquad }
+    let kingAndy = { Name = "Andy King"; Team = wales; Type = Midfielder; Status = OriginalSquad }
+    let edwardsDavid = { Name = "David Edwards"; Team = wales; Type = Midfielder; Status = OriginalSquad }
+    let allenJoe = { Name = "Joe Allen"; Team = wales; Type = Midfielder; Status = OriginalSquad }
+    let cotterillDavid = { Name = "David Cotterill"; Team = wales; Type = Midfielder; Status = OriginalSquad }
+    let williamsJonathan = { Name = "Jonathan Williams"; Team = wales; Type = Midfielder; Status = OriginalSquad }
+    let baleGareth = { Name = "Gareth Bale"; Team = wales; Type = Forward; Status = OriginalSquad }
+    let vokesSam = { Name = "Sam Vokes"; Team = wales; Type = Forward; Status = OriginalSquad }
+    let churchSimon = { Name = "Simon Church"; Team = wales; Type = Forward; Status = OriginalSquad }
+    let robsonKanuHal = { Name = "Hal Robson-Kanu"; Team = wales; Type = Forward; Status = OriginalSquad }
+    let williamsGeorge = { Name = "George Williams"; Team = wales; Type = Forward; Status = OriginalSquad }
 
     let walesSquad = { Team = wales
-                       Players = [ (* TODO *) ] }
+                       Players = [ hennesseyWayne; williamsOwainFon; wardDanny; gunterChris; williamsAshley; collinsJames; taylorNeil; daviesBen; chesterJames; richardsJazz; ledleyJoe; vaughanDavid
+                                   ramseyAaron; kingAndy; edwardsDavid; allenJoe; cotterillDavid; williamsJonathan; baleGareth; vokesSam; churchSimon; robsonKanuHal; williamsGeorge ] }
 
     // Group C.
 
@@ -254,13 +274,34 @@ module ``Data 2016`` =
                                      schweinsteigerBastian; ozilMesut; kroosToni; khediraSami; gotzeMario; schurrleAndre; draxlerJulian; saneLeroy; weiglJulian; kimmichJoshua; podolskiLukas
                                      mullerThomas; gomezMario ] }
 
-    (* let a = { Name = ""; Team = b; Type = Goalkeeper; Status = OriginalSquad }
-    let a = { Name = ""; Team = b; Type = Defender; Status = OriginalSquad }
-    let a = { Name = ""; Team = b; Type = Midfielder; Status = OriginalSquad }
-    let a = { Name = ""; Team = b; Type = Forward; Status = OriginalSquad } *)
+    let pyatovAndriy = { Name = "Andriy Pyatov"; Team = ukraine; Type = Goalkeeper; Status = OriginalSquad }
+    let boykoDenys = { Name = "Denys Boyko"; Team = ukraine; Type = Goalkeeper; Status = OriginalSquad }
+    let shevchenkoMykyta = { Name = "Mykyta Shevchenko"; Team = ukraine; Type = Goalkeeper; Status = OriginalSquad }
+    let shevchukVyacheslav = { Name = "Vyacheslav Shevchuk"; Team = ukraine; Type = Defender; Status = OriginalSquad }
+    let kucherOleksandr = { Name = "Oleksandr Kucher"; Team = ukraine; Type = Defender; Status = OriginalSquad }
+    let fedetskyiArtem = { Name = "Artem Fedetskyi"; Team = ukraine; Type = Defender; Status = OriginalSquad }
+    let khacheridiYevhen = { Name = "Yevhen Khacheridi"; Team = ukraine; Type = Defender; Status = OriginalSquad }
+    let rakitskiyYaroslav = { Name = "Yaroslav Rakitskiy"; Team = ukraine; Type = Defender; Status = OriginalSquad }
+    let butkoBohdan = { Name = "Bohdan Butko"; Team = ukraine; Type = Defender; Status = OriginalSquad }
+    let tymoshchukAnatoliy = { Name = "Anatoliy Tymoshchuk "; Team = ukraine; Type = Midfielder; Status = OriginalSquad }
+    let rotanRuslan = { Name = "Ruslan Rotan"; Team = ukraine; Type = Midfielder; Status = OriginalSquad }
+    let yarmolenkoAndriy = { Name = "Andriy Yarmolenko"; Team = ukraine; Type = Midfielder; Status = OriginalSquad }
+    let konoplyankaYevhen = { Name = "Yevhen Konoplyanka"; Team = ukraine; Type = Midfielder; Status = OriginalSquad }
+    let stepanenkoTaras = { Name = "Taras Stepanenko"; Team = ukraine; Type = Midfielder; Status = OriginalSquad }
+    let harmashDenys = { Name = "Denys Harmash"; Team = ukraine; Type = Midfielder; Status = OriginalSquad }
+    let sydorchukSerhiy = { Name = "Serhiy Sydorchuk"; Team = ukraine; Type = Midfielder; Status = OriginalSquad }
+    let rybalkaSerhiy = { Name = "Serhiy Rybalka"; Team = ukraine; Type = Midfielder; Status = OriginalSquad }
+    let zinchenkoOleksandr = { Name = "Oleksandr Zinchenko"; Team = ukraine; Type = Midfielder; Status = OriginalSquad }
+    let karavayevOleksandr = { Name = "Oleksandr Karavayev"; Team = ukraine; Type = Midfielder; Status = OriginalSquad }
+    let kovalenkoViktor = { Name = "Viktor Kovalenko"; Team = ukraine; Type = Midfielder; Status = OriginalSquad }
+    let seleznyovYevhen = { Name = "Yevhen Seleznyov"; Team = ukraine; Type = Forward; Status = OriginalSquad }
+    let zozulyaRoman = { Name = "Roman Zozulya"; Team = ukraine; Type = Forward; Status = OriginalSquad }
+    let budkivskyiPylyp = { Name = "Pylyp Budkivskyi"; Team = ukraine; Type = Forward; Status = OriginalSquad }
 
     let ukraineSquad = { Team = ukraine
-                         Players = [ (* TODO *) ] }
+                         Players = [ pyatovAndriy; boykoDenys; shevchenkoMykyta; shevchukVyacheslav; kucherOleksandr; fedetskyiArtem; khacheridiYevhen; rakitskiyYaroslav; butkoBohdan
+                                     tymoshchukAnatoliy; rotanRuslan; yarmolenkoAndriy; konoplyankaYevhen; stepanenkoTaras; harmashDenys; sydorchukSerhiy; rybalkaSerhiy; zinchenkoOleksandr
+                                     karavayevOleksandr; kovalenkoViktor; seleznyovYevhen; zozulyaRoman; budkivskyiPylyp ] }
 
     let szczesnyWojciech = { Name = "Wojciech Szczęsny"; Team = poland; Type = Goalkeeper; Status = OriginalSquad }
     let borucArtur = { Name = "Artur Boruc"; Team = poland; Type = Goalkeeper; Status = OriginalSquad }
@@ -346,13 +387,33 @@ module ``Data 2016`` =
     let czechRepublicSquad = { Team = czechRepublic
                                Players = [ (* TODO *) ] }
 
-    (* let a = { Name = ""; Team = b; Type = Goalkeeper; Status = OriginalSquad }
-    let a = { Name = ""; Team = b; Type = Defender; Status = OriginalSquad }
-    let a = { Name = ""; Team = b; Type = Midfielder; Status = OriginalSquad }
-    let a = { Name = ""; Team = b; Type = Forward; Status = OriginalSquad } *)
+    let babacanVolkan = { Name = "Volkan Babacan"; Team = turkey; Type = Goalkeeper; Status = OriginalSquad }
+    let kivrakOnurRecep = { Name = "Onur Recep Kıvrak"; Team = turkey; Type = Goalkeeper; Status = OriginalSquad }
+    let tekinHarun = { Name = "Harun Tekin"; Team = turkey; Type = Goalkeeper; Status = OriginalSquad }
+    let topalMehmet = { Name = "Mehmet Topal"; Team = turkey; Type = Defender; Status = OriginalSquad }
+    let gonulGokhan = { Name = "Gökhan Gönül"; Team = turkey; Type = Defender; Status = OriginalSquad }
+    let erkinCaner = { Name = "Caner Erkin"; Team = turkey; Type = Defender; Status = OriginalSquad }
+    let baltaHakanKadir = { Name = "Hakan Kadir Balta"; Team = turkey; Type = Defender; Status = OriginalSquad }
+    let kayaSemih = { Name = "Semih Kaya"; Team = turkey; Type = Defender; Status = OriginalSquad }
+    let koybasiIsmail = { Name = "İsmail Köybaşı"; Team = turkey; Type = Defender; Status = OriginalSquad }
+    let ozbayrakliSener = { Name = "Şener Özbayraklı"; Team = turkey; Type = Defender; Status = OriginalSquad }
+    let calikAhmetYilmaz = { Name = "Ahmet Yılmaz Çalık"; Team = turkey; Type = Defender; Status = OriginalSquad }
+    let turanArda = { Name = "Arda Turan "; Team = turkey; Type = Midfielder; Status = OriginalSquad }
+    let inanSelcuk = { Name = "Selçuk İnan"; Team = turkey; Type = Midfielder; Status = OriginalSquad }
+    let sahinNuri = { Name = "Nuri Şahin"; Team = turkey; Type = Midfielder; Status = OriginalSquad }
+    let sahanOlcay = { Name = "Olcay Şahan"; Team = turkey; Type = Midfielder; Status = OriginalSquad }
+    let tufanOzan = { Name = "Ozan Tufan"; Team = turkey; Type = Midfielder; Status = OriginalSquad }
+    let calhanogluHakan = { Name = "Hakan Çalhanoğlu"; Team = turkey; Type = Midfielder; Status = OriginalSquad }
+    let ozyakupOguzhan = { Name = "Oğuzhan Özyakup"; Team = turkey; Type = Midfielder; Status = OriginalSquad }
+    let senVolkan = { Name = "Volkan Şen"; Team = turkey; Type = Midfielder; Status = OriginalSquad }
+    let morEmre = { Name = "Emre Mor"; Team = turkey; Type = Midfielder; Status = OriginalSquad }
+    let yilmazBurak = { Name = "Burak Yılmaz"; Team = turkey; Type = Forward; Status = OriginalSquad }
+    let tosunCenk = { Name = "Cenk Tosun"; Team = turkey; Type = Forward; Status = OriginalSquad }
+    let malliYunus = { Name = "Yunus Mallı"; Team = turkey; Type = Forward; Status = OriginalSquad }
 
     let turkeySquad = { Team = turkey
-                        Players = [ (* TODO *) ] }
+                        Players = [ babacanVolkan; kivrakOnurRecep; tekinHarun; topalMehmet; gonulGokhan; erkinCaner; baltaHakanKadir; kayaSemih; koybasiIsmail; ozbayrakliSener; calikAhmetYilmaz
+                                    turanArda; inanSelcuk; sahinNuri; sahanOlcay; tufanOzan; calhanogluHakan; ozyakupOguzhan; senVolkan; morEmre; yilmazBurak; tosunCenk; malliYunus ] }
 
     // Group E.
 
@@ -468,13 +529,33 @@ module ``Data 2016`` =
     let austriaSquad = { Team = austria
                          Players = [ (* TODO *) ] }
 
-    (* let a = { Name = ""; Team = b; Type = Goalkeeper; Status = OriginalSquad }
-    let a = { Name = ""; Team = b; Type = Defender; Status = OriginalSquad }
-    let a = { Name = ""; Team = b; Type = Midfielder; Status = OriginalSquad }
-    let a = { Name = ""; Team = b; Type = Forward; Status = OriginalSquad } *)
+    let kiralyGabor = { Name = "Gábor Király"; Team = hungary; Type = Goalkeeper; Status = OriginalSquad }
+    let dibuszDenes = { Name = "Dénes Dibusz"; Team = hungary; Type = Goalkeeper; Status = OriginalSquad }
+    let gulacsiPeter = { Name = "Péter Gulácsi"; Team = hungary; Type = Goalkeeper; Status = OriginalSquad }
+    let beseBarnabas = { Name = "Barnabás Bese"; Team = hungary; Type = Defender; Status = OriginalSquad }
+    let fiolaAttila = { Name = "Attila Fiola"; Team = hungary; Type = Defender; Status = OriginalSquad }
+    let guzmicsRichard = { Name = "Richárd Guzmics"; Team = hungary; Type = Defender; Status = OriginalSquad }
+    let juhaszRoland = { Name = "Roland Juhász"; Team = hungary; Type = Defender; Status = OriginalSquad }
+    let kadarTamas = { Name = "Tamás Kádár"; Team = hungary; Type = Defender; Status = OriginalSquad }
+    let korhutMihaly = { Name = "Mihály Korhut"; Team = hungary; Type = Defender; Status = OriginalSquad }
+    let langAdam = { Name = "Ádám Lang"; Team = hungary; Type = Defender; Status = OriginalSquad }
+    let elekAkos = { Name = "Ákos Elek"; Team = hungary; Type = Midfielder; Status = OriginalSquad }
+    let geraZoltan = { Name = "Zoltán Gera"; Team = hungary; Type = Midfielder; Status = OriginalSquad }
+    let kleinheislerLaszlo = { Name = "László Kleinheisler"; Team = hungary; Type = Midfielder; Status = OriginalSquad }
+    let lovrencsicsGergo = { Name = "Gergő Lovrencsics"; Team = hungary; Type = Midfielder; Status = OriginalSquad }
+    let nagyAdam = { Name = "Ádám Nagy"; Team = hungary; Type = Midfielder; Status = OriginalSquad }
+    let pinterAdam = { Name = "Ádám Pintér"; Team = hungary; Type = Midfielder; Status = OriginalSquad }
+    let stieberZoltan = { Name = "Zoltán Stieber"; Team = hungary; Type = Midfielder; Status = OriginalSquad }
+    let bodeDaniel = { Name = "Dániel Böde"; Team = hungary; Type = Forward; Status = OriginalSquad }
+    let dzsudzsakBalazs = { Name = "Balázs Dzsudzsák"; Team = hungary; Type = Forward; Status = OriginalSquad }
+    let nemethKrisztian = { Name = "Krisztián Németh"; Team = hungary; Type = Forward; Status = OriginalSquad }
+    let nikolicNemanja = { Name = "Nemanja Nikolić"; Team = hungary; Type = Forward; Status = OriginalSquad }
+    let priskinTamas = { Name = "Tamás Priskin"; Team = hungary; Type = Forward; Status = OriginalSquad }
+    let szalaiAdam = { Name = "Ádám Szalai"; Team = hungary; Type = Forward; Status = OriginalSquad }
 
     let hungarySquad = { Team = hungary
-                         Players = [ (* TODO *) ] }
+                         Players = [ kiralyGabor; dibuszDenes; gulacsiPeter; beseBarnabas; fiolaAttila; guzmicsRichard; juhaszRoland; kadarTamas; korhutMihaly; langAdam; elekAkos; geraZoltan
+                                     kleinheislerLaszlo; lovrencsicsGergo; nagyAdam; pinterAdam; stieberZoltan; bodeDaniel; dzsudzsakBalazs; nemethKrisztian; nikolicNemanja; priskinTamas; szalaiAdam ] }
 
     let halldorssonHannesThor = { Name = "Hannes Þór Halldórsson"; Team = iceland; Type = Goalkeeper; Status = OriginalSquad }
     let kristinssonOgmundur = { Name = "Ögmundur Kristinsson"; Team = iceland; Type = Goalkeeper; Status = OriginalSquad }
