@@ -16,14 +16,6 @@ Teams and fixtures/results
 
 (*** include-value: lastUpdated ***)
 
-(**
-## This is _**temporary test data**_ only...
-*)
-
-(**
-Please note that the final squads should have been announced by the end of Tuesday 31st May and will be updated here soon afterwards.
-*)
-
 (*** include-value: teamsLinksHtml ***)
 
 (*** include-value: teamsHtml ***)

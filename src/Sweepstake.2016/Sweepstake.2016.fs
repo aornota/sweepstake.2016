@@ -26,23 +26,23 @@ module ``Sweepstake 2016`` =
 
     // Final teams...
     let jackPicksFinal = { Participant = jack
-                           CoachTeam = Some france
-                           Picks = [ { Player = halldorssonHannesThor (* Goalkeeper *); OnlyScoresFrom = None }
+                           CoachTeam = None
+                           Picks = [ (* { Player = halldorssonHannesThor (* Goalkeeper *); OnlyScoresFrom = None }
                                      { Player = giroudOlivier; OnlyScoresFrom = None }
-                                     { Player = gudjohnsenEidur; OnlyScoresFrom = None } ] }
+                                     { Player = gudjohnsenEidur; OnlyScoresFrom = None } *) ] }
 
     let nephPicksFinal = { Participant = neph
-                           CoachTeam = Some iceland
-                           Picks = [ { Player = llorisHugo (* Goalkeeper *); OnlyScoresFrom = None }
+                           CoachTeam = None
+                           Picks = [ (* { Player = llorisHugo (* Goalkeeper *); OnlyScoresFrom = None }
                                      { Player = griezmannAntoine; OnlyScoresFrom = None } 
                                      { Player = sigurdssonGylfi; OnlyScoresFrom = None } 
-                                     { Player = gyomberNorbert; OnlyScoresFrom = None } ] }
+                                     { Player = gyomberNorbert; OnlyScoresFrom = None } *) ] }
 
     let rosiePicksFinal = { Participant = rosie
-                            CoachTeam = Some portugal
-                            Picks = [ { Player = payetDimitri; OnlyScoresFrom = None }
+                            CoachTeam = None
+                            Picks = [ (* { Player = payetDimitri; OnlyScoresFrom = None }
                                       { Player = martialAnthony; OnlyScoresFrom = None }
-                                      { Player = ronaldoCristiano; OnlyScoresFrom = None } ] }
+                                      { Player = ronaldoCristiano; OnlyScoresFrom = None } *) ] }
 
     let sweepstakersFinal = [ jackPicksFinal; nephPicksFinal; rosiePicksFinal ]
     // ...TEMP

@@ -17,11 +17,13 @@ Latest news
 (*** include-value: lastUpdated ***)
 
 (**
+## Wednesday 1st June
+
+Complete squad lists now available [here](teams.html).
+
 ## Tuesday 31st May
 
 So, eighteen years after the 1998 World Cup, it's time for another major football tournament in France - and therefore time for another sweepstake ;)
-
-Squad lists can be found [here](teams.html). (Please note that the final squads should have been announced by the end of Tuesday 31st May and will be updated here soon afterwards.)
 
 Entry into the sweepstake costs a tenner. The payout structure will be confirmed once the number of entrants is known - and yes, there will hopefully be a "wooden spoon" prize.
 

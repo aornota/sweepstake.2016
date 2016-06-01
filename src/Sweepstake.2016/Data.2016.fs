@@ -141,13 +141,33 @@ module ``Data 2016`` =
                                      filipSteliano; torjeGabriel; pintiliiMihai; chipciuAlexandru; hobanOvidiu; sanmarteanLucian; popaAdrian; prepelitaAndrei; stanciuNicolae; stancuBogdan
                                      keseruClaudiu; andoneFlorin; alibecDenis ] }
 
-    (* let a = { Name = ""; Team = b; Type = Goalkeeper; Status = OriginalSquad }
-    let a = { Name = ""; Team = b; Type = Defender; Status = OriginalSquad }
-    let a = { Name = ""; Team = b; Type = Midfielder; Status = OriginalSquad }
-    let a = { Name = ""; Team = b; Type = Forward; Status = OriginalSquad } *)
+    let berishaEtrit = { Name = "Etrit Berisha"; Team = albania; Type = Goalkeeper; Status = OriginalSquad }
+    let shehiOrges = { Name = "Orges Shehi"; Team = albania; Type = Goalkeeper; Status = OriginalSquad }
+    let hoxhaAlban = { Name = "Alban Hoxha"; Team = albania; Type = Goalkeeper; Status = OriginalSquad }
+    let lilaAndi = { Name = "Andi Lila"; Team = albania; Type = Defender; Status = OriginalSquad }
+    let hysajElseid = { Name = "Elseid Hysaj"; Team = albania; Type = Defender; Status = OriginalSquad }
+    let canaLorik = { Name = "Lorik Cana"; Team = albania; Type = Defender; Status = OriginalSquad }
+    let veseliFrederik = { Name = "Frederik Veseli"; Team = albania; Type = Defender; Status = OriginalSquad }
+    let agolliAnsi = { Name = "Ansi Agolli"; Team = albania; Type = Defender; Status = OriginalSquad }
+    let mavrajMergim = { Name = "Mërgim Mavraj"; Team = albania; Type = Defender; Status = OriginalSquad }
+    let alijiNaser = { Name = "Naser Aliji"; Team = albania; Type = Defender; Status = OriginalSquad }
+    let ajetiArlind = { Name = "Arlind Ajeti"; Team = albania; Type = Defender; Status = OriginalSquad }
+    let lenjaniErmir = { Name = "Ermir Lenjani"; Team = albania; Type = Midfielder; Status = OriginalSquad }
+    let bashaMigjen = { Name = "Migjen Basha"; Team = albania; Type = Midfielder; Status = OriginalSquad }
+    let memushajLedian = { Name = "Ledian Memushaj"; Team = albania; Type = Midfielder; Status = OriginalSquad }
+    let gashiShkelzen = { Name = "Shkëlzen Gashi"; Team = albania; Type = Midfielder; Status = OriginalSquad }
+    let kukeliBurim = { Name = "Burim Kukeli"; Team = albania; Type = Midfielder; Status = OriginalSquad }
+    let xhakaTaulant = { Name = "Taulant Xhaka"; Team = albania; Type = Midfielder; Status = OriginalSquad }
+    let kaceErgys = { Name = "Ergys Kaçe"; Team = albania; Type = Midfielder; Status = OriginalSquad }
+    let roshiOdise = { Name = "Odise Roshi"; Team = albania; Type = Midfielder; Status = OriginalSquad }
+    let abrashiAmir = { Name = "Amir Abrashi"; Team = albania; Type = Midfielder; Status = OriginalSquad }
+    let sadikuArmando = { Name = "Armando Sadiku"; Team = albania; Type = Forward; Status = OriginalSquad }
+    let cikalleshiSokol = { Name = "Sokol Cikalleshi"; Team = albania; Type = Forward; Status = OriginalSquad }
+    let balajBekim = { Name = "Bekim Balaj"; Team = albania; Type = Forward; Status = OriginalSquad }
 
     let albaniaSquad = { Team = albania
-                         Players = [ (* TODO *) ] }
+                         Players = [ berishaEtrit; shehiOrges; hoxhaAlban; lilaAndi; hysajElseid; canaLorik; veseliFrederik; agolliAnsi; mavrajMergim; alijiNaser; ajetiArlind; lenjaniErmir
+                                     bashaMigjen; memushajLedian; gashiShkelzen; kukeliBurim; xhakaTaulant; kaceErgys; roshiOdise; abrashiAmir; sadikuArmando; cikalleshiSokol; balajBekim ] }
 
     // Group B.
 
@@ -586,13 +606,34 @@ module ``Data 2016`` =
                                     kallstromKim; larssonSebastian; wernbloomPontus; durmazJimmy; ekdalAlbin; zenginErkan; forsbergEmil; hiljemarkOscar; lewickiOscar; ibrahimovicZlatan; bergMarcus
                                     guidettiJohn; kujovicEmir ] }
 
-    (* let a = { Name = ""; Team = b; Type = Goalkeeper; Status = OriginalSquad }
-    let a = { Name = ""; Team = b; Type = Defender; Status = OriginalSquad }
-    let a = { Name = ""; Team = b; Type = Midfielder; Status = OriginalSquad }
-    let a = { Name = ""; Team = b; Type = Forward; Status = OriginalSquad } *)
+    let westwoodKieren = { Name = "Keiren Westwood"; Team = republicOfIreland; Type = Goalkeeper; Status = OriginalSquad }
+    let givenShay = { Name = "Shay Given"; Team = republicOfIreland; Type = Goalkeeper; Status = OriginalSquad }
+    let randolphDarren = { Name = "Darren Randolph"; Team = republicOfIreland; Type = Goalkeeper; Status = OriginalSquad }
+    let colemanSeamus = { Name = "Séamus Coleman"; Team = republicOfIreland; Type = Defender; Status = OriginalSquad }
+    let clarkCiaran = { Name = "Ciaran Clark"; Team = republicOfIreland; Type = Defender; Status = OriginalSquad }
+    let oSheaJohn = { Name = "John O'Shea"; Team = republicOfIreland; Type = Defender; Status = OriginalSquad }
+    let keoghRichard = { Name = "Richard Keogh"; Team = republicOfIreland; Type = Defender; Status = OriginalSquad }
+    let duffyShane = { Name = "Shane Duffy"; Team = republicOfIreland; Type = Defender; Status = OriginalSquad }
+    let christieCyrus = { Name = "Cyrus Christie"; Team = republicOfIreland; Type = Defender; Status = OriginalSquad }
+    let wardStephen = { Name = "Stephen Ward"; Team = republicOfIreland; Type = Defender; Status = OriginalSquad }
+    let whelanGlenn = { Name = "Glenn Whelan"; Team = republicOfIreland; Type = Midfielder; Status = OriginalSquad }
+    let mcGeadyAiden = { Name = "Aiden McGeady"; Team = republicOfIreland; Type = Midfielder; Status = OriginalSquad }
+    let mcCarthyJames = { Name = "James McCarthy"; Team = republicOfIreland; Type = Midfielder; Status = OriginalSquad }
+    let mcCleanJames = { Name = "James McClean"; Team = republicOfIreland; Type = Midfielder; Status = OriginalSquad }
+    let hendrickJeff = { Name = "Jeff Hendrick"; Team = republicOfIreland; Type = Midfielder; Status = OriginalSquad }
+    let meylerDavid = { Name = "David Meyler"; Team = republicOfIreland; Type = Midfielder; Status = OriginalSquad }
+    let bradyRobbie = { Name = "Robbie Brady"; Team = republicOfIreland; Type = Midfielder; Status = OriginalSquad }
+    let hoolahanWes = { Name = "Wes Hoolahan"; Team = republicOfIreland; Type = Midfielder; Status = OriginalSquad }
+    let quinnStephen = { Name = "Stephen Quinn"; Team = republicOfIreland; Type = Midfielder; Status = OriginalSquad }
+    let longShane = { Name = "Shane Long"; Team = republicOfIreland; Type = Forward; Status = OriginalSquad }
+    let keaneRobbie = { Name = "Robbie Keane"; Team = republicOfIreland; Type = Forward; Status = OriginalSquad }
+    let waltersJonathan = { Name = "Jonathan Walters"; Team = republicOfIreland; Type = Forward; Status = OriginalSquad }
+    let murphyDaryl = { Name = "Daryl Murphy"; Team = republicOfIreland; Type = Forward; Status = OriginalSquad }
 
     let republicOfIrelandSquad = { Team = republicOfIreland
-                                   Players = [ (* TODO *) ] }
+                                   Players = [ westwoodKieren; givenShay; randolphDarren; colemanSeamus; clarkCiaran; oSheaJohn; keoghRichard; duffyShane; christieCyrus; wardStephen; whelanGlenn
+                                               mcGeadyAiden; mcCarthyJames; mcCleanJames; hendrickJeff; meylerDavid; bradyRobbie; hoolahanWes; quinnStephen; longShane; keaneRobbie; waltersJonathan
+                                               murphyDaryl ] }
 
     // Group F.
 
@@ -624,13 +665,34 @@ module ``Data 2016`` =
                           Players = [ patricioRui; eduardo; lopesAnthony; alvesBruno; carvalhoRicardo; pepe; vieirinha; eliseu; fonteJose; cedric; guerreiroRaphael; moutinhoJoao; carvalhoWilliam;
                                       pereiraDanilo; marioJoao; silvaAdrien; gomesAndre; sanchesRenato; ronaldoCristiano; nani; quaresmaRicardo; eder_Portugal; silvaRafa ] }
 
-    (* let a = { Name = ""; Team = b; Type = Goalkeeper; Status = OriginalSquad }
-    let a = { Name = ""; Team = b; Type = Defender; Status = OriginalSquad }
-    let a = { Name = ""; Team = b; Type = Midfielder; Status = OriginalSquad }
-    let a = { Name = ""; Team = b; Type = Forward; Status = OriginalSquad } *)
+    let almerRobert = { Name = "Robert Almer"; Team = austria; Type = Goalkeeper; Status = OriginalSquad }
+    let lindnerHeinz = { Name = "Heinz Lindner"; Team = austria; Type = Goalkeeper; Status = OriginalSquad }
+    let ozcanRamazan = { Name = "Ramazan Özcan"; Team = austria; Type = Goalkeeper; Status = OriginalSquad }
+    let fuchsChristian = { Name = "Christian Fuchs"; Team = austria; Type = Defender; Status = OriginalSquad }
+    let prodlSebastian = { Name = "Sebastian Prödl"; Team = austria; Type = Defender; Status = OriginalSquad }
+    let dragovicAleksandar = { Name = "Aleksandar Dragović"; Team = austria; Type = Defender; Status = OriginalSquad }
+    let garicsGyorgy = { Name = "György Garics"; Team = austria; Type = Defender; Status = OriginalSquad }
+    let kleinFlorian = { Name = "Florian Klein"; Team = austria; Type = Defender; Status = OriginalSquad }
+    let suttnerMarkus = { Name = "Markus Suttner"; Team = austria; Type = Defender; Status = OriginalSquad }
+    let hintereggerMartin = { Name = "Martin Hinteregger"; Team = austria; Type = Defender; Status = OriginalSquad }
+    let wimmerKevin = { Name = "Kevin Wimmer"; Team = austria; Type = Defender; Status = OriginalSquad }
+    let harnikMartin = { Name = "Martin Harnik"; Team = austria; Type = Midfielder; Status = OriginalSquad }
+    let arnautovicMarko = { Name = "Marko Arnautović"; Team = austria; Type = Midfielder; Status = OriginalSquad }
+    let junuzovicZlatko = { Name = "Zlatko Junuzović"; Team = austria; Type = Midfielder; Status = OriginalSquad }
+    let alabaDavid = { Name = "David Alaba"; Team = austria; Type = Midfielder; Status = OriginalSquad }
+    let baumgartlingerJulian = { Name = "Julian Baumgartlinger"; Team = austria; Type = Midfielder; Status = OriginalSquad }
+    let jantscherJakob = { Name = "Jakob Jantscher"; Team = austria; Type = Midfielder; Status = OriginalSquad }
+    let sabitzerMarcel = { Name = "Marcel Sabitzer"; Team = austria; Type = Midfielder; Status = OriginalSquad }
+    let ilsankerStefan = { Name = "Stefan Ilsanker"; Team = austria; Type = Midfielder; Status = OriginalSquad }
+    let schopfAlessandro = { Name = "Alessandro Schöpf"; Team = austria; Type = Midfielder; Status = OriginalSquad }
+    let jankoMarc = { Name = "Marc Janko"; Team = austria; Type = Forward; Status = OriginalSquad }
+    let okotieRubin = { Name = "Rubin Okotie"; Team = austria; Type = Forward; Status = OriginalSquad }
+    let hinterseerLukas = { Name = "Lukas Hinterseer"; Team = austria; Type = Forward; Status = OriginalSquad }
 
     let austriaSquad = { Team = austria
-                         Players = [ (* TODO *) ] }
+                         Players = [ almerRobert; lindnerHeinz; ozcanRamazan; fuchsChristian; prodlSebastian; dragovicAleksandar; garicsGyorgy; kleinFlorian; suttnerMarkus; hintereggerMartin
+                                     wimmerKevin; harnikMartin; arnautovicMarko; junuzovicZlatko; alabaDavid; baumgartlingerJulian; jantscherJakob; sabitzerMarcel; ilsankerStefan; schopfAlessandro
+                                     jankoMarc; okotieRubin; hinterseerLukas ] }
 
     let kiralyGabor = { Name = "Gábor Király"; Team = hungary; Type = Goalkeeper; Status = OriginalSquad }
     let dibuszDenes = { Name = "Dénes Dibusz"; Team = hungary; Type = Goalkeeper; Status = OriginalSquad }
@@ -860,7 +922,11 @@ module ``Data 2016`` =
                                    Number = 11; Stage = groupF; KickOff = DateTime (2016, 06, 14, 17, 00, 00)
                                    Events = [ (* austria *) (* hungary *) ] }
                                            
-    let groupFPortugalVsIceland = { Team1Score = TeamMatchScore (portugal, (* TEMP... *) 0<goal> (* <0>goal ...TEMP *), None)
+    let groupFPortugalVsIceland = { Team1Score = TeamMatchScore (portugal, 0<goal>, None); Team2Score = TeamMatchScore (iceland, 0<goal>, None)
+                                    Number = 12; Stage = groupF; KickOff = DateTime (2016, 06, 14, 20, 00, 00)
+                                    Events = [ (* portugal *) (* iceland *) ] }
+
+    (* let groupFPortugalVsIceland = { Team1Score = TeamMatchScore (portugal, (* TEMP... *) 0<goal> (* <0>goal ...TEMP *), None)
                                     Team2Score = TeamMatchScore (iceland, (* TEMP... *) 3<goal> (* <0>goal ...TEMP *), None)
                                     Number = 12; Stage = groupF; KickOff = (* TEMP... *) DateTime (2016, 05, 06, 20, 00, 00) (* DateTime (2016, 06, 14, 20, 00, 00) ...TEMP *)
                                     Events = [ (* portugal *) (* iceland *)                                                
@@ -875,7 +941,7 @@ module ``Data 2016`` =
                                                YellowCard (skulasonAriFreyr, Some 29<min>)
                                                Goal (gudjohnsenEidur, Some 81<min>, Some sigurdssonGylfi)
                                                Penalty (sigurdssonGylfi, true, Some 87<min>, Some sigurdssonGylfi, None)
-                                               CleanSheet (halldorssonHannesThor, Some kristinssonOgmundur) (* ...TEMP *) ] }
+                                               CleanSheet (halldorssonHannesThor, Some kristinssonOgmundur) (* ...TEMP *) ] } *)
 
     let groupFIcelandVsHungary = { Team1Score = TeamMatchScore (iceland, 0<goal>, None); Team2Score = TeamMatchScore (hungary, 0<goal>, None)
                                    Number = 23; Stage = groupF; KickOff = DateTime (2016, 06, 18, 17, 00, 00)
@@ -947,7 +1013,11 @@ module ``Data 2016`` =
                         Number = 39; Stage = RoundOf16 39; KickOff = DateTime (2016, 06, 25, 20, 00, 00)
                         Events = [ (* winnerD *) (* thirdBEF *) ] }
 
-    let match40XVsY = { Team1Score = TeamMatchScore ((* TEMP... *) france (* winnerA ...TEMP *), (* TEMP... *) 1<goal> (* <0>goal ...TEMP *), Some 4<shootoutPenalty>)
+    let match40XVsY = { Team1Score = TeamMatchScore (winnerA, 0<goal>, None); Team2Score = TeamMatchScore (thirdCDE, 0<goal>, None)
+                        Number = 40; Stage = RoundOf16 40; KickOff = DateTime (2016, 06, 26, 14, 00, 00)
+                        Events = [ (* winnerA *) (* thirdCDE *) ] }
+
+    (* let match40XVsY = { Team1Score = TeamMatchScore ((* TEMP... *) france (* winnerA ...TEMP *), (* TEMP... *) 1<goal> (* <0>goal ...TEMP *), Some 4<shootoutPenalty>)
                         Team2Score = TeamMatchScore ((* TEMP... *) iceland (* thirdCDE ...TEMP *), (* TEMP... *) 1<goal> (* <0>goal ...TEMP *), Some 2<shootoutPenalty>)
                         Number = 40; Stage = RoundOf16 40; KickOff = (* TEMP... *) DateTime (2016, 05, 20, 14, 00, 00) (* DateTime (2016, 06, 26, 14, 00, 00) ...TEMP *)
                         Events = [ (* winnerA *) (* thirdCDE *)
@@ -967,7 +1037,7 @@ module ``Data 2016`` =
                                    ShootoutPenalty (gudjohnsenEidur, true)
                                    ShootoutPenalty (sigurdssonGylfi, true)
                                    ShootoutPenalty (sigurjonssonRunarMar, false)
-                                   ShootoutPenalty (saevarssonBirkirMar, false) (* ...TEMP *) ] }
+                                   ShootoutPenalty (saevarssonBirkirMar, false) (* ...TEMP *) ] } *)
 
     let match41XVsY = { Team1Score = TeamMatchScore (winnerC, 0<goal>, None); Team2Score = TeamMatchScore (thirdABF, 0<goal>, None)
                         Number = 41; Stage = RoundOf16 41; KickOff = DateTime (2016, 06, 26, 17, 00, 00)
