@@ -68,7 +68,7 @@ module ``Data 2016`` =
     let cabayeYohan = { Name = "Yohan Cabaye"; Team = france; Type = Midfielder; Status = OriginalSquad }
     let matuidiBlaise = { Name = "Blaise Matuidi"; Team = france; Type = Midfielder; Status = OriginalSquad }
     let sissokoMoussa = { Name = "Moussa Sissoko"; Team = france; Type = Midfielder; Status = OriginalSquad }
-    let diarraLassana = { Name = "Lassana Diarra"; Team = france; Type = Midfielder; Status = OriginalSquad }
+    let schneiderlinMorgan = { Name = "Morgan Schneiderlin"; Team = france; Type = Midfielder; Status = OriginalSquad }
     let pogbaPaul = { Name = "Paul Pogba"; Team = france; Type = Midfielder; Status = OriginalSquad }
     let payetDimitri = { Name = "Dimitri Payet"; Team = france; Type = Midfielder; Status = OriginalSquad }
     let kanteNGolo = { Name = "N'Golo Kanté"; Team = france; Type = Midfielder; Status = OriginalSquad }
@@ -80,8 +80,8 @@ module ``Data 2016`` =
 
     let franceSquad = { Team = france
                         Players = [ llorisHugo; mandandaSteve; costilBenoit; evraPatrice; sagnaBacary; koscielnyLaurent; ramiAdil; digneLucas; jalletChristophe; mangalaEliaquim; umtitiSamuel
-                                    cabayeYohan; matuidiBlaise; sissokoMoussa; diarraLassana; pogbaPaul; payetDimitri; kanteNGolo; giroudOlivier; griezmannAntoine; gignacAndrePierre; martialAnthony
-                                    comanKingsley ] }
+                                    cabayeYohan; matuidiBlaise; sissokoMoussa; schneiderlinMorgan; pogbaPaul; payetDimitri; kanteNGolo; giroudOlivier; griezmannAntoine; gignacAndrePierre
+                                    martialAnthony; comanKingsley ] }
 
     let sommerYann = { Name = "Yann Sommer"; Team = switzerland; Type = Goalkeeper; Status = OriginalSquad }
     let hitzMarwin = { Name = "Marwin Hitz"; Team = switzerland; Type = Goalkeeper; Status = OriginalSquad }

@@ -8,8 +8,6 @@ open AOrNotA.Sweepstake2016.Sweepstake
 
 module ``Sweepstake 2016`` =
 
-    // TODO: Invite Josh...
-
     // TEMP...
     let jack = Participant "Jack"
     let neph = Participant "Neph"

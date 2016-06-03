@@ -17,6 +17,37 @@ Latest news
 (*** include-value: lastUpdated ***)
 
 (**
+## Friday 3rd June
+
+Okay, we're still looking at a deadline of 22:00 BST on Sunday 5th June for your first draft picks. Please e-mail these to **djnarration@gmail.com**. (Don't worry: I won't look at them until I've 
+made my own choices.)
+
+As previously mentioned, we'd suggest submitting an **ordered** list of 25 to 30 choices for the first draft.
+
+Please note that these choices can include more than one team/coach and more than one goalkeeper: if an earlier pick is successful, the later picks will just be ignored.
+
+(And if you want to pick Eder, bear in mind that there are players with this name in both the Italian and Portuguese squads.) 
+
+So, for example, something like this:
+
+1. Germany (Joachim Low)
+2. Antoine Griezmann (France)
+3. Gareth Bale (Wales)
+4. Gianluigi Buffon (Italy; goalkeeper)
+5. Robert Lewandowski (Poland)
+6. Norbert Gyomber (Slovakia)
+7. Igor Akinfeev (Russia; goalkeeper)
+8. Hungary (Bernd Storck)
+9. David Alaba (Austria)
+10. 'Broadway' Danny Rose (England)
+11. Toby Alderweireld (Belgium)
+12. Gylfi Sigurdsson (Iceland)
+13. (and so on...)
+
+### Squad changes
+
+France: Lassana Diarra has been replaced by Morgan Schneiderlin.
+
 ## Wednesday 1st June
 
 Complete squad lists now available [here](teams.html).
