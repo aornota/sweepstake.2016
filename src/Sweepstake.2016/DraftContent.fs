@@ -17,31 +17,31 @@ module DraftContent =
 
     // TEMP...
     // First draft...
-    let jack1 = { Participant = jack
-                  DraftPicks = [ Player giroudOlivier
-                                 CoachTeam france
-                                 Player martialAnthony
-                                 Player gudjohnsenEidur
-                                 Player halldorssonHannesThor
-                                 Player akinfeevIgor ] }
+    let rob1 = { Participant = rob
+                 DraftPicks = [ Player giroudOlivier
+                                CoachTeam france
+                                Player martialAnthony
+                                Player gudjohnsenEidur
+                                Player halldorssonHannesThor
+                                Player akinfeevIgor ] }
 
-    let neph1 = { Participant = neph
-                  DraftPicks = [ Player llorisHugo
-                                 Player griezmannAntoine
-                                 CoachTeam france
-                                 Player sigurdssonGylfi
-                                 CoachTeam iceland
-                                 Player gyomberNorbert ] }
+    let steveM1 = { Participant = steveM
+                    DraftPicks = [ Player llorisHugo
+                                   Player griezmannAntoine
+                                   CoachTeam france
+                                   Player sigurdssonGylfi
+                                   CoachTeam iceland
+                                   Player gyomberNorbert ] }
 
-    let rosie1 = { Participant = rosie
-                   DraftPicks = [ CoachTeam portugal
-                                  Player payetDimitri
-                                  Player griezmannAntoine
-                                  Player martialAnthony
-                                  Player ronaldoCristiano
-                                  CoachTeam england ] }
-
-    let draft1 = [ jack1; neph1; rosie1 ]
+    let steveS1 = { Participant = steveS
+                    DraftPicks = [ CoachTeam portugal
+                                   Player payetDimitri
+                                   Player griezmannAntoine
+                                   Player martialAnthony
+                                   Player ronaldoCristiano
+                                   CoachTeam england ] }
+                                   
+    let draft1 = [ rob1; steveM1; steveS1 ]
 
     // TODO (if needed): Second draft...
 
