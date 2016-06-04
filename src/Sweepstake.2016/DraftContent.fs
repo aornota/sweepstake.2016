@@ -15,37 +15,23 @@ module DraftContent =
 
     type SweepstakerDraft = { Participant: Participant; DraftPicks: DraftPick list }
 
-    // TEMP...
     // First draft...
+    let neph1 = { Participant = neph
+                  DraftPicks = [ 
+                                  ] }
+
     let rob1 = { Participant = rob
-                 DraftPicks = [ Player giroudOlivier
-                                CoachTeam france
-                                Player martialAnthony
-                                Player gudjohnsenEidur
-                                Player halldorssonHannesThor
-                                Player akinfeevIgor ] }
+                 DraftPicks = [] }
 
     let steveM1 = { Participant = steveM
-                    DraftPicks = [ Player llorisHugo
-                                   Player griezmannAntoine
-                                   CoachTeam france
-                                   Player sigurdssonGylfi
-                                   CoachTeam iceland
-                                   Player gyomberNorbert ] }
+                    DraftPicks = [] }
 
     let steveS1 = { Participant = steveS
-                    DraftPicks = [ CoachTeam portugal
-                                   Player payetDimitri
-                                   Player griezmannAntoine
-                                   Player martialAnthony
-                                   Player ronaldoCristiano
-                                   CoachTeam england ] }
+                    DraftPicks = [] }
                                    
-    let draft1 = [ rob1; steveM1; steveS1 ]
+    let draft1 = [ neph1; rob1; steveM1; steveS1 ]
 
     // TODO (if needed): Second draft...
-
-    // ...TEMP
 
     let getDraftPickText draftPick = match draftPick with | CoachTeam team -> sprintf "%s (%s)" team.Name team.Coach
                                                           | Player player -> sprintf "%s (%s)" player.Name player.Team.Name
@@ -317,7 +303,7 @@ module DraftContent =
         sweepstakersPostDraftHtml ordinal sweepstakers'
 
     let getDraft1Html () = draftPicksHtml 1 draft1 @
-                           draftProcessHtml 1 (Some 24689465) sweepstakers0 draft1
+                           draftProcessHtml 1 (Some 2016) sweepstakers0 draft1
                            |> concatenateWithNewLine
 
                            

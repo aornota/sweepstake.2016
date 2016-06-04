@@ -23,7 +23,7 @@ module IndexContent =
 
     let sweepstakerLinksHtml =
         let sweepstakerCell sweepstaker = [ td (linkToAnchor (getParticipant sweepstaker)) ]
-        table (Some 80) (tr ( [ td (bold "Sweepstakers") ] @
+        table (Some 100) (tr ( [ td (bold "Sweepstakers") ] @
                               (sweepstakers |> List.collect sweepstakerCell) ))
 
     let standingsHtml =
