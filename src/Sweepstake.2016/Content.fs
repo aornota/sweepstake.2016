@@ -70,6 +70,10 @@ module Content =
                                  | Replacement _ -> Some "Replacement"
                                  | _ -> None
     let getPlayerTypeAndStatus player = match getPlayerStatus player with | Some status -> sprintf "%s - %s" (getPlayerType player) status | None -> (getPlayerType player)
+    let getPlayerIsGoalkeeper (player: Player) = match player.Type with | Goalkeeper -> true | _ -> false
+    let getPlayerIsDefender (player: Player) = match player.Type with | Defender -> true | _ -> false
+    let getPlayerIsMidfielder (player: Player) = match player.Type with | Midfielder -> true | _ -> false
+    let getPlayerIsForward (player: Player) = match player.Type with | Forward -> true | _ -> false
 
     let teamScores2016 = getTotalScorePerTeam ``Data 2016``.teams ``Data 2016``.matches
     let getTeamScore (teamScores: (Team * int<score>) list) (team: Team) = match teamScores |> List.filter (fun (team', _) -> team'.Name = team.Name) with

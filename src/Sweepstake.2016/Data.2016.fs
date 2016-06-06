@@ -451,14 +451,14 @@ module ``Data 2016`` =
     let rogMarko = { Name = "Marko Rog"; Team = croatia; Type = Midfielder; Status = OriginalSquad }
     let coricAnte = { Name = "Ante Ćorić"; Team = croatia; Type = Midfielder; Status = OriginalSquad }
     let mandzukicMario = { Name = "Mario Mandžukić"; Team = croatia; Type = Forward; Status = OriginalSquad }
-    let lakinicNikola = { Name = "Nikola Kalinić"; Team = croatia; Type = Forward; Status = OriginalSquad }
+    let kalinicNikola = { Name = "Nikola Kalinić"; Team = croatia; Type = Forward; Status = OriginalSquad }
     let kramaricAndrej = { Name = "Andrej Kramarić"; Team = croatia; Type = Forward; Status = OriginalSquad }
     let pjacaMarko = { Name = "Marko Pjaca"; Team = croatia; Type = Forward; Status = OriginalSquad }
     let copDuje = { Name = "Duje Čop"; Team = croatia; Type = Forward; Status = OriginalSquad }
 
     let croatiaSquad = { Team = croatia
                          Players = [ subasicDanijel; kalinicLovre; vargicIvan; srnaDarijo; corlukaVedran; vidaDomagoj; strinicIvan; schildenfeldGordon; vrsaljkoSime; jedvajTin; modricLuka; rakiticIvan
-                                     perisicIvan; kovacicMateo; badeljMilan; brozovicMarcelo; rogMarko; coricAnte; mandzukicMario; lakinicNikola; kramaricAndrej; pjacaMarko; copDuje ] }
+                                     perisicIvan; kovacicMateo; badeljMilan; brozovicMarcelo; rogMarko; coricAnte; mandzukicMario; kalinicNikola; kramaricAndrej; pjacaMarko; copDuje ] }
 
     let cechPetr = { Name = "Petr Čech"; Team = czechRepublic; Type = Goalkeeper; Status = OriginalSquad }
     let vaclikTomas = { Name = "Tomáš Vaclík"; Team = czechRepublic; Type = Goalkeeper; Status = OriginalSquad }
@@ -564,18 +564,18 @@ module ``Data 2016`` =
     let deRossiDaniele = { Name = "Daniele De Rossi"; Team = italy; Type = Midfielder; Status = OriginalSquad }
     let paroloMarco = { Name = "Marco Parolo"; Team = italy; Type = Midfielder; Status = OriginalSquad }
     let bernardeschiFederico = { Name = "Federico Bernardeschi"; Team = italy; Type = Midfielder; Status = OriginalSquad }
-    let elShaarawyStephan = { Name = "Stephan El Shaarawy"; Team = italy; Type = Midfielder; Status = OriginalSquad }
     let giaccheriniEmanuele = { Name = "Emanuele Giaccherini"; Team = italy; Type = Midfielder; Status = OriginalSquad }
     let zazaSimone = { Name = "Simone Zaza"; Team = italy; Type = Forward; Status = OriginalSquad }
     let pelleGraciano = { Name = "Graziano Pellè"; Team = italy; Type = Forward; Status = OriginalSquad }
     let immobileCiro = { Name = "Ciro Immobile"; Team = italy; Type = Forward; Status = OriginalSquad }
     let eder_Italy = { Name = "Éder"; Team = italy; Type = Forward; Status = OriginalSquad }
     let insigneLorenzo = { Name = "Lorenzo Insigne"; Team = italy; Type = Forward; Status = OriginalSquad }
+    let elShaarawyStephan = { Name = "Stephan El Shaarawy"; Team = italy; Type = Forward; Status = OriginalSquad }
 
     let italySquad = { Team = italy
                        Players = [ buffonGianluigi; siriguSalvatore; marchettiFederico; deSciglioMattia; chielliniGiorgio; darmianMatteo; ogbonnaAngelo; barzagliAndrea; bonucciLeonardo
-                                   candrevaAntonio; florenziAlessandro; mottaThiago; sturaroStefano; deRossiDaniele; paroloMarco; bernardeschiFederico; elShaarawyStephan; giaccheriniEmanuele
-                                   zazaSimone; pelleGraciano; immobileCiro; eder_Italy; insigneLorenzo ] }
+                                   candrevaAntonio; florenziAlessandro; mottaThiago; sturaroStefano; deRossiDaniele; paroloMarco; bernardeschiFederico; giaccheriniEmanuele; zazaSimone; pelleGraciano
+                                   immobileCiro; eder_Italy; insigneLorenzo; elShaarawyStephan ] }
 
     let isakssonAndreas = { Name = "Andreas Isaksson"; Team = sweden; Type = Goalkeeper; Status = OriginalSquad }
     let olsenRobin = { Name = "Robin Olsen"; Team = sweden; Type = Goalkeeper; Status = OriginalSquad }

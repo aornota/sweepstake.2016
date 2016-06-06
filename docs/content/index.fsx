@@ -16,7 +16,49 @@ Latest news
 
 (*** include-value: lastUpdated ***)
 
+(*** include-value: indexStandingsAndLinksHtml ***)
+
 (**
+## Monday 6th June
+
+**The first draft has been processed.** See [here](draft.html) for the full details - or just click your name above to see how things worked out for you.
+
+(As expected, the folks who submitted the longest lists - and/or included less popular choices - have generally ended up with a full team.)
+
+_**Please note that if you want to change your mind**_ and release some of your picks before the second draft - e.g. because you've ended up with too many defenders and would prefer to ditch some of 
+these and take your chances in the second draft instead - you can do so: just e-mail djnarration@gmail.com by 22:00 BST on Tuesday 7th June.
+
+### Second draft
+
+For those that need them - i.e. everyone except Denis, Josh, Neph and Steve M (unless they decide to release some of their first draft picks, as mentioned above) - **second draft picks should be 
+submitted by 16:00 BST on Thursday 9th June**.
+
+More specifically:
+
+ - Chris needs to pick a goalkeeper and 4 outfield players
+ - Hugh needs to pick a team/coach
+ - Jem needs to pick a goalkeeper and 2 outfield players
+ - Rob needs to pick 6 outfield players
+ - Rosie needs to pick a goalkeeper
+ - Steve S needs to pick 2 outfield players
+ - Susie needs to pick a goalkeeper and 5 outfield players
+ - Will needs to pick 4 outfield players
+
+As a rough guide, please submit a list at least twice as long as the number of players you need. (We will have time for a third draft on Friday if needs be - but hopefully this won't be required: we 
+should be through the worst of the everyone-trying-to-pick-the-same-players phase.)
+
+You can see which players are still available on the [teams page](teams.html). (And it looks like Russia's Igor Denisov is injured, so don't pick him; his replacement will be confirmed in due 
+course...)
+
+#### Payout structure
+
+The following payout structure has been agreed:
+
+ - Sixty quid for first place
+ - Thirty quid for second place
+ - Twenty quid for third place
+ - Ten quid for the "wooden spoon"
+
 ## Friday 3rd June
 
 Okay, we're still looking at a deadline of 22:00 BST on Sunday 5th June for your first draft picks. Please e-mail these to **djnarration@gmail.com**. (Don't worry: I won't look at them until I've 
@@ -100,20 +142,10 @@ that point onwards. (If there's a sudden spate of withdrawals, replacements will
 
 Please note that a player who is unavailable for disciplinary reasons cannot be replaced.
 
-#### Payout structure
-
-**To be confirmed...**
-
 #### Source code
 If anyone wants to check that the drafting algorithm is above board, please feel free to take a look at 
 [all of the code](https://github.com/aornota/sweepstake.2016).
 *)
-
-(**
-## This is _**temporary test data**_ only...
-*)
-
-(*** include-value: indexStandingsAndLinksHtml ***)
 
 (*** include-value: indexHtml ***)
 

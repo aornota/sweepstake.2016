@@ -29,19 +29,27 @@ module IndexContent =
     let standingsHtml =
         let standingsHeaderRow = tr ( [ td (bold "Name")
                                         td (bold "Team/coach")
+                                        td (bold "Formation")
                                         td (bold "Players remaining")
                                         td (bold "Score") ] )
         let sweepstakersHtml =
             let sweepstakerRow (sweepstaker, score) =
                 let remainingPlayers = sweepstaker.Picks |> List.filter (fun pick -> getPlayerIsActive pick.Player)
                                                          |> List.length
+                let defenders = sweepstaker.Picks |> List.filter (fun pick -> getPlayerIsDefender pick.Player)
+                                                  |> List.length
+                let midfielders = sweepstaker.Picks |> List.filter (fun pick -> getPlayerIsMidfielder pick.Player)
+                                                    |> List.length
+                let forwards = sweepstaker.Picks |> List.filter (fun pick -> getPlayerIsForward pick.Player)
+                                                 |> List.length
                 tr ( [ td (linkToAnchor (getParticipant sweepstaker))
                        td (getTeamWithCoach sweepstaker)
+                       td (sprintf "%d-%d-%d" defenders midfielders forwards)
                        td (sprintf "%d" remainingPlayers)
                        td (sprintf "%d" (int score)) ] )
             let sweepstakerScores = sweepstakers |> List.map (fun sweepstaker -> sweepstaker, getSweepstakerScore sweepstaker)
                                                  |> List.sortBy (fun (_, score) -> -score)
-            table (Some 90) (standingsHeaderRow @ (sweepstakerScores |> List.collect sweepstakerRow))
+            table (Some 100) (standingsHeaderRow @ (sweepstakerScores |> List.collect sweepstakerRow))
         [ h2 (anchor "Standings") ] @
         sweepstakersHtml
 
