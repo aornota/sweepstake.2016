@@ -19,6 +19,31 @@ Latest news
 (*** include-value: indexStandingsAndLinksHtml ***)
 
 (**
+## Friday 10th June
+
+**The second draft has been processed.**
+
+Almost everyone now has a full team, though Susie still needs to pick 1 more outfield player.
+
+Good luck folks ;)
+
+## Wednesday 8th June
+
+### Released players
+
+The following players have been released:
+
+ - Hugh no longer wants Selcuk Inan (Turkey)
+ - Rosie no longer wants Oguzhan Ozyakup (Turkey), Ondrej Duda (Slovakia) or Marcel Sabitzer (Austria)
+ - Steve M no longer wants Jerome Boateng (Germany) or Leonardo Bonucci (Italy)
+ - Steve S no longer wants Ashley Williams (Wales), Vlad Chiriches (Romania) or Juanfran (Spain)
+
+### Squad changes
+
+Russia: Igor Denisov has been replaced by Artur Yusupov.
+
+Germany: Antonio Rudiger has been replaced by Jonathan Tah.
+
 ## Monday 6th June
 
 **The first draft has been processed.** See [here](draft.html) for the full details - or just click your name above to see how things worked out for you.
@@ -30,17 +55,18 @@ these and take your chances in the second draft instead - you can do so: just e-
 
 ### Second draft
 
-For those that need them - i.e. everyone except Denis, Josh, Neph and Steve M (unless they decide to release some of their first draft picks, as mentioned above) - **second draft picks should be 
-submitted by 16:00 BST on Thursday 9th June**.
+For those that need them - i.e. everyone except Denis, Josh and Neph M (unless they decide to release some of their first draft picks, as mentioned above) - **second draft picks should be submitted 
+by 16:00 BST on Thursday 9th June**.
 
 More specifically:
 
  - Chris needs to pick a goalkeeper and 4 outfield players
- - Hugh needs to pick a team/coach
+ - Hugh needs to pick a team/coach and 1 outfield player
  - Jem needs to pick a goalkeeper and 2 outfield players
  - Rob needs to pick 6 outfield players
- - Rosie needs to pick a goalkeeper
- - Steve S needs to pick 2 outfield players
+ - Rosie needs to pick a goalkeeper and 3 outfield players
+ - Steve M needs to pick 2 outfield players
+ - Steve S needs to pick 5 outfield players
  - Susie needs to pick a goalkeeper and 5 outfield players
  - Will needs to pick 4 outfield players
 

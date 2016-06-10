@@ -63,6 +63,7 @@ module ``Sweepstake 2016`` =
 
     let hughPicks1 = { Participant = hugh
                        CoachTeam = None
+                       // Note: 'inanSelcuk' released after first draft.
                        Picks = [ { Player = patricioRui; OnlyScoresFrom = None } (* goalkeeper *)
                                  { Player = lewandowskiRobert; OnlyScoresFrom = None }
                                  { Player = ibrahimovicZlatan; OnlyScoresFrom = None }
@@ -72,7 +73,6 @@ module ``Sweepstake 2016`` =
                                  { Player = yilmazBurak; OnlyScoresFrom = None }
                                  { Player = necidTomas; OnlyScoresFrom = None }
                                  { Player = fellainiMarouane; OnlyScoresFrom = None }
-                                 { Player = inanSelcuk; OnlyScoresFrom = None }
                                  { Player = junuzovicZlatko; OnlyScoresFrom = None } ] }
 
     let jemPicks1 = { Participant = jem
@@ -124,19 +124,18 @@ module ``Sweepstake 2016`` =
 
     let rosiePicks1 = { Participant = rosie
                         CoachTeam = Some england
+                        // Note: 'ozyakupOguzhan', 'dudaOndrej' and 'sabitzerMarcel' released after first draft.
                         Picks = [ { Player = griezmannAntoine; OnlyScoresFrom = None }
                                   { Player = ozilMesut; OnlyScoresFrom = None }
                                   { Player = alabaDavid; OnlyScoresFrom = None }
                                   { Player = jankoMarc; OnlyScoresFrom = None }
                                   { Player = comanKingsley; OnlyScoresFrom = None }
                                   { Player = stanciuNicolae; OnlyScoresFrom = None }
-                                  { Player = elShaarawyStephan; OnlyScoresFrom = None }
-                                  { Player = ozyakupOguzhan; OnlyScoresFrom = None }
-                                  { Player = dudaOndrej; OnlyScoresFrom = None }
-                                  { Player = sabitzerMarcel; OnlyScoresFrom = None } ] }
+                                  { Player = elShaarawyStephan; OnlyScoresFrom = None } ] }
 
     let steveMPicks1 = { Participant = steveM
                          CoachTeam = Some germany
+                         // Note: 'bonucciLeonardo' and 'boatengJerome' released after first draft.
                          Picks = [ { Player = courtoisThibaut; OnlyScoresFrom = None } (* goalkeeper *)
                                    { Player = gomezMario; OnlyScoresFrom = None }
                                    { Player = payetDimitri; OnlyScoresFrom = None }
@@ -145,21 +144,17 @@ module ``Sweepstake 2016`` =
                                    { Player = sigthorssonKolbeinn; OnlyScoresFrom = None }
                                    { Player = rosickyTomas; OnlyScoresFrom = None }
                                    { Player = albaJordi; OnlyScoresFrom = None }
-                                   { Player = bonucciLeonardo; OnlyScoresFrom = None }
-                                   { Player = chielliniGiorgio; OnlyScoresFrom = None }
-                                   { Player = boatengJerome; OnlyScoresFrom = None } ] }
+                                   { Player = chielliniGiorgio; OnlyScoresFrom = None } ] }
 
     let steveSPicks1 = { Participant = steveS
                          CoachTeam = Some portugal
+                         // Note: 'juanfran', 'williamsAshley' and 'chirichesVlad' released after first draft.
                          Picks = [ { Player = cechPetr; OnlyScoresFrom = None } (* goalkeeper *)
                                    { Player = giroudOlivier; OnlyScoresFrom = None }
                                    { Player = roseDanny; OnlyScoresFrom = None }
                                    { Player = hamsikMarek; OnlyScoresFrom = None }
                                    { Player = alderweireldToby; OnlyScoresFrom = None }
-                                   { Player = konoplyankaYevhen; OnlyScoresFrom = None }
-                                   { Player = juanfran; OnlyScoresFrom = None }
-                                   { Player = williamsAshley; OnlyScoresFrom = None }
-                                   { Player = chirichesVlad; OnlyScoresFrom = None } ] }
+                                   { Player = konoplyankaYevhen; OnlyScoresFrom = None } ] }
 
     let susiePicks1 = { Participant = susie
                         CoachTeam = Some italy
@@ -183,8 +178,18 @@ module ``Sweepstake 2016`` =
 
     // Final teams...
     let chrisPicksFinal = { Participant = chris
-                            CoachTeam = None
-                            Picks = [] }
+                            CoachTeam = Some spain
+                            Picks = [ { Player = casillasIker; OnlyScoresFrom = None } (* goalkeeper *)
+                                      { Player = vardyJamie; OnlyScoresFrom = None }
+                                      { Player = morataAlvaro; OnlyScoresFrom = None }
+                                      { Player = zazaSimone; OnlyScoresFrom = None }
+                                      { Player = gignacAndrePierre; OnlyScoresFrom = None }
+                                      { Player = emboloBreel; OnlyScoresFrom = None }
+                                      { Player = kokorinAleksandr; OnlyScoresFrom = None }
+                                      { Player = koke; OnlyScoresFrom = None }
+                                      { Player = sterlingRaheem; OnlyScoresFrom = None }
+                                      { Player = kramaricAndrej; OnlyScoresFrom = None }
+                                      { Player = seferovicHaris; OnlyScoresFrom = None } ] }
 
     let denisPicksFinal = { Participant = denis
                             CoachTeam = Some russia
@@ -201,12 +206,32 @@ module ``Sweepstake 2016`` =
                                       { Player = kimmichJoshua; OnlyScoresFrom = None } ] }
 
     let hughPicksFinal = { Participant = hugh
-                           CoachTeam = None
-                           Picks = [] }
+                           CoachTeam = Some switzerland
+                           Picks = [ { Player = patricioRui; OnlyScoresFrom = None } (* goalkeeper *)
+                                     { Player = lewandowskiRobert; OnlyScoresFrom = None }
+                                     { Player = ibrahimovicZlatan; OnlyScoresFrom = None }
+                                     { Player = pelleGraciano; OnlyScoresFrom = None }
+                                     { Player = sturridgeDaniel; OnlyScoresFrom = None }
+                                     { Player = yarmolenkoAndriy; OnlyScoresFrom = None }
+                                     { Player = yilmazBurak; OnlyScoresFrom = None }
+                                     { Player = necidTomas; OnlyScoresFrom = None }
+                                     { Player = fellainiMarouane; OnlyScoresFrom = None }
+                                     { Player = junuzovicZlatko; OnlyScoresFrom = None }
+                                     { Player = podolskiLukas; OnlyScoresFrom = None } ] }
 
     let jemPicksFinal = { Participant = jem
-                          CoachTeam = None
-                          Picks = [] }
+                          CoachTeam = Some france
+                          Picks = [ { Player = deGeaDavid; OnlyScoresFrom = None } (* goalkeeper *)
+                                    { Player = deBruyneKevin; OnlyScoresFrom = None }
+                                    { Player = hazardEden; OnlyScoresFrom = None }
+                                    { Player = rakiticIvan; OnlyScoresFrom = None }
+                                    { Player = dzyubaArtyom; OnlyScoresFrom = None }
+                                    { Player = nani; OnlyScoresFrom = None }
+                                    { Player = insigneLorenzo; OnlyScoresFrom = None }
+                                    { Player = ramosSergio; OnlyScoresFrom = None }
+                                    { Player = smallingChris; OnlyScoresFrom = None }
+                                    { Player = forsbergEmil; OnlyScoresFrom = None }
+                                    { Player = golovinAleksandr; OnlyScoresFrom = None } ] }
 
     let joshPicksFinal = { Participant = josh
                            CoachTeam = Some austria
@@ -237,12 +262,32 @@ module ``Sweepstake 2016`` =
                                      { Player = perisicIvan; OnlyScoresFrom = None }  ] }
 
     let robPicksFinal = { Participant = rob
-                          CoachTeam = None
-                          Picks = [] }
+                          CoachTeam = Some belgium
+                          Picks = [ { Player = llorisHugo; OnlyScoresFrom = None } (* goalkeeper *)
+                                    { Player = martialAnthony; OnlyScoresFrom = None }
+                                    { Player = fabregasCesc; OnlyScoresFrom = None }
+                                    { Player = kanteNGolo; OnlyScoresFrom = None }
+                                    { Player = adurizAritz; OnlyScoresFrom = None }
+                                    { Player = eder_Italy; OnlyScoresFrom = None }
+                                    { Player = moutinhoJoao; OnlyScoresFrom = None }
+                                    { Player = quaresmaRicardo; OnlyScoresFrom = None }
+                                    { Player = khediraSami; OnlyScoresFrom = None }
+                                    { Player = sorianoBruno; OnlyScoresFrom = None }
+                                    { Player = marioJoao; OnlyScoresFrom = None } ] }
 
     let rosiePicksFinal = { Participant = rosie
-                            CoachTeam = None
-                            Picks = [] }
+                            CoachTeam = Some england
+                            Picks = [ { Player = szczesnyWojciech; OnlyScoresFrom = None } (* goalkeeper *)
+                                      { Player = griezmannAntoine; OnlyScoresFrom = None }
+                                      { Player = ozilMesut; OnlyScoresFrom = None }
+                                      { Player = alabaDavid; OnlyScoresFrom = None }
+                                      { Player = jankoMarc; OnlyScoresFrom = None }
+                                      { Player = comanKingsley; OnlyScoresFrom = None }
+                                      { Player = stanciuNicolae; OnlyScoresFrom = None }
+                                      { Player = elShaarawyStephan; OnlyScoresFrom = None }
+                                      { Player = rashfordMarcus; OnlyScoresFrom = None }
+                                      { Player = saneLeroy; OnlyScoresFrom = None }
+                                      { Player = kapustkaBartosz; OnlyScoresFrom = None } ] }
 
     let steveMPicksFinal = { Participant = steveM
                              CoachTeam = Some germany
@@ -254,29 +299,56 @@ module ``Sweepstake 2016`` =
                                        { Player = sigthorssonKolbeinn; OnlyScoresFrom = None }
                                        { Player = rosickyTomas; OnlyScoresFrom = None }
                                        { Player = albaJordi; OnlyScoresFrom = None }
-                                       { Player = bonucciLeonardo; OnlyScoresFrom = None }
                                        { Player = chielliniGiorgio; OnlyScoresFrom = None }
-                                       { Player = boatengJerome; OnlyScoresFrom = None } ] }
+                                       { Player = schneiderlinMorgan; OnlyScoresFrom = None }
+                                       { Player = busquetsSergio; OnlyScoresFrom = None } ] }
 
     let steveSPicksFinal = { Participant = steveS
-                             CoachTeam = None
-                             Picks = [] }
+                             CoachTeam = Some portugal
+                             Picks = [ { Player = cechPetr; OnlyScoresFrom = None } (* goalkeeper *)
+                                       { Player = giroudOlivier; OnlyScoresFrom = None }
+                                       { Player = roseDanny; OnlyScoresFrom = None }
+                                       { Player = hamsikMarek; OnlyScoresFrom = None }
+                                       { Player = alderweireldToby; OnlyScoresFrom = None }
+                                       { Player = konoplyankaYevhen; OnlyScoresFrom = None }
+                                       { Player = bentekeChristian; OnlyScoresFrom = None }
+                                       { Player = andoneFlorin; OnlyScoresFrom = None }
+                                       { Player = carrascoYannickFerreira; OnlyScoresFrom = None }
+                                       { Player = milnerJames; OnlyScoresFrom = None }
+                                       { Player = schweinsteigerBastian; OnlyScoresFrom = None } ] }
 
     let susiePicksFinal = { Participant = susie
-                            CoachTeam = None
-                            Picks = [] }
+                            CoachTeam = Some italy
+                            Picks = [ { Player = fabianskiLukasz; OnlyScoresFrom = None } (* goalkeeper *)
+                                      { Player = kaneHarry; OnlyScoresFrom = None }
+                                      { Player = alliDele; OnlyScoresFrom = None }
+                                      { Player = rooneyWayne; OnlyScoresFrom = None }
+                                      { Player = iniestaAndres; OnlyScoresFrom = None }
+                                      { Player = pedro; OnlyScoresFrom = None }
+                                      { Player = smolovFyodor; OnlyScoresFrom = None }
+                                      { Player = larssonSebastian; OnlyScoresFrom = None }
+                                      { Player = okotieRubin; OnlyScoresFrom = None }
+                                      { Player = weiglJulian; OnlyScoresFrom = None }
+                                      (* TODO: One more Player... *) ] }
 
     let willPicksFinal = { Participant = will
-                           CoachTeam = None
-                           Picks = [] }
+                           CoachTeam = Some poland
+                           Picks = [ { Player = tatarusanuCiprian; OnlyScoresFrom = None } (* goalkeeper *)
+                                     { Player = ronaldoCristiano; OnlyScoresFrom = None }
+                                     { Player = pogbaPaul; OnlyScoresFrom = None }
+                                     { Player = modricLuka; OnlyScoresFrom = None }
+                                     { Player = silvaDavid; OnlyScoresFrom = None }
+                                     { Player = origiDivock; OnlyScoresFrom = None }
+                                     { Player = milikArkadiusz; OnlyScoresFrom = None }
+                                     { Player = sanchesRenato; OnlyScoresFrom = None }
+                                     { Player = mertensDries; OnlyScoresFrom = None }
+                                     { Player = harnikMartin; OnlyScoresFrom = None }
+                                     { Player = wilshereJack; OnlyScoresFrom = None } ] }
 
     let sweepstakersFinal = [ chrisPicksFinal; denisPicksFinal; hughPicksFinal; jemPicksFinal; joshPicksFinal; nephPicksFinal; robPicksFinal; rosiePicksFinal; steveMPicksFinal; steveSPicksFinal
                               susiePicksFinal; willPicksFinal ]
 
-    // TEMP...
-    let sweepstakers = sweepstakers1
-    //let sweepstakers = sweepstakersFinal
-    // ...TEMP
+    let sweepstakers = sweepstakersFinal
 
     let pickedPlayers = sweepstakers |> List.collect (fun sweepstaker -> let participant = getParticipant sweepstaker
                                                                          sweepstaker.Picks |> List.map (fun pick -> pick, participant))

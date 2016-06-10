@@ -280,7 +280,7 @@ module DraftContent =
                                   Player emboloBreel
                                   Player sabitzerMarcel ] }
 
-    let steveM1 = { Participant = steveM // note: draft pick order TBC...
+    let steveM1 = { Participant = steveM
                     DraftPicks = [ CoachTeam germany
                                    Player buffonGianluigi (* goalkeeper *)
                                    Player gomezMario
@@ -389,33 +389,133 @@ module DraftContent =
                                    
     let draft1 = [ chris1; denis1; hugh1; jem1; josh1; neph1; rob1; rosie1; steveM1; steveS1; susie1; will1 ]
 
-    // TODO: Second draft...
+    // Second draft...
 
-    let chris2 = { Participant = chris
-                   DraftPicks = [  ] }
+    let chris2 = { Participant = chris (* needs goalkeeper and 4 outfield players *)
+                   DraftPicks = [ Player casillasIker (* goalkeeper *)
+                                  Player bentekeChristian
+                                  Player koke
+                                  Player rashfordMarcus
+                                  Player sterlingRaheem
+                                  Player podolskiLukas
+                                  Player kramaricAndrej
+                                  Player harnikMartin
+                                  Player seferovicHaris
+                                  Player sanchesRenato
+                                  Player vokesSam
+                                  Player forsbergEmil
+                                  Player akinfeevIgor (* goalkeeper *)
+                                  Player finnbogasonAlfred
+                                  Player nemecAdam
+                                  Player lafataDavid
+                                  Player mertensDries
+                                  Player vazquezLucas
+                                  Player zozulyaRoman
+                                  Player kujovicEmir
+                                  Player derdiyokEren
+                                  Player stancuBogdan
+                                  Player keaneRobbie
+                                  Player bergMarcus
+                                  Player laffertyKyle ] }
 
-    let hugh2 = { Participant = hugh
-                  DraftPicks = [  ] }
+    let hugh2 = { Participant = hugh (* needs team/coach and 1 outfield player *)
+                  DraftPicks = [ Player podolskiLukas
+                                 Player schurrleAndre
+                                 Player mertensDries
+                                 Player nainggolanRadja
+                                 CoachTeam switzerland ] }
 
-    let jem2 = { Participant = jem
-                 DraftPicks = [  ] }
+    let jem2 = { Participant = jem (* needs goalkeeper and 2 outfield players *)
+                 DraftPicks = [ Player deGeaDavid (* goalkeeper *)
+                                Player forsbergEmil
+                                Player golovinAleksandr
+                                Player weiglJulian
+                                Player sanchesRenato
+                                Player dzsudzsakBalazs
+                                Player isakssonAndreas
+                                Player akinfeevIgor (* goalkeeper *) ] }
 
-    let rob2 = { Participant = rob
-                 DraftPicks = [  ] }
+    let rob2 = { Participant = rob (* needs 6 outfield players *)
+                 DraftPicks = [ Player eder_Italy
+                                Player moutinhoJoao
+                                Player mertensDries
+                                Player quaresmaRicardo
+                                Player khediraSami
+                                Player sorianoBruno
+                                Player marioJoao
+                                Player rashfordMarcus
+                                Player koscielnyLaurent
+                                Player pereiraDanilo
+                                Player nainggolanRadja
+                                Player gomesAndre
+                                Player sissokoMoussa
+                                Player sagnaBacary
+                                Player bellerinHector
+                                Player florenziAlessandro
+                                Player azpilicuetaCesar
+                                Player koke
+                                Player busquetsSergio
+                                Player cabayeYohan ] }
 
-    let rosie2 = { Participant = rosie
-                   DraftPicks = [  ] }
+    let rosie2 = { Participant = rosie (* needs goalkeeper and 3 outfield players *)
+                   DraftPicks = [ Player rashfordMarcus
+                                  Player szczesnyWojciech (* goalkeeper *)
+                                  Player sommerYann (* goalkeeper *)
+                                  Player sanchesRenato
+                                  Player saneLeroy
+                                  Player moutinhoJoao
+                                  Player kapustkaBartosz
+                                  Player sterlingRaheem
+                                  Player durisMichal
+                                  Player coricAnte
+                                  Player nemecAdam ] }
 
-    let steveS2 = { Participant = steveS
-                    DraftPicks = [  ] }
+    let steveM2 = { Participant = steveM (* needs 2 outfield players *)
+                    DraftPicks = [ Player schneiderlinMorgan
+                                   Player rashfordMarcus
+                                   Player busquetsSergio
+                                   Player eder_Italy
+                                   Player guidettiJohn ] }
 
-    let susie2 = { Participant = susie
-                   DraftPicks = [  ] }
+    let steveS2 = { Participant = steveS (* needs 5 outfield players *)
+                    DraftPicks = [ Player rashfordMarcus
+                                   Player bentekeChristian
+                                   Player andoneFlorin
+                                   Player carrascoYannickFerreira
+                                   Player milnerJames
+                                   Player schweinsteigerBastian
+                                   Player saneLeroy
+                                   Player marioJoao ] }
 
-    let will2 = { Participant = will
-                  DraftPicks = [  ] }
+    let susie2 = { Participant = susie (* needs goalkeeper and 5 outfield players *)
+                   DraftPicks = [ Player fabianskiLukasz (* goalkeeper *)
+                                  Player bentekeChristian
+                                  Player smolovFyodor
+                                  Player larssonSebastian
+                                  Player okotieRubin
+                                  Player carrascoYannickFerreira
+                                  Player isakssonAndreas
+                                  Player akinfeevIgor (* goalkeeper *)
+                                  Player quaresmaRicardo
+                                  Player golovinAleksandr
+                                  Player weiglJulian
+                                  Player sanchesRenato ] }
 
-    let draft2 = [ chris2; hugh2; jem2; rob2; rosie2; steveS2; susie2; will2 ]
+    let will2 = { Participant = will (* needs 4 outfield players *)
+                  DraftPicks = [ Player sanchesRenato
+                                 Player mertensDries
+                                 Player harnikMartin
+                                 Player podolskiLukas
+                                 Player wilshereJack
+                                 Player saneLeroy
+                                 Player weiglJulian
+                                 Player baumgartlingerJulian
+                                 Player schurrleAndre
+                                 Player milnerJames
+                                 Player dembeleMousa
+                                 Player carrascoYannickFerreira ] }
+
+    let draft2 = [ chris2; hugh2; jem2; rob2; rosie2; steveM2; steveS2; susie2; will2 ]
 
     let getDraftPickText draftPick = match draftPick with | CoachTeam team -> sprintf "%s (%s)" team.Name team.Coach
                                                           | Player player -> sprintf "%s (%s)" player.Name player.Team.Name
@@ -728,7 +828,6 @@ module DraftContent =
                            |> concatenateWithNewLine
 
     let getDraft2Html () = draftPicksHtml 2 draft2 @
-                           draftProcessHtml 2 (Some 2016) sweepstakers1 draft2
+                           draftProcessHtml 2 (Some 20160610) sweepstakers1 draft2
                            |> concatenateWithNewLine
 
-                           

@@ -211,7 +211,7 @@ module ``Data 2016`` =
     let shchennikovGeorgi = { Name = "Georgi Shchennikov"; Team = russia; Type = Defender; Status = OriginalSquad }
     let neustadterRoman = { Name = "Roman Neustädter"; Team = russia; Type = Defender; Status = OriginalSquad }
     let shirokovRoman = { Name = "Roman Shirokov"; Team = russia; Type = Midfielder; Status = OriginalSquad }
-    let denisovIgor = { Name = "Igor Denisov"; Team = russia; Type = Midfielder; Status = OriginalSquad }
+    let yusupovArtur = { Name = "Artur Yusupov"; Team = russia; Type = Midfielder; Status = OriginalSquad }
     let glushakovDenis = { Name = "Denis Glushakov"; Team = russia; Type = Midfielder; Status = OriginalSquad }
     let samedovAleksandr = { Name = "Aleksandr Samedov"; Team = russia; Type = Midfielder; Status = OriginalSquad }
     let torbinskiDmitri = { Name = "Dmitri Torbinski"; Team = russia; Type = Midfielder; Status = OriginalSquad }
@@ -225,7 +225,7 @@ module ``Data 2016`` =
 
     let russiaSquad = { Team = russia
                         Players = [ akinfeevIgor; lodyginYuri; marinatoGuilherme; ignashevichSergei; berezutskiVasili; berezutskiAleksei; kombarovDmitri; smolnikovIgor; shishkinRoman
-                                    shchennikovGeorgi; neustadterRoman; shirokovRoman; denisovIgor; glushakovDenis; samedovAleksandr; torbinskiDmitri; shatovOleg; mamayevPavel; golovinAleksandr
+                                    shchennikovGeorgi; neustadterRoman; shirokovRoman; yusupovArtur; glushakovDenis; samedovAleksandr; torbinskiDmitri; shatovOleg; mamayevPavel; golovinAleksandr
                                     ivanovOleg; kokorinAleksandr; dzyubaArtyom; smolovFyodor ] }
 
     let muchaJan = { Name = "Ján Mucha"; Team = slovakia; Type = Goalkeeper; Status = OriginalSquad }
@@ -294,7 +294,7 @@ module ``Data 2016`` =
     let howedesBenedikt = { Name = "Benedikt Höwedes"; Team = germany; Type = Defender; Status = OriginalSquad }
     let hectorJonas = { Name = "Jonas Hector"; Team = germany; Type = Defender; Status = OriginalSquad }
     let mustafiShkodran = { Name = "Shkodran Mustafi"; Team = germany; Type = Defender; Status = OriginalSquad }
-    let rudigerAntonio = { Name = "Antonio Rüdiger"; Team = germany; Type = Defender; Status = OriginalSquad }
+    let tahJonathan = { Name = "Jonathan Tah"; Team = germany; Type = Defender; Status = OriginalSquad }
     let canEmre = { Name = "Emre Can"; Team = germany; Type = Defender; Status = OriginalSquad }
     let schweinsteigerBastian = { Name = "Bastian Schweinsteiger"; Team = germany; Type = Midfielder; Status = OriginalSquad }
     let ozilMesut = { Name = "Mesut Özil"; Team = germany; Type = Midfielder; Status = OriginalSquad }
@@ -311,7 +311,7 @@ module ``Data 2016`` =
     let gomezMario = { Name = "Mario Gómez"; Team = germany; Type = Forward; Status = OriginalSquad }
 
     let germanySquad = { Team = germany
-                         Players = [ neuerManuel; terStegenMarcAndre; lenoBernd; boatengJerome; hummelsMatt; howedesBenedikt; hectorJonas; mustafiShkodran; rudigerAntonio; canEmre
+                         Players = [ neuerManuel; terStegenMarcAndre; lenoBernd; boatengJerome; hummelsMatt; howedesBenedikt; hectorJonas; mustafiShkodran; tahJonathan; canEmre
                                      schweinsteigerBastian; ozilMesut; kroosToni; khediraSami; gotzeMario; schurrleAndre; draxlerJulian; saneLeroy; weiglJulian; kimmichJoshua; podolskiLukas
                                      mullerThomas; gomezMario ] }
 
