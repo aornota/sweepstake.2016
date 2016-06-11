@@ -114,12 +114,12 @@ module Sweepstake =
                               | teamPoints, opponentPoints, true, Some teamShootoutPenalties', Some opponentShootoutPenalities' when teamPoints = opponentPoints && teamShootoutPenalties' = opponentShootoutPenalities' -> failwith (sprintf "Penalty shootout cannot be a draw for knockout match %d" ``match``.Number)
                               | teamPoints, opponentPoints, true, _, _ when teamPoints = opponentPoints -> failwith (sprintf "Missing penalty shootout information for knockout match %d." ``match``.Number)
                               | _ -> Lose
-            match matchResult, teamIsTop12, opponentIsTop12 with | Win, false, true -> Some (winUnderdog, sprintf "win for %s = %d" team1.Name (int winUnderdog))
-                                                                 | Win, true, false -> Some (winFavourite, sprintf "win for %s = %d" team1.Name (int winFavourite))
-                                                                 | Win, _, _ -> Some (winPickEm, sprintf "win for %s = %d" team1.Name (int winPickEm))
-                                                                 | Draw, false, true -> Some (drawUnderdog, sprintf "draw for %s = %d" team1.Name (int drawUnderdog))
-                                                                 | Draw, true, false -> Some (drawFavourite, sprintf "draw for %s = %d" team1.Name (int drawFavourite))
-                                                                 | Draw, _, _ -> Some (drawPickEm, sprintf "draw for %s = %d" team1.Name (int drawPickEm))
+            match matchResult, teamIsTop12, opponentIsTop12 with | Win, false, true -> Some (winUnderdog, sprintf "win for %s = %d" team.Name (int winUnderdog))
+                                                                 | Win, true, false -> Some (winFavourite, sprintf "win for %s = %d" team.Name (int winFavourite))
+                                                                 | Win, _, _ -> Some (winPickEm, sprintf "win for %s = %d" team.Name (int winPickEm))
+                                                                 | Draw, false, true -> Some (drawUnderdog, sprintf "draw for %s = %d" team.Name (int drawUnderdog))
+                                                                 | Draw, true, false -> Some (drawFavourite, sprintf "draw for %s = %d" team.Name (int drawFavourite))
+                                                                 | Draw, _, _ -> Some (drawPickEm, sprintf "draw for %s = %d" team.Name (int drawPickEm))
                                                                  | _ -> None
         let team1, team2 = getTeam ``match``.Team1Score, getTeam ``match``.Team2Score
         if team <> team1 && team <> team2 then []

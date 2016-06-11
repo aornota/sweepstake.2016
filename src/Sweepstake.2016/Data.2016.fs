@@ -795,9 +795,18 @@ module ``Data 2016`` =
                                              Penalty (stancuBogdan, true, Some 65<min>, Some stanciuNicolae, None)
                                              YellowCard (popaAdrian, Some 78<min>) ] }
 
-    let groupAAlbaniaVsSwitzerland = { Team1Score = TeamMatchScore (albania, 0<goal>, None); Team2Score = TeamMatchScore (switzerland, 0<goal>, None)
+    let groupAAlbaniaVsSwitzerland = { Team1Score = TeamMatchScore (albania, 0<goal>, None); Team2Score = TeamMatchScore (switzerland, 1<goal>, None)
                                        Number = 2; Stage = groupA; KickOff = DateTime (2016, 06, 11, 14, 00, 00)
-                                       Events = [ (* albania *) (* switzerland *) ] }
+                                       Events = [ ManOfTheMatch xhakaGranit
+                                                  YellowCard (canaLorik, Some 23<min>) (* albania *)
+                                                  YellowCard (canaLorik, Some 36<min>)
+                                                  YellowCard (kaceErgys, Some 63<min>)
+                                                  YellowCard (kukeliBurim, Some 89<min>)
+                                                  YellowCard (mavrajMergim, Some 92<min>)
+                                                  Goal (scharFabian, Some 5<min>, Some shaqiriXherdan) (* switzerland *)
+                                                  YellowCard (scharFabian, Some 14<min>)
+                                                  YellowCard (behramiValon, Some 67<min>)
+                                                  CleanSheet (sommerYann, None) ] }
                                            
     let groupARomaniaVsSwitzerland = { Team1Score = TeamMatchScore (romania, 0<goal>, None); Team2Score = TeamMatchScore (switzerland, 0<goal>, None)
                                        Number = 14; Stage = groupA; KickOff = DateTime (2016, 06, 15, 17, 00, 00)

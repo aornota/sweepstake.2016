@@ -26,6 +26,12 @@ Latest news
 
 (**
 ## Saturday 11th June
+*)
+
+(*** include-value: groupAAlbaniaVsSwitzerlandHtml ***)
+
+(**
+Early days, of course - but Josh moves up to second thanks to Granit Xhaka; Hugh and Denis also open their accounts.
 
 ### Final picks
 
