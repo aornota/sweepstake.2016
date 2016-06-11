@@ -9,6 +9,7 @@ open AOrNotA.Sweepstake2016.IndexContent
 let lastUpdated = getLastUpdated ()
 let indexSummaryAndLinksHtml = getIndexSummaryAndLinksHtml ()
 let upcomingFixturesHtml = getUpcomingFixturesHtml 3
+let groupBWalesVsSlovakiaHtml = getMatchDetailsHtml groupBWalesVsSlovakia
 let groupAAlbaniaVsSwitzerlandHtml = getMatchDetailsHtml groupAAlbaniaVsSwitzerland
 let groupAFranceVsRomaniaHtml = getMatchDetailsHtml groupAFranceVsRomania
 let indexDetailHtml = getIndexDetailHtml ()
@@ -26,6 +27,14 @@ Latest news
 
 (**
 ## Saturday 11th June
+*)
+
+(*** include-value: groupBWalesVsSlovakiaHtml ***)
+
+(**
+A deserved win for Wales sees Neph off the mark and more points for Josh.
+
+Now to see if Roy Hodgson can shuffle his pack as well as Chris Coleman...
 *)
 
 (*** include-value: groupAAlbaniaVsSwitzerlandHtml ***)

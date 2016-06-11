@@ -828,9 +828,17 @@ module ``Data 2016`` =
 
     // Group B matches: https://en.wikipedia.org/wiki/UEFA_Euro_2016_Group_B.
 
-    let groupBWalesVsSlovakia = { Team1Score = TeamMatchScore (wales, 0<goal>, None); Team2Score = TeamMatchScore (slovakia, 0<goal>, None)
+    let groupBWalesVsSlovakia = { Team1Score = TeamMatchScore (wales, 2<goal>, None); Team2Score = TeamMatchScore (slovakia, 1<goal>, None)
                                   Number = 3; Stage = groupB; KickOff = DateTime (2016, 06, 11, 17, 00, 00)
-                                  Events = [ (* wales *) (* slovakia *) ] }
+                                  Events = [ ManOfTheMatch allenJoe
+                                             Goal (baleGareth, Some 10<min>, Some williamsJonathan) (* wales *)
+                                             Goal (robsonKanuHal, Some 81<min>, Some ramseyAaron)
+                                             YellowCard (hrosovskyPatrik, Some 31<min>) (* slovakia *)
+                                             Goal (dudaOndrej, Some 61<min>, Some makRobert)
+                                             YellowCard (makRobert, Some 78<min>)
+                                             YellowCard (weissVladimir, Some 80<min>)
+                                             YellowCard (kuckaJuraj, Some 83<min>)
+                                             YellowCard (skrtelMartin, Some 92<min>) ] }
                                            
     let groupBEnglandVsRussia = { Team1Score = TeamMatchScore (england, 0<goal>, None); Team2Score = TeamMatchScore (russia, 0<goal>, None)
                                   Number = 4; Stage = groupB; KickOff = DateTime (2016, 06, 11, 20, 00, 00)
