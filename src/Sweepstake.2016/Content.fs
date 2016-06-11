@@ -8,10 +8,18 @@ open AOrNotA.Sweepstake2016.Sweepstake
 
 module Content =
 
-    let concatenateWithNewLine (lines: string list) =
-        let append (state: StringBuilder) (line: string) = state.Append (sprintf "%s\n" line)
-        let builder = lines |> List.fold append (StringBuilder ())
-        builder.ToString ()
+    [<Literal>]
+    let private teamsPage = "teams"
+
+    let concatenate separator (values: string list) =
+        let append (state: StringBuilder) (value: string) = state.Append (sprintf "%s%s" value separator)
+        let builder = values |> List.fold append (StringBuilder ())
+        let result = builder.ToString ()
+        if result.EndsWith (separator) then result.Substring (0, result.Length - separator.Length)
+        else result
+
+    let concatenateWithSemiColon = concatenate "; "
+    let concatenateWithNewLine = concatenate "\n"
 
     let h2 text = sprintf "<h2>%s</h2>" text
     let h3 text = sprintf "<h3>%s</h3>" text
@@ -84,8 +92,11 @@ module Content =
     let getTeamScore2016 team = getTeamScore teamScores2016 team
     let getTeamScoreText2016 team = getTeamScoreText teamScores2016 team
     let getTeamPickedBy team = match ``Sweepstake 2016``.sweepstakers |> List.filter (fun sweepstaker -> match sweepstaker.CoachTeam with | Some team' when team' = team -> true | _ -> false) with
-                               | h :: _ -> getParticipant h
-                               | _ -> ""
+                               | h :: _ -> Some h
+                               | _ -> None
+    let getTeamPickedByText team = match getTeamPickedBy team with
+                                   | Some sweepstaker -> getParticipant sweepstaker
+                                   | _ -> ""
 
     let players2016 = ``Data 2016``.players |> List.map (fun player -> player, None)
     let playerPicks2016 = ``Sweepstake 2016``.pickedPlayers |> List.map (fun (pick, _) -> pick.Player, pick.OnlyScoresFrom)
@@ -107,15 +118,38 @@ module Content =
                                    | _ -> None
     let getPlayerPickedByText player = match getPlayerPickedBy player with
                                        | Some (pickedBy, onlyScoresFrom) -> match onlyScoresFrom with
-                                                                            | Some date -> sprintf "%s (from %s)" pickedBy (date.ToString ("dd-MMM"))
-                                                                            | None -> pickedBy
+                                                                            | Some date -> sprintf "%s (from %s)" (getParticipant pickedBy) (date.ToString ("dd-MMM"))
+                                                                            | None -> (getParticipant pickedBy)
                                        | None -> ""
     let getPlayerAndPickScoreText2016 player = match getPlayerPickedBy player with
                                                | Some (pickedBy, _) -> let playerScoreText2016 = getPlayerScoreText2016 player
                                                                        let playerPickScoreText2016 = getPlayerPickScoreText2016 player
                                                                        if playerScoreText2016 = playerPickScoreText2016 then playerScoreText2016
-                                                                       else sprintf "%s (%s for %s)" playerScoreText2016 playerPickScoreText2016 pickedBy
+                                                                       else sprintf "%s (%s for %s)" playerScoreText2016 playerPickScoreText2016 (getParticipant pickedBy)
                                                | None -> getPlayerScoreText2016 player
+
+    let getResult forTeamsPage ``match`` =
+        let team1, team2 = getTeam ``match``.Team1Score, getTeam ``match``.Team2Score
+        let team1Goals, team2Goals = getGoals ``match``.Team1Score, getGoals ``match``.Team2Score
+        let team1Link, team2Link = match forTeamsPage with | true -> linkToAnchor team1.Name, linkToAnchor team2.Name
+                                                           | false -> linkToContentAnchor teamsPage team1.Name team1.Name, linkToContentAnchor teamsPage team2.Name team2.Name
+        match (matchHasStarted ``match``) with
+        | false -> sprintf "%s vs %s" team1Link team2Link
+        | true -> let shootoutDetails = match (isKnockout ``match``) with
+                                        | false -> None
+                                        | true -> match team1Goals, team2Goals with
+                                                  | team1Goals, team2Goals when team1Goals <> team2Goals -> None
+                                                  | _ -> let team1ShootoutPenalties, team2ShootoutPenalties = getShootoutPenalties ``match``.Team1Score, getShootoutPenalties ``match``.Team2Score
+                                                         if team1ShootoutPenalties.IsNone || team2ShootoutPenalties.IsNone then failwith (sprintf "Missing penalty shootout information for knockout match %d." ``match``.Number)
+                                                         else let team1ShootoutPenalties', team2ShootoutPenalties' = team1ShootoutPenalties.Value, team2ShootoutPenalties.Value
+                                                              let winner, winningPenalties, losingPenalties = if team1ShootoutPenalties' > team2ShootoutPenalties' then team1, team1ShootoutPenalties', team2ShootoutPenalties'
+                                                                                                              else if team1ShootoutPenalties < team2ShootoutPenalties then team2, team2ShootoutPenalties', team1ShootoutPenalties'
+                                                                                                              else failwith (sprintf "Penalty shootout cannot be a draw for knockout match %d" ``match``.Number)
+                                                              Some (sprintf "%s win %d - %d on penalties" winner.Name winningPenalties losingPenalties)
+                  // TODO: More details (e.g. MatchEvents &c.)?...
+                  match shootoutDetails with
+                  | Some shootoutDetails' -> sprintf "%s %d - %d %s (%s)" team1Link (int team1Goals) (int team2Goals) team2Link shootoutDetails'
+                  | None -> sprintf "%s %d - %d %s" team1Link (int team1Goals) (int team2Goals) team2Link
 
     let groups2016 = [ ``Data 2016``.groupA; ``Data 2016``.groupB; ``Data 2016``.groupC; ``Data 2016``.groupD; ``Data 2016``.groupE; ``Data 2016``.groupF ]
     let matches2016 = ``Data 2016``.matches

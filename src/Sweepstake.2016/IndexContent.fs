@@ -9,24 +9,24 @@ open AOrNotA.Sweepstake2016.``Sweepstake 2016``
 
 module IndexContent =
 
-    let getSweepstakerTeamScore sweepstaker = match sweepstaker.CoachTeam with | Some team' -> match getTeamScore2016 team' with | Some score -> score
-                                                                                                                                 | None -> 0<score>
-                                                                               | None -> 0<score>
+    let private getSweepstakerTeamScore sweepstaker = match sweepstaker.CoachTeam with | Some team' -> match getTeamScore2016 team' with | Some score -> score
+                                                                                                                                         | None -> 0<score>
+                                                                                       | None -> 0<score>
                                                                                
-    let getSweepstakerPlayersScore sweepstaker = sweepstaker.Picks |> List.map (fun pick -> match getPlayerPickScore2016 pick.Player with | Some score -> score
-                                                                                                                                          | None -> 0<score>)
-                                                                   |> List.sum
+    let private getSweepstakerPlayersScore sweepstaker = sweepstaker.Picks |> List.map (fun pick -> match getPlayerPickScore2016 pick.Player with | Some score -> score
+                                                                                                                                                  | None -> 0<score>)
+                                                                           |> List.sum
 
-    let getSweepstakerScore sweepstaker = getSweepstakerTeamScore sweepstaker + getSweepstakerPlayersScore sweepstaker
+    let private getSweepstakerScore sweepstaker = getSweepstakerTeamScore sweepstaker + getSweepstakerPlayersScore sweepstaker
 
-    let getTeamWithCoach sweepstaker = match sweepstaker.CoachTeam with | Some team -> getTeamTextWithStrike team (getTeamNameWithCoach team) | None -> ""
+    let private getTeamWithCoach sweepstaker = match sweepstaker.CoachTeam with | Some team -> getTeamTextWithStrike team (getTeamNameWithCoach team) | None -> ""
 
-    let sweepstakerLinksHtml =
+    let private sweepstakerLinksHtml =
         let sweepstakerCell sweepstaker = [ td (linkToAnchor (getParticipant sweepstaker)) ]
         table (Some 100) (tr ( [ td (bold "Sweepstakers") ] @
                               (sweepstakers |> List.collect sweepstakerCell) ))
 
-    let standingsHtml =
+    let private standingsHtml =
         let standingsHeaderRow = tr ( [ td (bold "Name")
                                         td (bold "Team/coach")
                                         td (bold "Formation")
@@ -53,27 +53,70 @@ module IndexContent =
         [ h2 (anchor "Standings") ] @
         sweepstakersHtml
 
-    let linksHtml = table (Some 100) (tr ( [ td (bold "Top")
-                                             td (linkToAnchor2 "Top teams/coaches" "teams/coaches")
-                                             td (linkToAnchor2 "Top players" "players")
-                                             td (linkToAnchor2 "Top goalkeepers" "goalkeepers")
-                                             td (linkToAnchor2 "Top defenders" "defenders")
-                                             td (linkToAnchor2 "Top midfielders" "midfielders")
-                                             td (linkToAnchor2 "Top forwards" "forwards") ] ) @
-                                      tr ( [ td (bold "Best unpicked") 
-                                             td (linkToAnchor2 "Best unpicked teams/coaches" "teams/coaches")
-                                             td (linkToAnchor2 "Best unpicked players" "players")
-                                             td (linkToAnchor2 "Best unpicked goalkeepers" "goalkeepers")
-                                             td (linkToAnchor2 "Best unpicked defenders" "defenders")
-                                             td (linkToAnchor2 "Best unpicked midfielders" "midfielders")
-                                             td (linkToAnchor2 "Best unpicked forwards" "forwards") ] ))
+    let private linksHtml = table (Some 100) (tr ( [ td (bold "Top")
+                                                     td (linkToAnchor2 "Top teams/coaches" "teams/coaches")
+                                                     td (linkToAnchor2 "Top players" "players")
+                                                     td (linkToAnchor2 "Top goalkeepers" "goalkeepers")
+                                                     td (linkToAnchor2 "Top defenders" "defenders")
+                                                     td (linkToAnchor2 "Top midfielders" "midfielders")
+                                                     td (linkToAnchor2 "Top forwards" "forwards") ] ) @
+                                              tr ( [ td (bold "Best unpicked") 
+                                                     td (linkToAnchor2 "Best unpicked teams/coaches" "teams/coaches")
+                                                     td (linkToAnchor2 "Best unpicked players" "players")
+                                                     td (linkToAnchor2 "Best unpicked goalkeepers" "goalkeepers")
+                                                     td (linkToAnchor2 "Best unpicked defenders" "defenders")
+                                                     td (linkToAnchor2 "Best unpicked midfielders" "midfielders")
+                                                     td (linkToAnchor2 "Best unpicked forwards" "forwards") ] ))
 
-    let getIndexStandingsAndLinksHtml () = sweepstakerLinksHtml @ [ para "" ] @
-                                           standingsHtml @
-                                           [ para "" ] @ linksHtml
-                                           |> concatenateWithNewLine
+    let getIndexSummaryAndLinksHtml () = sweepstakerLinksHtml @ [ para "" ] @
+                                         standingsHtml @
+                                         [ para "" ] @ linksHtml
+                                         |> concatenateWithNewLine
 
-    let sweepstakersHtml =
+    let private fixtureHtml ``match`` =
+        let result = td (getResult false ``match``)
+        let kickOff = td (sprintf "%s %s" (``match``.KickOff.DayOfWeek.ToString ()) (``match``.KickOff.ToString ("dd-MMM-yyyy HH:mm")))
+        let stage = match ``match``.Stage with | Group (label, _) -> [ td (sprintf "Group %c" label) ] | _ -> [ td (getStage ``match``.Stage) ]
+        tr (stage @ [ kickOff; result ])
+
+    let private upcomingFixturesHtml nextNDays =
+        let fixturesHtml = matches2016 |> List.filter (fun ``match`` -> not (matchHasStarted ``match``) && ``match``.KickOff < DateTime.Now.AddDays (float nextNDays))
+                                       |> List.sortBy (fun ``match`` -> -``match``.Number)
+                                       |> List.collect fixtureHtml
+        table (Some 100) fixturesHtml
+
+    let getUpcomingFixturesHtml nextNDays = [ h2 "Upcoming fixtures" ] @
+                                            upcomingFixturesHtml nextNDays
+                                            |> concatenateWithNewLine
+
+    let getMatchDetailsHtml ``match`` =
+        let stage = match ``match``.Stage with | Group (label, _) -> sprintf "Group %c" label | _ -> getStage ``match``.Stage
+        let result = getResult false ``match``
+        let getSweepstakerDetailsHtml sweepstaker (items: (int<score> * string) list) =
+            let totalScore = items |> List.map (fun (score, _) -> score)
+                                   |> List.sum
+            let notes = items |> List.map (fun (_, notes) -> notes)
+                              |> concatenateWithSemiColon
+            [ para (sprintf "%s: %s%s (%s)" (bold (getParticipant sweepstaker)) (bold (if (int totalScore) > 0 then "+" else "")) (bold (sprintf "%d" (int totalScore))) notes) ]
+        let getTeamScoreDetails team = match (getTeamPickedBy team) with
+                                       | Some sweepstaker -> getTeamScoresForMatch team ``match``
+                                                             |> List.map (fun (score, notes) -> sweepstaker, score, notes)
+                                       | None -> []
+        let teamScoreDetails = getTeamScoreDetails (getTeam ``match``.Team1Score) @ getTeamScoreDetails (getTeam ``match``.Team2Score)
+        let playerScoreDetails = pickedPlayers |> List.collect (fun (pick, sweepstaker) -> getPlayerScoresForMatch pick.Player pick.OnlyScoresFrom ``match``
+                                                                                           |> List.map (fun (score, notes) -> sweepstaker, score, notes))
+        let scoreDetailsHtml = teamScoreDetails @ playerScoreDetails
+                               |> List.groupBy (fun (sweepstaker, _, _) -> sweepstaker)
+                               |> List.sortBy (fun (_, grouped) -> let totalScore = grouped |> List.map (fun (_, score, _) -> score)
+                                                                                            |> List.sum
+                                                                   -totalScore)
+                               |> List.collect (fun (sweepstaker, grouped) -> let items = grouped |> List.map (fun (_, score, notes) -> score, notes)
+                                                                              getSweepstakerDetailsHtml sweepstaker items)
+        [ h3 (sprintf "Game #%d (%s): %s" ``match``.Number stage result) ] @
+        scoreDetailsHtml
+        |> concatenateWithNewLine
+
+    let private sweepstakersHtml =
         let isGoalkeeper pick = match pick.Player.Type with | Goalkeeper -> true | _ -> false
         let pluralize noun count = if count = 1 then noun else sprintf "%ss" noun
         let picksHeaderRow = tr ( [ td (bold "Name")
@@ -118,17 +161,17 @@ module IndexContent =
             picksHtml sweepstaker
         sweepstakers |> List.collect (fun sweepstaker -> sweepstakerHtml sweepstaker)
 
-    let unpickedAnchor unpicked = match unpicked with | true -> "Best unpicked" | false -> "Top"
-    let playerTypeText playerType = match playerType with | Some playerType' -> match playerType' with | Goalkeeper -> "goalkeepers"
-                                                                                                       | Defender -> "defenders"
-                                                                                                       | Midfielder -> "midfielders"
-                                                                                                       | Forward -> "forwards"
-                                                          | None -> "players"
+    let private unpickedAnchor unpicked = match unpicked with | true -> "Best unpicked" | false -> "Top"
+    let private playerTypeText playerType = match playerType with | Some playerType' -> match playerType' with | Goalkeeper -> "goalkeepers"
+                                                                                                               | Defender -> "defenders"
+                                                                                                               | Midfielder -> "midfielders"
+                                                                                                               | Forward -> "forwards"
+                                                                  | None -> "players"
 
-    let topN n list = if list |> List.length > n then list |> Seq.ofList |> Seq.take n |> List.ofSeq
-                      else list
+    let private topN n list = if list |> List.length > n then list |> Seq.ofList |> Seq.take n |> List.ofSeq
+                              else list
 
-    let teamScoresHtml unpicked =
+    let private teamScoresHtml unpicked =
         let teamsHeaderRow = tr ( [ td (bold "Team")
                                     td (bold "Seeding")
                                     td (bold "Coach") ] @
@@ -138,10 +181,10 @@ module IndexContent =
             let teamRow (team, score) = tr ( [ td (getTeamTextWithStrike team team.Name)
                                                td (getTeamSeeding team)
                                                td team.Coach ] @
-                                             (if unpicked then [] else [ td (getTeamPickedBy team) ] ) @
+                                             (if unpicked then [] else [ td (getTeamPickedByText team) ] ) @
                                              [ td (sprintf "%d" (int score)) ] )
             table (Some (if unpicked then 70 else 80)) (teamsHeaderRow @ (teamScores |> List.collect teamRow))
-        let picked team = getTeamPickedBy team <> ""
+        let picked team = getTeamPickedByText team <> ""
         let matching unpicked picked = if unpicked then not picked else true
         let topScoring = teamScores2016 |> List.filter (fun (team, _) -> matching unpicked (picked team))
                                         |> List.filter (fun (_, score) -> score > 0<score>)
@@ -152,7 +195,7 @@ module IndexContent =
         [ h3 (anchor (sprintf "%s teams/coaches" (unpickedAnchor unpicked))) ] @
         scoresHtml
 
-    let playerScoresHtml unpicked (playerType: PlayerType option) =
+    let private playerScoresHtml unpicked (playerType: PlayerType option) =
         let playersHeaderRow = tr ( [ td (bold "Name")
                                       td (bold "Team") ] @
                                     (if playerType.IsSome then [ td "" ] else [ td (bold "Type") ] ) @
@@ -184,18 +227,18 @@ module IndexContent =
         [ h3 (anchor (sprintf "%s %s" (unpickedAnchor unpicked) (playerTypeText playerType))) ] @
         scoresHtml
 
-    let getIndexHtml () = sweepstakersHtml @
-                          teamScoresHtml false @
-                          playerScoresHtml false None @
-                          playerScoresHtml false (Some Goalkeeper) @
-                          playerScoresHtml false (Some Defender) @
-                          playerScoresHtml false (Some Midfielder) @
-                          playerScoresHtml false (Some Forward) @
-                          teamScoresHtml true @
-                          playerScoresHtml true None @
-                          playerScoresHtml true (Some Goalkeeper) @
-                          playerScoresHtml true (Some Defender) @
-                          playerScoresHtml true (Some Midfielder) @
-                          playerScoresHtml true (Some Forward)
-                          |> concatenateWithNewLine
+    let getIndexDetailHtml () = sweepstakersHtml @
+                                teamScoresHtml false @
+                                playerScoresHtml false None @
+                                playerScoresHtml false (Some Goalkeeper) @
+                                playerScoresHtml false (Some Defender) @
+                                playerScoresHtml false (Some Midfielder) @
+                                playerScoresHtml false (Some Forward) @
+                                teamScoresHtml true @
+                                playerScoresHtml true None @
+                                playerScoresHtml true (Some Goalkeeper) @
+                                playerScoresHtml true (Some Defender) @
+                                playerScoresHtml true (Some Midfielder) @
+                                playerScoresHtml true (Some Forward)
+                                |> concatenateWithNewLine
 
