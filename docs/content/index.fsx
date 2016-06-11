@@ -9,6 +9,7 @@ open AOrNotA.Sweepstake2016.IndexContent
 let lastUpdated = getLastUpdated ()
 let indexSummaryAndLinksHtml = getIndexSummaryAndLinksHtml ()
 let upcomingFixturesHtml = getUpcomingFixturesHtml 3
+let groupBEnglandVsRussiaHtml = getMatchDetailsHtml groupBEnglandVsRussia
 let groupBWalesVsSlovakiaHtml = getMatchDetailsHtml groupBWalesVsSlovakia
 let groupAAlbaniaVsSwitzerlandHtml = getMatchDetailsHtml groupAAlbaniaVsSwitzerland
 let groupAFranceVsRomaniaHtml = getMatchDetailsHtml groupAFranceVsRomania
@@ -27,6 +28,14 @@ Latest news
 
 (**
 ## Saturday 11th June
+*)
+
+(*** include-value: groupBEnglandVsRussiaHtml ***)
+
+(**
+_Fantais Cymru?_
+
+Josh storms into the lead; scraps from the table for Rosie, Denis and Susie.
 *)
 
 (*** include-value: groupBWalesVsSlovakiaHtml ***)

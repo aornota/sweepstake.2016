@@ -45,7 +45,7 @@ Note that the top 12 seeds are (in order): Germany; Spain; England; Portugal; Be
 
  - being named **man-of-the-match**: **15**
  - _**scoring**_ a **goal** or a **penalty**: **12**
- - _**assisting**_ a **goal**: **3** (note that a goal cannot be assisted by the same player who scored the goal)
+ - _**assisting**_ a **goal**: **3** (note that a goal cannot be assisted by the same player who scored the goal - unless they win a free kick and then score directly from it)
  - _**winning**_ a **penalty**: **3** (note that a penalty can be won by the same player who took the penalty)
  - _**missing**_ a **penalty**: **-6**
  - _**scoring**_ an **own goal**: **-6**
