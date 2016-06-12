@@ -9,6 +9,7 @@ open AOrNotA.Sweepstake2016.IndexContent
 let lastUpdated = getLastUpdated ()
 let indexSummaryAndLinksHtml = getIndexSummaryAndLinksHtml ()
 let upcomingFixturesHtml = getUpcomingFixturesHtml 3
+let groupCGermanyVsUkraineHtml = getMatchDetailsHtml groupCGermanyVsUkraine
 let groupCPolandVsNorthernIrelandHtml = getMatchDetailsHtml groupCPolandVsNorthernIreland
 let groupDTurkeyVsCroatiaHtml = getMatchDetailsHtml groupDTurkeyVsCroatia
 let groupBEnglandVsRussiaHtml = getMatchDetailsHtml groupBEnglandVsRussia
@@ -30,6 +31,13 @@ Latest news
 
 (**
 ## Sunday 12th June
+*)
+
+(*** include-value: groupCGermanyVsUkraineHtml ***)
+
+(**
+Excellent performances from Toni Kroos and Manuel Neuer see Denis climb the table; the German win keeps Steve M in third; Steve S picks up his 
+first points since the opening game; and Rosie continues to eke out the assists.
 *)
 
 (*** include-value: groupCPolandVsNorthernIrelandHtml ***)
