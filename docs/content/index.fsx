@@ -9,6 +9,7 @@ open AOrNotA.Sweepstake2016.IndexContent
 let lastUpdated = getLastUpdated ()
 let indexSummaryAndLinksHtml = getIndexSummaryAndLinksHtml ()
 let upcomingFixturesHtml = getUpcomingFixturesHtml 3
+let groupCPolandVsNorthernIrelandHtml = getMatchDetailsHtml groupCPolandVsNorthernIreland
 let groupDTurkeyVsCroatiaHtml = getMatchDetailsHtml groupDTurkeyVsCroatia
 let groupBEnglandVsRussiaHtml = getMatchDetailsHtml groupBEnglandVsRussia
 let groupBWalesVsSlovakiaHtml = getMatchDetailsHtml groupBWalesVsSlovakia
@@ -29,6 +30,13 @@ Latest news
 
 (**
 ## Sunday 12th June
+*)
+
+(*** include-value: groupCPolandVsNorthernIrelandHtml ***)
+
+(**
+Northern Ireland's brave attempt to win the tournament without conceding or scoring a goal fails at the first hurdle - largely to Will's benefit, 
+though points also for Rosie and Denis.
 *)
 
 (*** include-value: groupDTurkeyVsCroatiaHtml ***)

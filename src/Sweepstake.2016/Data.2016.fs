@@ -868,9 +868,14 @@ module ``Data 2016`` =
 
     // Group C matches: https://en.wikipedia.org/wiki/UEFA_Euro_2016_Group_C.
 
-    let groupCPolandVsNorthernIreland = { Team1Score = TeamMatchScore (poland, 0<goal>, None); Team2Score = TeamMatchScore (northernIreland, 0<goal>, None)
+    let groupCPolandVsNorthernIreland = { Team1Score = TeamMatchScore (poland, 1<goal>, None); Team2Score = TeamMatchScore (northernIreland, 0<goal>, None)
                                           Number = 6; Stage = groupC; KickOff = DateTime (2016, 06, 12, 17, 00, 00)
-                                          Events = [ (* poland *) (* northernIreland *) ] }
+                                          Events = [ ManOfTheMatch krychowiakGrzegorz
+                                                     Goal (milikArkadiusz, Some 51<min>, Some blaszczykowskiJakub) (* poland *)
+                                                     YellowCard (kapustkaBartosz, Some 65<min>)
+                                                     YellowCard (piszczekLukasz, Some 89<min>)
+                                                     CleanSheet (szczesnyWojciech, None)
+                                                     YellowCard (cathcartCraig, Some 69<min>) (* northernIreland *) ] }
                                            
     let groupCGermanyVsUkraine = { Team1Score = TeamMatchScore (germany, 0<goal>, None); Team2Score = TeamMatchScore (ukraine, 0<goal>, None)
                                    Number = 7; Stage = groupC; KickOff = DateTime (2016, 06, 12, 20, 00, 00)
