@@ -9,6 +9,7 @@ open AOrNotA.Sweepstake2016.IndexContent
 let lastUpdated = getLastUpdated ()
 let indexSummaryAndLinksHtml = getIndexSummaryAndLinksHtml ()
 let upcomingFixturesHtml = getUpcomingFixturesHtml 3
+let groupDTurkeyVsCroatiaHtml = getMatchDetailsHtml groupDTurkeyVsCroatia
 let groupBEnglandVsRussiaHtml = getMatchDetailsHtml groupBEnglandVsRussia
 let groupBWalesVsSlovakiaHtml = getMatchDetailsHtml groupBWalesVsSlovakia
 let groupAAlbaniaVsSwitzerlandHtml = getMatchDetailsHtml groupAAlbaniaVsSwitzerland
@@ -25,6 +26,16 @@ Latest news
 (*** include-value: indexSummaryAndLinksHtml ***)
 
 (*** include-value: upcomingFixturesHtml ***)
+
+(**
+## Sunday 12th June
+*)
+
+(*** include-value: groupDTurkeyVsCroatiaHtml ***)
+
+(**
+Like England, Croatia will be wondering how they only scored a single goal; unlike England, the profligacy doesn't cost them. Will races up to third.
+*)
 
 (**
 ## Saturday 11th June

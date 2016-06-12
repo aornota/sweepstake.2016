@@ -846,7 +846,7 @@ module ``Data 2016`` =
                                              YellowCard (cahillGary, Some 62<min>) (* england *)
                                              Goal (dierEric, Some 73<min>, Some alliDele)
                                              YellowCard (shchennikovGeorgi, Some 72<min>) (* russia *)
-                                             Goal (glushakovDenis (* TBC *), Some 92<min>, Some smolnikovIgor) ] }
+                                             Goal (berezutskiVasili, Some 92<min>, Some smolnikovIgor) ] }
                                            
     let groupBRussiaVsSlovakia = { Team1Score = TeamMatchScore (russia, 0<goal>, None); Team2Score = TeamMatchScore (slovakia, 0<goal>, None)
                                    Number = 13; Stage = groupB; KickOff = DateTime (2016, 06, 15, 14, 00, 00)
@@ -897,9 +897,15 @@ module ``Data 2016`` =
 
     // Group D matches: https://en.wikipedia.org/wiki/UEFA_Euro_2016_Group_D.
 
-    let groupDTurkeyVsCroatia = { Team1Score = TeamMatchScore (turkey, 0<goal>, None); Team2Score = TeamMatchScore (croatia, 0<goal>, None)
+    let groupDTurkeyVsCroatia = { Team1Score = TeamMatchScore (turkey, 0<goal>, None); Team2Score = TeamMatchScore (croatia, 1<goal>, None)
                                   Number = 5; Stage = groupD; KickOff = DateTime (2016, 06, 12, 14, 00, 00)
-                                  Events = [ (* turkey *) (* croatia *) ] }
+                                  Events = [ ManOfTheMatch modricLuka
+                                             YellowCard (tosunCenk, Some 31<min>) (* turkey *)
+                                             YellowCard (baltaHakanKadir, Some 48<min>)
+                                             YellowCard (senVolkan, Some 91<min>)
+                                             Goal (modricLuka, Some 41<min>, None) (* croatia *)
+                                             YellowCard (strinicIvan, Some 80<min>)
+                                             CleanSheet (subasicDanijel, None) ] }
                                            
     let groupDSpainVsCzechRepublic = { Team1Score = TeamMatchScore (spain, 0<goal>, None); Team2Score = TeamMatchScore (czechRepublic, 0<goal>, None)
                                        Number = 8; Stage = groupD; KickOff = DateTime (2016, 06, 13, 14, 00, 00)
