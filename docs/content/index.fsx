@@ -9,6 +9,7 @@ open AOrNotA.Sweepstake2016.IndexContent
 let lastUpdated = getLastUpdated ()
 let indexSummaryAndLinksHtml = getIndexSummaryAndLinksHtml ()
 let upcomingFixturesHtml = getUpcomingFixturesHtml 3
+let groupDSpainVsCzechRepublicHtml = getMatchDetailsHtml groupDSpainVsCzechRepublic
 let groupCGermanyVsUkraineHtml = getMatchDetailsHtml groupCGermanyVsUkraine
 let groupCPolandVsNorthernIrelandHtml = getMatchDetailsHtml groupCPolandVsNorthernIreland
 let groupDTurkeyVsCroatiaHtml = getMatchDetailsHtml groupDTurkeyVsCroatia
@@ -28,6 +29,17 @@ Latest news
 (*** include-value: indexSummaryAndLinksHtml ***)
 
 (*** include-value: upcomingFixturesHtml ***)
+
+(**
+## Monday 13th June
+*)
+
+(*** include-value: groupDSpainVsCzechRepublicHtml ***)
+
+(**
+The class of Andres Iniesta eventually does the trick for Spain against a resolute Czech defence, with the result that Susie and Chris haul 
+themselves towards respectability; Josh retakes the lead; Jem also moves in the right direction.
+*)
 
 (**
 ## Sunday 12th June
