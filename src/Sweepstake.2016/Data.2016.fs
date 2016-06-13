@@ -943,9 +943,14 @@ module ``Data 2016`` =
 
     // Group E matches: https://en.wikipedia.org/wiki/UEFA_Euro_2016_Group_E.
 
-    let groupERepublicOfIrelandVsSweden = { Team1Score = TeamMatchScore (republicOfIreland, 0<goal>, None); Team2Score = TeamMatchScore (sweden, 0<goal>, None)
+    let groupERepublicOfIrelandVsSweden = { Team1Score = TeamMatchScore (republicOfIreland, 1<goal>, None); Team2Score = TeamMatchScore (sweden, 1<goal>, None)
                                             Number = 9; Stage = groupE; KickOff = DateTime (2016, 06, 13, 17, 00, 00)
-                                            Events = [ (* republicOfIreland *) (* sweden *) ] }
+                                            Events = [ ManOfTheMatch hoolahanWes
+                                                       YellowCard (mcCarthyJames, Some 43<min>) (* republicOfIreland *)
+                                                       Goal (hoolahanWes, Some 48<min>, Some colemanSeamus)
+                                                       OwnGoal (sweden, clarkCiaran, Some 71<min>)
+                                                       YellowCard (whelanGlenn, Some 77<min>)
+                                                       YellowCard (lindelofVictor, Some 61<min>) (* sweden *) ] }
                                            
     let groupEBelgiumVsItaly = { Team1Score = TeamMatchScore (belgium, 0<goal>, None); Team2Score = TeamMatchScore (italy, 0<goal>, None)
                                  Number = 10; Stage = groupE; KickOff = DateTime (2016, 06, 13, 20, 00, 00)

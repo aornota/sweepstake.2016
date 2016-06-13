@@ -9,6 +9,9 @@ open AOrNotA.Sweepstake2016.IndexContent
 let lastUpdated = getLastUpdated ()
 let indexSummaryAndLinksHtml = getIndexSummaryAndLinksHtml ()
 let upcomingFixturesHtml = getUpcomingFixturesHtml 3
+
+let groupERepublicOfIrelandVsSwedenHtml = getMatchDetailsHtml groupERepublicOfIrelandVsSweden
+
 let groupDSpainVsCzechRepublicHtml = getMatchDetailsHtml groupDSpainVsCzechRepublic
 let groupCGermanyVsUkraineHtml = getMatchDetailsHtml groupCGermanyVsUkraine
 let groupCPolandVsNorthernIrelandHtml = getMatchDetailsHtml groupCPolandVsNorthernIreland
@@ -32,6 +35,12 @@ Latest news
 
 (**
 ## Monday 13th June
+*)
+
+(*** include-value: groupERepublicOfIrelandVsSwedenHtml ***)
+
+(**
+Nothing to see here.
 *)
 
 (*** include-value: groupDSpainVsCzechRepublicHtml ***)
