@@ -30,8 +30,8 @@ module Domain =
 
     type Squad = { Team: Team; Players: Player list }
 
-    type MatchEvent = | Goal of player: Player * at: int<min> option * assistedBy: Player option // note: assistedBy (if specified) must be *same* Team as player (but *cannot* be the same Player)
-                      | OwnGoal of goalFor: Team * player: Player * at: int<min> option // note: player must be *opposing* Team to goalFor
+    type MatchEvent = | Goal of player: Player * at: int<min> option * assistedBy: Player option // note: assistedBy (if specified) must be *same* Team as player (and *can* be the same Player, e.g. winning a free-kick and then scoring directly from it)
+                      | OwnGoal of goalFor: Team * player: Player * at: int<min> option * assistedBy: Player option // note: player must be *opposing* Team to goalFor - and assistedBy (if specified) must be *same* Team as goalFor
                       | Penalty of player: Player * successful: bool * at: int<min> option * wonBy: Player option * savedBy: Player option // note: wonBy (if specified) must be *same* Team as player (and *can* be the same Player) - and savedBy (if specified) must be *opposing* Team (and will *usually* be Goalkeeper) and must only be specified (but does *not* have to be specified, e.g. a penalty can be "missed" without being "saved") if not successful
                       | YellowCard of player: Player * at: int<min> option
                       | RedCard of player: Player * at: int<min> option
@@ -50,7 +50,7 @@ module Domain =
     let getShootoutPenalties teamMatchScore = match teamMatchScore with | TeamMatchScore (_, _, shootoutPenalties) -> shootoutPenalties
 
     let getTeamForMatchEvent matchEvent = match matchEvent with | Goal (player, _, _) -> player.Team
-                                                                | OwnGoal (_, player, _) -> player.Team
+                                                                | OwnGoal (_, player, _, _) -> player.Team
                                                                 | Penalty (player, _, _, _, _) -> player.Team
                                                                 | YellowCard (player, _) -> player.Team
                                                                 | RedCard (player, _) -> player.Team
@@ -58,14 +58,14 @@ module Domain =
                                                                 | ManOfTheMatch player -> player.Team
                                                                 | ShootoutPenalty (player, _) -> player.Team
 
-    let getOtherTeamForMatchEvent matchEvent = match matchEvent with | OwnGoal (goalFor, _, _) -> Some goalFor
+    let getOtherTeamForMatchEvent matchEvent = match matchEvent with | OwnGoal (goalFor, _, _, _) -> Some goalFor
                                                                      | Penalty (_, _, _, _, Some savedBy) -> Some savedBy.Team
                                                                      | _ -> None
 
     let getTeamMatchScoresFromMatchEvents ``match`` =
         let getGoals team matchEvents = matchEvents |> List.map (fun matchEvent -> match matchEvent with
                                                                                    | Goal (player, _, _) when player.Team = team -> 1<goal>
-                                                                                   | OwnGoal (goalFor, _, _) when goalFor = team -> 1<goal>
+                                                                                   | OwnGoal (goalFor, _, _, _) when goalFor = team -> 1<goal>
                                                                                    | Penalty (player, successful, _, _, _) when successful && player.Team = team -> 1<goal>
                                                                                    | _ -> 0<goal>)
                                                     |> List.sum

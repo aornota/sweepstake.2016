@@ -45,6 +45,8 @@ module Sweepstake =
     [<Literal>]
     let private playerOwnGoal = -6<score>
     [<Literal>]
+    let private playerOwnGoalAssist = playerAssist
+    [<Literal>]
     let private playerCleanSheet = 12<score>
     [<Literal>]
     let private playerSavePenalty = 12<score>
@@ -131,11 +133,10 @@ module Sweepstake =
     
     let getPlayerScoresForMatch (player: Player) (onlyScoresFrom: DateTime option) ``match`` =
         let matchEventScores = ``match``.Events |> List.map (fun matchEvent -> match matchEvent with
-                                                                               // Note: For Goal, player and assistedBy *cannot* be the same Player.
                                                                                | Goal (player', _, _) when player' = player -> Some (playerGoal, sprintf "goal scored by %s = %d" player'.Name (int playerGoal))
                                                                                | Goal (_, _, Some assistedBy) when assistedBy = player -> Some (playerAssist, sprintf "assist by %s = %d" assistedBy.Name (int playerAssist))
-                                                                               | OwnGoal (_, player', _) when player' = player -> Some (playerOwnGoal, sprintf "own goal scored by %s = %d" player'.Name (int playerOwnGoal))
-                                                                               // Note: For Penalty, player and wonBy *can* be the same Player.
+                                                                               | OwnGoal (_, player', _, _) when player' = player -> Some (playerOwnGoal, sprintf "own goal scored by %s = %d" player'.Name (int playerOwnGoal))
+                                                                               | OwnGoal (_, _, _, Some assistedBy) when assistedBy = player -> Some (playerOwnGoalAssist, sprintf "own goal assisted by %s = %d" assistedBy.Name (int playerOwnGoalAssist))
                                                                                | Penalty (player', true, _, Some wonBy, _) when player' = player && wonBy = player -> Some (playerScorePenalty + playerWinPenalty, sprintf "Penalty won and scored by %s = %d" player'.Name (int playerScorePenalty + int playerWinPenalty))
                                                                                | Penalty (player', false, _, Some wonBy, _) when player' = player && wonBy = player -> Some (playerMissPenalty + playerWinPenalty, sprintf "Penalty won and missed by %s = %d" player'.Name (int playerMissPenalty + int playerWinPenalty))
                                                                                | Penalty (player', true, _, _, _) when player' = player -> Some (playerScorePenalty, sprintf "penalty scored by %s = %d" player'.Name (int playerScorePenalty))
@@ -144,7 +145,6 @@ module Sweepstake =
                                                                                | Penalty (_, _, _, _, Some savedBy) when savedBy = player -> Some (playerSavePenalty, sprintf "penalty saved by %s = %d" savedBy.Name (int playerSavePenalty))
                                                                                // Note: YellowCards handled separately.
                                                                                | RedCard (player', _) when player' = player -> Some (playerRed, sprintf "red card for %s = %d" player'.Name (int playerRed))
-                                                                               // Note: For CleanSheet, goalkeeper and sharedWith *cannot* be the same Player.
                                                                                | CleanSheet (goalkeeper, Some sharedWith) when goalkeeper = player -> Some (playerCleanSheet / 2, sprintf "clean sheet (shared with %s) for %s = %d" sharedWith.Name goalkeeper.Name (int playerCleanSheet / 2))
                                                                                | CleanSheet (goalkeeper, Some sharedWith) when sharedWith = player -> Some (playerCleanSheet / 2, sprintf "clean sheet (shared with %s) for %s = %d" goalkeeper.Name sharedWith.Name (int playerCleanSheet / 2))
                                                                                | CleanSheet (goalkeeper, _) when goalkeeper = player -> Some (playerCleanSheet, sprintf "clean sheet for %s = %d" goalkeeper.Name (int playerCleanSheet))

@@ -948,13 +948,21 @@ module ``Data 2016`` =
                                             Events = [ ManOfTheMatch hoolahanWes
                                                        YellowCard (mcCarthyJames, Some 43<min>) (* republicOfIreland *)
                                                        Goal (hoolahanWes, Some 48<min>, Some colemanSeamus)
-                                                       OwnGoal (sweden, clarkCiaran, Some 71<min>)
+                                                       OwnGoal (sweden, clarkCiaran, Some 71<min>, Some ibrahimovicZlatan)
                                                        YellowCard (whelanGlenn, Some 77<min>)
                                                        YellowCard (lindelofVictor, Some 61<min>) (* sweden *) ] }
                                            
-    let groupEBelgiumVsItaly = { Team1Score = TeamMatchScore (belgium, 0<goal>, None); Team2Score = TeamMatchScore (italy, 0<goal>, None)
+    let groupEBelgiumVsItaly = { Team1Score = TeamMatchScore (belgium, 0<goal>, None); Team2Score = TeamMatchScore (italy, 2<goal>, None)
                                  Number = 10; Stage = groupE; KickOff = DateTime (2016, 06, 13, 20, 00, 00)
-                                 Events = [ (* belgium *) (* italy *) ] }
+                                 Events = [ ManOfTheMatch giaccheriniEmanuele
+                                            YellowCard (vertonghenJan, Some 92<min>) (* belgium *)
+                                            Goal (giaccheriniEmanuele, Some 32<min>, Some bonucciLeonardo) (* italy *)
+                                            YellowCard (chielliniGiorgio, Some 66<min>)
+                                            YellowCard (eder_Italy, Some 75<min>)
+                                            YellowCard (bonucciLeonardo, Some 78<min>)
+                                            YellowCard (mottaThiago, Some 84<min>)
+                                            Goal (pelleGraciano, Some 93<min>, Some candrevaAntonio)
+                                            CleanSheet (buffonGianluigi, None) ] }
                                            
     let groupEItalyVsSweden = { Team1Score = TeamMatchScore (italy, 0<goal>, None); Team2Score = TeamMatchScore (sweden, 0<goal>, None)
                                 Number = 19; Stage = groupE; KickOff = DateTime (2016, 06, 17, 14, 00, 00)

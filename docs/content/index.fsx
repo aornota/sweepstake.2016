@@ -10,8 +10,9 @@ let lastUpdated = getLastUpdated ()
 let indexSummaryAndLinksHtml = getIndexSummaryAndLinksHtml ()
 let upcomingFixturesHtml = getUpcomingFixturesHtml 3
 
-let groupERepublicOfIrelandVsSwedenHtml = getMatchDetailsHtml groupERepublicOfIrelandVsSweden
+let groupEBelgiumVsItalyHtml = getMatchDetailsHtml groupEBelgiumVsItaly
 
+let groupERepublicOfIrelandVsSwedenHtml = getMatchDetailsHtml groupERepublicOfIrelandVsSweden
 let groupDSpainVsCzechRepublicHtml = getMatchDetailsHtml groupDSpainVsCzechRepublic
 let groupCGermanyVsUkraineHtml = getMatchDetailsHtml groupCGermanyVsUkraine
 let groupCPolandVsNorthernIrelandHtml = getMatchDetailsHtml groupCPolandVsNorthernIreland
@@ -37,10 +38,18 @@ Latest news
 ## Monday 13th June
 *)
 
+(*** include-value: groupEBelgiumVsItalyHtml ***)
+
+(**
+Impressive stuff from Italy, albeit against a somewhat inchoate Belgian side. Josh extends his lead; Susie and Hugh move into the top half of 
+the table; Steve M drops points but remains third; and Rob finds himself back where he started.
+*)
+
 (*** include-value: groupERepublicOfIrelandVsSwedenHtml ***)
 
 (**
-Nothing to see here.
+Nothing much to see here - though following a late clarification of the rules (i.e. that assists can be scored for own goals), Hugh scrapes up a 
+few more points.
 *)
 
 (*** include-value: groupDSpainVsCzechRepublicHtml ***)

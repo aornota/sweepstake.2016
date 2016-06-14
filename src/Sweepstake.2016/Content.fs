@@ -84,7 +84,7 @@ module Content =
     let getPlayerIsForward (player: Player) = match player.Type with | Forward -> true | _ -> false
 
     let teamScores2016 = getTotalScorePerTeam ``Data 2016``.teams ``Data 2016``.matches
-    let getTeamScore (teamScores: (Team * int<score>) list) (team: Team) = match teamScores |> List.filter (fun (team', _) -> team'.Name = team.Name) with
+    let getTeamScore (teamScores: (Team * int<score>) list) (team: Team) = match teamScores |> List.filter (fun (team', _) -> team' = team) with
                                                                            | h :: _ -> Some (snd h)
                                                                            | _ -> None
     let getTeamScoreText teamScores team = match getTeamScore teamScores team with | Some score -> sprintf "%d" score
@@ -102,7 +102,7 @@ module Content =
     let playerPicks2016 = ``Sweepstake 2016``.pickedPlayers |> List.map (fun (pick, _) -> pick.Player, pick.OnlyScoresFrom)
     let playerScores2016 = getTotalScorePerPlayer players2016 ``Data 2016``.matches
     let playerPickScores2016 = getTotalScorePerPlayer playerPicks2016 ``Data 2016``.matches
-    let getPlayerScore playerScores player = match playerScores |> List.filter (fun (player', _) -> player'.Name = player.Name) with
+    let getPlayerScore playerScores player = match playerScores |> List.filter (fun (player', _) -> player' = player) with
                                              | h :: _ -> Some (snd h)
                                              | _ -> None
     let getPlayerScoreText playerScores player = match getPlayerScore playerScores player with | Some score -> sprintf "%d" score | None -> "n/a"
