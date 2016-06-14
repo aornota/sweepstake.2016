@@ -10,8 +10,9 @@ let lastUpdated = getLastUpdated ()
 let indexSummaryAndLinksHtml = getIndexSummaryAndLinksHtml ()
 let upcomingFixturesHtml = getUpcomingFixturesHtml 3
 
-let groupEBelgiumVsItalyHtml = getMatchDetailsHtml groupEBelgiumVsItaly
+let groupFAustriaVsHungaryHtml = getMatchDetailsHtml groupFAustriaVsHungary
 
+let groupEBelgiumVsItalyHtml = getMatchDetailsHtml groupEBelgiumVsItaly
 let groupERepublicOfIrelandVsSwedenHtml = getMatchDetailsHtml groupERepublicOfIrelandVsSweden
 let groupDSpainVsCzechRepublicHtml = getMatchDetailsHtml groupDSpainVsCzechRepublic
 let groupCGermanyVsUkraineHtml = getMatchDetailsHtml groupCGermanyVsUkraine
@@ -33,6 +34,16 @@ Latest news
 (*** include-value: indexSummaryAndLinksHtml ***)
 
 (*** include-value: upcomingFixturesHtml ***)
+
+(**
+## Tuesday 14th June
+*)
+
+(*** include-value: groupFAustriaVsHungaryHtml ***)
+
+(**
+Unfancied Hungary send the dark horses of Austria a step closer to the glue factory. Only Josh scores points - and negative ones at that.
+*)
 
 (**
 ## Monday 13th June

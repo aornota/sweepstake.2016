@@ -985,9 +985,15 @@ module ``Data 2016`` =
 
     // Group F matches: https://en.wikipedia.org/wiki/UEFA_Euro_2016_Group_F.
 
-    let groupFAustriaVsHungary = { Team1Score = TeamMatchScore (austria, 0<goal>, None); Team2Score = TeamMatchScore (hungary, 0<goal>, None)
+    let groupFAustriaVsHungary = { Team1Score = TeamMatchScore (austria, 0<goal>, None); Team2Score = TeamMatchScore (hungary, 2<goal>, None)
                                    Number = 11; Stage = groupF; KickOff = DateTime (2016, 06, 14, 17, 00, 00)
-                                   Events = [ (* austria *) (* hungary *) ] }
+                                   Events = [ ManOfTheMatch kleinheislerLaszlo
+                                              YellowCard (dragovicAleksandar, Some 33<min>) (* austria *)
+                                              YellowCard (dragovicAleksandar, Some 66<min>)
+                                              Goal (szalaiAdam, Some 62<min>, Some kleinheislerLaszlo) (* hungary *)
+                                              YellowCard (nemethKrisztian, Some 80<min>)
+                                              Goal (stieberZoltan, Some 87<min>, Some priskinTamas)
+                                              CleanSheet (kiralyGabor, None) ] }
                                            
     let groupFPortugalVsIceland = { Team1Score = TeamMatchScore (portugal, 0<goal>, None); Team2Score = TeamMatchScore (iceland, 0<goal>, None)
                                     Number = 12; Stage = groupF; KickOff = DateTime (2016, 06, 14, 20, 00, 00)
