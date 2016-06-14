@@ -10,8 +10,9 @@ let lastUpdated = getLastUpdated ()
 let indexSummaryAndLinksHtml = getIndexSummaryAndLinksHtml ()
 let upcomingFixturesHtml = getUpcomingFixturesHtml 3
 
-let groupFAustriaVsHungaryHtml = getMatchDetailsHtml groupFAustriaVsHungary
+let groupFPortugalVsIceland = getMatchDetailsHtml groupFPortugalVsIceland
 
+let groupFAustriaVsHungaryHtml = getMatchDetailsHtml groupFAustriaVsHungary
 let groupEBelgiumVsItalyHtml = getMatchDetailsHtml groupEBelgiumVsItaly
 let groupERepublicOfIrelandVsSwedenHtml = getMatchDetailsHtml groupERepublicOfIrelandVsSweden
 let groupDSpainVsCzechRepublicHtml = getMatchDetailsHtml groupDSpainVsCzechRepublic
@@ -37,6 +38,13 @@ Latest news
 
 (**
 ## Tuesday 14th June
+*)
+
+(*** include-value: groupFPortugalVsIceland ***)
+
+(**
+Yep, you read that right: Nani was voted man-of-the-match. Time to end the disastrous democratic experiment... Jem storms up to third; Steve 
+S keeps chugging along.
 *)
 
 (*** include-value: groupFAustriaVsHungaryHtml ***)
