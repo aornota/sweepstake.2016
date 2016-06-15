@@ -10,8 +10,9 @@ let lastUpdated = getLastUpdated ()
 let indexSummaryAndLinksHtml = getIndexSummaryAndLinksHtml ()
 let upcomingFixturesHtml = getUpcomingFixturesHtml 3
 
-let groupBRussiaVsSlovakiaHtml = getMatchDetailsHtml groupBRussiaVsSlovakia
+let groupARomaniaVsSwitzerlandHtml = getMatchDetailsHtml groupARomaniaVsSwitzerland
 
+let groupBRussiaVsSlovakiaHtml = getMatchDetailsHtml groupBRussiaVsSlovakia
 let groupFPortugalVsIceland = getMatchDetailsHtml groupFPortugalVsIceland
 let groupFAustriaVsHungaryHtml = getMatchDetailsHtml groupFAustriaVsHungary
 let groupEBelgiumVsItalyHtml = getMatchDetailsHtml groupEBelgiumVsItaly
@@ -39,6 +40,13 @@ Latest news
 
 (**
 ## Wednesday 15th June
+*)
+
+(*** include-value: groupARomaniaVsSwitzerlandHtml ***)
+
+(**
+The Granit Xhaka fan club appears to have rigged the man-of-the-match voting. Josh won't be complaining as he extends his lead; Hugh lurches 
+unsteadily forwards.
 *)
 
 (*** include-value: groupBRussiaVsSlovakiaHtml ***)
