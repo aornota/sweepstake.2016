@@ -10,8 +10,9 @@ let lastUpdated = getLastUpdated ()
 let indexSummaryAndLinksHtml = getIndexSummaryAndLinksHtml ()
 let upcomingFixturesHtml = getUpcomingFixturesHtml 3
 
-let groupFPortugalVsIceland = getMatchDetailsHtml groupFPortugalVsIceland
+let groupBRussiaVsSlovakiaHtml = getMatchDetailsHtml groupBRussiaVsSlovakia
 
+let groupFPortugalVsIceland = getMatchDetailsHtml groupFPortugalVsIceland
 let groupFAustriaVsHungaryHtml = getMatchDetailsHtml groupFAustriaVsHungary
 let groupEBelgiumVsItalyHtml = getMatchDetailsHtml groupEBelgiumVsItaly
 let groupERepublicOfIrelandVsSwedenHtml = getMatchDetailsHtml groupERepublicOfIrelandVsSweden
@@ -35,6 +36,16 @@ Latest news
 (*** include-value: indexSummaryAndLinksHtml ***)
 
 (*** include-value: upcomingFixturesHtml ***)
+
+(**
+## Wednesday 15th June
+*)
+
+(*** include-value: groupBRussiaVsSlovakiaHtml ***)
+
+(**
+I've always liked the name Marek - as, one suspects, does Steve S right now.
+*)
 
 (**
 ## Tuesday 14th June
