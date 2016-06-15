@@ -10,8 +10,9 @@ let lastUpdated = getLastUpdated ()
 let indexSummaryAndLinksHtml = getIndexSummaryAndLinksHtml ()
 let upcomingFixturesHtml = getUpcomingFixturesHtml 3
 
-let groupARomaniaVsSwitzerlandHtml = getMatchDetailsHtml groupARomaniaVsSwitzerland
+let groupAFranceVsAlbaniaHtml = getMatchDetailsHtml groupAFranceVsAlbania
 
+let groupARomaniaVsSwitzerlandHtml = getMatchDetailsHtml groupARomaniaVsSwitzerland
 let groupBRussiaVsSlovakiaHtml = getMatchDetailsHtml groupBRussiaVsSlovakia
 let groupFPortugalVsIceland = getMatchDetailsHtml groupFPortugalVsIceland
 let groupFAustriaVsHungaryHtml = getMatchDetailsHtml groupFAustriaVsHungary
@@ -40,6 +41,12 @@ Latest news
 
 (**
 ## Wednesday 15th June
+*)
+
+(*** include-value: groupAFranceVsAlbaniaHtml ***)
+
+(**
+An eventful end to the match sees Steve M and Jem rise to second and third respectively; points also for Rosie, Rob and Chris.
 *)
 
 (*** include-value: groupARomaniaVsSwitzerlandHtml ***)

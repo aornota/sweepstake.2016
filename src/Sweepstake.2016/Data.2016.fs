@@ -819,9 +819,15 @@ module ``Data 2016`` =
                                                   YellowCard (xhakaGranit, Some 50<min>) (* switzerland *)
                                                   Goal (mehmediAdmir, Some 57<min>, Some djourouJohan) ] }
                                            
-    let groupAFranceVsAlbania = { Team1Score = TeamMatchScore (france, 0<goal>, None); Team2Score = TeamMatchScore (albania, 0<goal>, None)
+    let groupAFranceVsAlbania = { Team1Score = TeamMatchScore (france, 2<goal>, None); Team2Score = TeamMatchScore (albania, 0<goal>, None)
                                   Number = 15; Stage = groupA; KickOff = DateTime (2016, 06, 15, 20, 00, 00)
-                                  Events = [ (* france *) (* albania *) ] }
+                                  Events = [ ManOfTheMatch payetDimitri
+                                             YellowCard (kanteNGolo, Some 88<min>) (* france *)
+                                             Goal (griezmannAntoine, Some 90<min>, Some ramiAdil)
+                                             Goal (payetDimitri, Some 96<min>, Some gignacAndrePierre)
+                                             CleanSheet (llorisHugo, None)
+                                             YellowCard (kukeliBurim, Some 55<min>) (* albania *)
+                                             YellowCard (abrashiAmir, Some 81<min>) ] }
                                            
     let groupARomaniaVsAlbania = { Team1Score = TeamMatchScore (romania, 0<goal>, None); Team2Score = TeamMatchScore (albania, 0<goal>, None)
                                    Number = 25; Stage = groupA; KickOff = DateTime (2016, 06, 19, 20, 00, 00)
