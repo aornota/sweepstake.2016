@@ -10,8 +10,9 @@ let lastUpdated = getLastUpdated ()
 let indexSummaryAndLinksHtml = getIndexSummaryAndLinksHtml ()
 let upcomingFixturesHtml = getUpcomingFixturesHtml 3
 
-let groupCUkraineVsNorthernIrelandHtml = getMatchDetailsHtml groupCUkraineVsNorthernIreland
+let groupCGermanyVsPolandHtml = getMatchDetailsHtml groupCGermanyVsPoland
 
+let groupCUkraineVsNorthernIrelandHtml = getMatchDetailsHtml groupCUkraineVsNorthernIreland
 let groupBEnglandVsWalesHtml = getMatchDetailsHtml groupBEnglandVsWales
 let groupAFranceVsAlbaniaHtml = getMatchDetailsHtml groupAFranceVsAlbania
 let groupARomaniaVsSwitzerlandHtml = getMatchDetailsHtml groupARomaniaVsSwitzerland
@@ -45,10 +46,17 @@ Latest news
 ## Thursday 16th June
 *)
 
+(*** include-value: groupCGermanyVsPolandHtml ***)
+
+(**
+A bore draw brings clean sheet points to the fore, with Denis and Susie joining the chasing pack. Will sneaks up to fourth; Rob and Rosie 
+slip into reverse.
+*)
+
 (*** include-value: groupCUkraineVsNorthernIrelandHtml ***)
 
 (**
-Good game, though - if you'll forgive the parochialism - with no great significance for the sweepstake.
+Good game - though, if you'll forgive the parochialism, with no great significance for the sweepstake.
 *)
 
 (*** include-value: groupBEnglandVsWalesHtml ***)
