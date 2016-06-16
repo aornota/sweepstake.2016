@@ -10,8 +10,9 @@ let lastUpdated = getLastUpdated ()
 let indexSummaryAndLinksHtml = getIndexSummaryAndLinksHtml ()
 let upcomingFixturesHtml = getUpcomingFixturesHtml 3
 
-let groupBEnglandVsWalesHtml = getMatchDetailsHtml groupBEnglandVsWales
+let groupCUkraineVsNorthernIrelandHtml = getMatchDetailsHtml groupCUkraineVsNorthernIreland
 
+let groupBEnglandVsWalesHtml = getMatchDetailsHtml groupBEnglandVsWales
 let groupAFranceVsAlbaniaHtml = getMatchDetailsHtml groupAFranceVsAlbania
 let groupARomaniaVsSwitzerlandHtml = getMatchDetailsHtml groupARomaniaVsSwitzerland
 let groupBRussiaVsSlovakiaHtml = getMatchDetailsHtml groupBRussiaVsSlovakia
@@ -42,6 +43,12 @@ Latest news
 
 (**
 ## Thursday 16th June
+*)
+
+(*** include-value: groupCUkraineVsNorthernIrelandHtml ***)
+
+(**
+Good game, though - if you'll forgive the parochialism - with no great significance for the sweepstake.
 *)
 
 (*** include-value: groupBEnglandVsWalesHtml ***)

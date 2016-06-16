@@ -906,13 +906,23 @@ module ``Data 2016`` =
                                               CleanSheet (neuerManuel, None)
                                               YellowCard (konoplyankaYevhen, Some 68<min>) (* ukraine *) ] }
                                            
-    let groupCUkraineVsNorthernIreland = { Team1Score = TeamMatchScore (ukraine, 0<goal>, None); Team2Score = TeamMatchScore (northernIreland, 0<goal>, None)
+    let groupCUkraineVsNorthernIreland = { Team1Score = TeamMatchScore (ukraine, 0<goal>, None); Team2Score = TeamMatchScore (northernIreland, 2<goal>, None)
                                            Number = 17; Stage = groupC; KickOff = DateTime (2016, 06, 16, 17, 00, 00)
-                                           Events = [ (* ukraine *) (* northernIreland *) ] }
+                                           Events = [ ManOfTheMatch mcAuleyGareth
+                                                      YellowCard (seleznyovYevhen, Some 40<min>) (* ukraine *)
+                                                      YellowCard (sydorchukSerhiy, Some 67<min>)
+                                                      Goal (mcAuleyGareth, Some 49<min>, Some norwoodOliver) (* northernIreland *)
+                                                      YellowCard (wardJamie, Some 61<min>)
+                                                      YellowCard (dallasStuart, Some 87<min>)
+                                                      YellowCard (evansJonny, Some 94<min>)
+                                                      Goal (mcGinnNiall, Some 96<min>, None)
+                                                      CleanSheet (mcGovernMichael, None) ] }
                                            
     let groupCGermanyVsPoland = { Team1Score = TeamMatchScore (germany, 0<goal>, None); Team2Score = TeamMatchScore (poland, 0<goal>, None)
                                   Number = 18; Stage = groupC; KickOff = DateTime (2016, 06, 16, 20, 00, 00)
-                                  Events = [ (* germany *) (* poland *) ] }
+                                  Events = [ (* ManOfTheMatch TBC *)
+                                              (* germany *)
+                                              (* poland *) ] }
                                            
     let groupCUkraineVsPoland = { Team1Score = TeamMatchScore (ukraine, 0<goal>, None); Team2Score = TeamMatchScore (poland, 0<goal>, None)
                                   Number = 29; Stage = groupC; KickOff = DateTime (2016, 06, 21, 17, 00, 00)
