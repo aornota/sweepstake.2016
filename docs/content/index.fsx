@@ -10,8 +10,9 @@ let lastUpdated = getLastUpdated ()
 let indexSummaryAndLinksHtml = getIndexSummaryAndLinksHtml ()
 let upcomingFixturesHtml = getUpcomingFixturesHtml 3
 
-let groupAFranceVsAlbaniaHtml = getMatchDetailsHtml groupAFranceVsAlbania
+let groupBEnglandVsWalesHtml = getMatchDetailsHtml groupBEnglandVsWales
 
+let groupAFranceVsAlbaniaHtml = getMatchDetailsHtml groupAFranceVsAlbania
 let groupARomaniaVsSwitzerlandHtml = getMatchDetailsHtml groupARomaniaVsSwitzerland
 let groupBRussiaVsSlovakiaHtml = getMatchDetailsHtml groupBRussiaVsSlovakia
 let groupFPortugalVsIceland = getMatchDetailsHtml groupFPortugalVsIceland
@@ -38,6 +39,17 @@ Latest news
 (*** include-value: indexSummaryAndLinksHtml ***)
 
 (*** include-value: upcomingFixturesHtml ***)
+
+(**
+## Thursday 16th June
+*)
+
+(*** include-value: groupBEnglandVsWalesHtml ***)
+
+(**
+Another late, late show leaves England and Wales both odds-on to get knocked out in the round of sixteen. Points for half of the 
+sweepstakers, with Josh and Steve M leading the way.
+*)
 
 (**
 ## Wednesday 15th June
