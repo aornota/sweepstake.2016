@@ -10,8 +10,9 @@ let lastUpdated = getLastUpdated ()
 let indexSummaryAndLinksHtml = getIndexSummaryAndLinksHtml ()
 let upcomingFixturesHtml = getUpcomingFixturesHtml 3
 
-let groupEItalyVsSwedenHtml = getMatchDetailsHtml groupEItalyVsSweden
+let groupDCzechRepublicVsCroatiaHtml = getMatchDetailsHtml groupDCzechRepublicVsCroatia
 
+let groupEItalyVsSwedenHtml = getMatchDetailsHtml groupEItalyVsSweden
 let groupCGermanyVsPolandHtml = getMatchDetailsHtml groupCGermanyVsPoland
 let groupCUkraineVsNorthernIrelandHtml = getMatchDetailsHtml groupCUkraineVsNorthernIreland
 let groupBEnglandVsWalesHtml = getMatchDetailsHtml groupBEnglandVsWales
@@ -45,6 +46,13 @@ Latest news
 
 (**
 ## Friday 17th June
+*)
+
+(*** include-value: groupDCzechRepublicVsCroatiaHtml ***)
+
+(**
+Croatia will be wondering how they failed to win that match - but may have bigger things to worry about. Nearly-but-not-quite for Neph; 
+defending champion Jem consolidates his place in the top three; Hugh moves ahead of Rosie.
 *)
 
 (*** include-value: groupEItalyVsSwedenHtml ***)
