@@ -10,8 +10,9 @@ let lastUpdated = getLastUpdated ()
 let indexSummaryAndLinksHtml = getIndexSummaryAndLinksHtml ()
 let upcomingFixturesHtml = getUpcomingFixturesHtml 3
 
-let groupDCzechRepublicVsCroatiaHtml = getMatchDetailsHtml groupDCzechRepublicVsCroatia
+let groupDSpainVsTurkeyHtml = getMatchDetailsHtml groupDSpainVsTurkey
 
+let groupDCzechRepublicVsCroatiaHtml = getMatchDetailsHtml groupDCzechRepublicVsCroatia
 let groupEItalyVsSwedenHtml = getMatchDetailsHtml groupEItalyVsSweden
 let groupCGermanyVsPolandHtml = getMatchDetailsHtml groupCGermanyVsPoland
 let groupCUkraineVsNorthernIrelandHtml = getMatchDetailsHtml groupCUkraineVsNorthernIreland
@@ -46,6 +47,15 @@ Latest news
 
 (**
 ## Friday 17th June
+*)
+
+(*** include-value: groupDSpainVsTurkeyHtml ***)
+
+(**
+Spain's strikers find their scoring touch as the peerless Andres Iniesta orchestrates a comprehensive victory. Jem moves up to second; Susie 
+keeps the pressure on the top three; Chris storms up to fifth; and Rob finds himself back in familiar territory at the foot of the table.
+
+Still, things can change very quickly, as we've seen - and with plenty of games to go (some would say too many), there's hope for everyone...
 *)
 
 (*** include-value: groupDCzechRepublicVsCroatiaHtml ***)
