@@ -10,8 +10,9 @@ let lastUpdated = getLastUpdated ()
 let indexSummaryAndLinksHtml = getIndexSummaryAndLinksHtml ()
 let upcomingFixturesHtml = getUpcomingFixturesHtml 3
 
-let groupCGermanyVsPolandHtml = getMatchDetailsHtml groupCGermanyVsPoland
+let groupEItalyVsSwedenHtml = getMatchDetailsHtml groupEItalyVsSweden
 
+let groupCGermanyVsPolandHtml = getMatchDetailsHtml groupCGermanyVsPoland
 let groupCUkraineVsNorthernIrelandHtml = getMatchDetailsHtml groupCUkraineVsNorthernIreland
 let groupBEnglandVsWalesHtml = getMatchDetailsHtml groupBEnglandVsWales
 let groupAFranceVsAlbaniaHtml = getMatchDetailsHtml groupAFranceVsAlbania
@@ -41,6 +42,17 @@ Latest news
 (*** include-value: indexSummaryAndLinksHtml ***)
 
 (*** include-value: upcomingFixturesHtml ***)
+
+(**
+## Friday 17th June
+*)
+
+(*** include-value: groupEItalyVsSwedenHtml ***)
+
+(**
+Note-to-self: don't bother tuning in until late in the second half during Platini's bloated group stages. Rob gets a much-needed boost; points 
+also for Susie, Josh and Chris; Neph needs some Croatian magic post-haste (although the wooden spoon may be the best he can hope for now).
+*)
 
 (**
 ## Thursday 16th June
