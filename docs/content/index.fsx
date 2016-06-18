@@ -10,8 +10,9 @@ let lastUpdated = getLastUpdated ()
 let indexSummaryAndLinksHtml = getIndexSummaryAndLinksHtml ()
 let upcomingFixturesHtml = getUpcomingFixturesHtml 3
 
-let groupDSpainVsTurkeyHtml = getMatchDetailsHtml groupDSpainVsTurkey
+let groupEBelgiumVsRepublicOfIrelandHtml = getMatchDetailsHtml groupEBelgiumVsRepublicOfIreland
 
+let groupDSpainVsTurkeyHtml = getMatchDetailsHtml groupDSpainVsTurkey
 let groupDCzechRepublicVsCroatiaHtml = getMatchDetailsHtml groupDCzechRepublicVsCroatia
 let groupEItalyVsSwedenHtml = getMatchDetailsHtml groupEItalyVsSweden
 let groupCGermanyVsPolandHtml = getMatchDetailsHtml groupCGermanyVsPoland
@@ -44,6 +45,17 @@ Latest news
 (*** include-value: indexSummaryAndLinksHtml ***)
 
 (*** include-value: upcomingFixturesHtml ***)
+
+(**
+## Saturday 18th June
+*)
+
+(*** include-value: groupEBelgiumVsRepublicOfIrelandHtml ***)
+
+(**
+A straightforward victory for Belgium, aided by Ciaran 'Calamity' Clark - and with Toby Alderweireld lucky to stay on the pitch. Mixed feelings 
+for Denis, no doubt, as he moves up to fourth; Jem and Steve M are snapping at Josh's heels.
+*)
 
 (**
 ## Friday 17th June
