@@ -10,8 +10,9 @@ let lastUpdated = getLastUpdated ()
 let indexSummaryAndLinksHtml = getIndexSummaryAndLinksHtml ()
 let upcomingFixturesHtml = getUpcomingFixturesHtml 3
 
-let groupFIcelandVsHungaryHtml = getMatchDetailsHtml groupFIcelandVsHungary
+let groupFPortugalVsAustriaHtml = getMatchDetailsHtml groupFPortugalVsAustria
 
+let groupFIcelandVsHungaryHtml = getMatchDetailsHtml groupFIcelandVsHungary
 let groupEBelgiumVsRepublicOfIrelandHtml = getMatchDetailsHtml groupEBelgiumVsRepublicOfIreland
 let groupDSpainVsTurkeyHtml = getMatchDetailsHtml groupDSpainVsTurkey
 let groupDCzechRepublicVsCroatiaHtml = getMatchDetailsHtml groupDCzechRepublicVsCroatia
@@ -49,6 +50,12 @@ Latest news
 
 (**
 ## Saturday 18th June
+*)
+
+(*** include-value: groupFPortugalVsAustriaHtml ***)
+
+(**
+Marvellous. No goals and not a lot of sweepstake points either - but a delicious helping of _schadenfreude_.
 *)
 
 (*** include-value: groupFIcelandVsHungaryHtml ***)

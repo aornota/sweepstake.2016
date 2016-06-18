@@ -1080,7 +1080,16 @@ module ``Data 2016`` =
                                            
     let groupFPortugalVsAustria = { Team1Score = TeamMatchScore (portugal, 0<goal>, None); Team2Score = TeamMatchScore (austria, 0<goal>, None)
                                     Number = 24; Stage = groupF; KickOff = DateTime (2016, 06, 18, 20, 00, 00)
-                                    Events = [ (* portugal *) (* austria *) ] }
+                                    Events = [ ManOfTheMatch moutinhoJoao
+                                               YellowCard (quaresmaRicardo, Some 31<min>) (* portugal *)
+                                               YellowCard (pepe, Some 40<min>)
+                                               Penalty (ronaldoCristiano, false, Some 78<min>, Some ronaldoCristiano, None)
+                                               CleanSheet (patricioRui, None)
+                                               YellowCard (harnikMartin, Some 47<min>) (* austria *)      
+                                               YellowCard (fuchsChristian, Some 60<min>)
+                                               YellowCard (hintereggerMartin, Some 78<min>)
+                                               YellowCard (schopfAlessandro, Some 86<min>)
+                                               CleanSheet (almerRobert, None) ] }
                                            
     let groupFIcelandVsAustria = { Team1Score = TeamMatchScore (iceland, 0<goal>, None); Team2Score = TeamMatchScore (austria, 0<goal>, None)
                                    Number = 33; Stage = groupF; KickOff = DateTime (2016, 06, 22, 17, 00, 00)
