@@ -10,8 +10,9 @@ let lastUpdated = getLastUpdated ()
 let indexSummaryAndLinksHtml = getIndexSummaryAndLinksHtml ()
 let upcomingFixturesHtml = getUpcomingFixturesHtml 3
 
-let groupEBelgiumVsRepublicOfIrelandHtml = getMatchDetailsHtml groupEBelgiumVsRepublicOfIreland
+let groupFIcelandVsHungaryHtml = getMatchDetailsHtml groupFIcelandVsHungary
 
+let groupEBelgiumVsRepublicOfIrelandHtml = getMatchDetailsHtml groupEBelgiumVsRepublicOfIreland
 let groupDSpainVsTurkeyHtml = getMatchDetailsHtml groupDSpainVsTurkey
 let groupDCzechRepublicVsCroatiaHtml = getMatchDetailsHtml groupDCzechRepublicVsCroatia
 let groupEItalyVsSwedenHtml = getMatchDetailsHtml groupEItalyVsSweden
@@ -48,6 +49,12 @@ Latest news
 
 (**
 ## Saturday 18th June
+*)
+
+(*** include-value: groupFIcelandVsHungaryHtml ***)
+
+(**
+Disappointment for Iceland - and widespread disbelief at the man-of-the-match award that takes Steve M back to the top of the table.
 *)
 
 (*** include-value: groupEBelgiumVsRepublicOfIrelandHtml ***)

@@ -1066,11 +1066,17 @@ module ``Data 2016`` =
                                                YellowCard (bjarnasonBirkir, Some 55<min>)
                                                YellowCard (finnbogasonAlfred, Some 94<min>) ] }
 
-    let groupFIcelandVsHungary = { Team1Score = TeamMatchScore (iceland, 0<goal>, None); Team2Score = TeamMatchScore (hungary, 0<goal>, None)
+    let groupFIcelandVsHungary = { Team1Score = TeamMatchScore (iceland, 1<goal>, None); Team2Score = TeamMatchScore (hungary, 1<goal>, None)
                                    Number = 23; Stage = groupF; KickOff = DateTime (2016, 06, 18, 17, 00, 00)
-                                   Events = [ (* ManOfTheMatch TBC *)
-                                               (* iceland *)
-                                               (* hungary *) ] }
+                                   Events = [ ManOfTheMatch sigthorssonKolbeinn
+                                              Penalty (sigurdssonGylfi, true, Some 40<min>, Some gunnarssonAron, None) (* iceland *)
+                                              YellowCard (gudmundssonJohannBerg, Some 42<min>)
+                                              YellowCard (finnbogasonAlfred, Some 75<min>)
+                                              YellowCard (saevarssonBirkirMar, Some 77<min>)
+                                              OwnGoal (hungary, saevarssonBirkirMar, Some 88<min>, Some nikolicNemanja)                                              
+                                              YellowCard (kadarTamas, Some 81<min>) (* hungary *)
+                                              YellowCard (kleinheislerLaszlo, Some 83<min>)
+                                              YellowCard (nagyAdam, Some 91<min>) ] }
                                            
     let groupFPortugalVsAustria = { Team1Score = TeamMatchScore (portugal, 0<goal>, None); Team2Score = TeamMatchScore (austria, 0<goal>, None)
                                     Number = 24; Stage = groupF; KickOff = DateTime (2016, 06, 18, 20, 00, 00)
@@ -1185,7 +1191,7 @@ module ``Data 2016`` =
                       Number = 50; Stage = Final; KickOff = DateTime (2016, 07, 10, 20, 00, 00)
                       Events = [ (* winnerSF1 *) (* winnerSF2 *) ] }
 
-    let private knockoutMatches = [ match37XVsY; match38XVsY; match39XVsY; match40XVsY; match41XVsY; match42XVsY; match43XVsY; match44XVsY
+    let private knockoutMatches = [ match37XVsY; match38XVsY; match39XVsY; match40XVsY; match41XVsY; match42XVsY; match43ItalyVsY; match44XVsY
                                     quarterFinal1XVsY; quarterFinal2XVsY; quarterFinal3XVsY; quarterFinal4XVsY
                                     semiFinal1XVsY; semiFinal2XVsY
                                     finalXVsY ]
