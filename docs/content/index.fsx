@@ -10,8 +10,10 @@ let lastUpdated = getLastUpdated ()
 let indexSummaryAndLinksHtml = getIndexSummaryAndLinksHtml ()
 let upcomingFixturesHtml = getUpcomingFixturesHtml 3
 
-let groupFPortugalVsAustriaHtml = getMatchDetailsHtml groupFPortugalVsAustria
+let groupASwitzerlandVsFranceHtml = getMatchDetailsHtml groupASwitzerlandVsFrance
+let groupARomaniaVsAlbaniaHtml = getMatchDetailsHtml groupARomaniaVsAlbania
 
+let groupFPortugalVsAustriaHtml = getMatchDetailsHtml groupFPortugalVsAustria
 let groupFIcelandVsHungaryHtml = getMatchDetailsHtml groupFIcelandVsHungary
 let groupEBelgiumVsRepublicOfIrelandHtml = getMatchDetailsHtml groupEBelgiumVsRepublicOfIreland
 let groupDSpainVsTurkeyHtml = getMatchDetailsHtml groupDSpainVsTurkey
@@ -47,6 +49,20 @@ Latest news
 (*** include-value: indexSummaryAndLinksHtml ***)
 
 (*** include-value: upcomingFixturesHtml ***)
+
+(**
+## Sunday 19th June
+*)
+
+(*** include-value: groupASwitzerlandVsFranceHtml ***)
+
+(*** include-value: groupARomaniaVsAlbaniaHtml ***)
+
+(**
+Not the most exciting Sunday evening fare as France maintain their record of not conceding in Lille since 1914 and Albania deservedly finish 
+third in the group (though that may not be enough to see them through to the knockout phase). Rob moves into the top half of the table; Hugh 
+and Jem also pick up some snore-draw points.
+*)
 
 (**
 ## Saturday 18th June
