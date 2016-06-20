@@ -10,9 +10,11 @@ let lastUpdated = getLastUpdated ()
 let indexSummaryAndLinksHtml = getIndexSummaryAndLinksHtml ()
 let upcomingFixturesHtml = getUpcomingFixturesHtml 3
 
+let groupBSlovakiaVsEnglandHtml = getMatchDetailsHtml groupBSlovakiaVsEngland
+let groupBRussiaVsWalesHtml = getMatchDetailsHtml groupBRussiaVsWales
+
 let groupASwitzerlandVsFranceHtml = getMatchDetailsHtml groupASwitzerlandVsFrance
 let groupARomaniaVsAlbaniaHtml = getMatchDetailsHtml groupARomaniaVsAlbania
-
 let groupFPortugalVsAustriaHtml = getMatchDetailsHtml groupFPortugalVsAustria
 let groupFIcelandVsHungaryHtml = getMatchDetailsHtml groupFIcelandVsHungary
 let groupEBelgiumVsRepublicOfIrelandHtml = getMatchDetailsHtml groupEBelgiumVsRepublicOfIreland
@@ -51,6 +53,20 @@ Latest news
 (*** include-value: upcomingFixturesHtml ***)
 
 (**
+## Monday 20th June
+*)
+
+(*** include-value: groupBSlovakiaVsEnglandHtml ***)
+
+(*** include-value: groupBRussiaVsWalesHtml ***)
+
+(**
+Wales top the group after brushing a sorry Russia aside, meaning that Denis is the first sweepstaker to lose his coach/team; England will find 
+out on Wednesday evening whether another meeting with Portugal awaits next Monday. (Perhaps Cristiano Ronaldo will get sent off against 
+Hungary...) Another goal for Gareth Bale takes Josh back to the top of the table; Neph storms up to fourth; little of note for anyone else.
+*)
+
+(**
 ## Sunday 19th June
 *)
 
@@ -60,7 +76,7 @@ Latest news
 
 (**
 Not the most exciting Sunday evening fare as France maintain their record of not conceding in Lille since 1914 and Albania deservedly finish 
-third in the group (though that may not be enough to see them through to the knockout phase). Rob moves into the top half of the table; Hugh 
+third in the group (though that might not be enough to see them through to the knockout phase). Rob moves into the top half of the table; Hugh 
 and Jem also pick up some snore-draw points.
 *)
 
