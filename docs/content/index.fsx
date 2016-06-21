@@ -10,9 +10,11 @@ let lastUpdated = getLastUpdated ()
 let indexSummaryAndLinksHtml = getIndexSummaryAndLinksHtml ()
 let upcomingFixturesHtml = getUpcomingFixturesHtml 3
 
+let groupCNorthernIrelandVsGermanyHtml = getMatchDetailsHtml groupCNorthernIrelandVsGermany
+let groupCUkraineVsPolandHtml = getMatchDetailsHtml groupCUkraineVsPoland
+
 let groupBSlovakiaVsEnglandHtml = getMatchDetailsHtml groupBSlovakiaVsEngland
 let groupBRussiaVsWalesHtml = getMatchDetailsHtml groupBRussiaVsWales
-
 let groupASwitzerlandVsFranceHtml = getMatchDetailsHtml groupASwitzerlandVsFrance
 let groupARomaniaVsAlbaniaHtml = getMatchDetailsHtml groupARomaniaVsAlbania
 let groupFPortugalVsAustriaHtml = getMatchDetailsHtml groupFPortugalVsAustria
@@ -51,6 +53,19 @@ Latest news
 (*** include-value: indexSummaryAndLinksHtml ***)
 
 (*** include-value: upcomingFixturesHtml ***)
+
+(**
+## Tuesday 21st June
+*)
+
+(*** include-value: groupCNorthernIrelandVsGermanyHtml ***)
+
+(*** include-value: groupCUkraineVsPolandHtml ***)
+
+(**
+Routine wins (and third consecutive clean sheets) for Germany and Poland see them through to the knockout phase; Northern Ireland may yet 
+join them. Steve M retakes the lead; Denis moves up to fourth; points also for Will, Rosie, Susie and Neph.
+*)
 
 (**
 ## Monday 20th June
