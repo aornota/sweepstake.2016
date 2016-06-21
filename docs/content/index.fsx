@@ -8,11 +8,13 @@ open AOrNotA.Sweepstake2016.IndexContent
 
 let lastUpdated = getLastUpdated ()
 let indexSummaryAndLinksHtml = getIndexSummaryAndLinksHtml ()
-let upcomingFixturesHtml = getUpcomingFixturesHtml 3
+let upcomingFixturesHtml = getUpcomingFixturesHtml 7
+
+let groupDCroatiaVsSpainHtml = getMatchDetailsHtml groupDCroatiaVsSpain
+let groupDCzechRepublicVsTurkeyHtml = getMatchDetailsHtml groupDCzechRepublicVsTurkey
 
 let groupCNorthernIrelandVsGermanyHtml = getMatchDetailsHtml groupCNorthernIrelandVsGermany
 let groupCUkraineVsPolandHtml = getMatchDetailsHtml groupCUkraineVsPoland
-
 let groupBSlovakiaVsEnglandHtml = getMatchDetailsHtml groupBSlovakiaVsEngland
 let groupBRussiaVsWalesHtml = getMatchDetailsHtml groupBRussiaVsWales
 let groupASwitzerlandVsFranceHtml = getMatchDetailsHtml groupASwitzerlandVsFrance
@@ -56,6 +58,21 @@ Latest news
 
 (**
 ## Tuesday 21st June
+*)
+
+(*** include-value: groupDCroatiaVsSpainHtml ***)
+
+(*** include-value: groupDCzechRepublicVsTurkeyHtml ***)
+
+(**
+Well, another late goal has put the cat amongst the pigeons. (It really has, as Glenn Hoddle would say.) Spain's reward for their lassitude 
+is a knockout match against Italy (with both teams in the same half of the draw as England, France and Germany); Croatia will find out their 
+next opponents as the group stages conclude tomorrow. Turkey could yet qualify for the knockout phase; Northern Ireland have definitely done 
+so.
+
+In the sweepstake, Neph tops the table for the first time as his Croatian gamble pays off handsomely; Hugh hauls himself back into contention; 
+Chris keeps moving in the right direction; scraps for Rob and Will; and Jem slips back as a result of Sergio Ramos missing a penalty that 
+should probably never have been given.
 *)
 
 (*** include-value: groupCNorthernIrelandVsGermanyHtml ***)
