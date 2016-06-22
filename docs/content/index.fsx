@@ -10,9 +10,11 @@ let lastUpdated = getLastUpdated ()
 let indexSummaryAndLinksHtml = getIndexSummaryAndLinksHtml ()
 let upcomingFixturesHtml = getUpcomingFixturesHtml 7
 
+let groupFHungaryVsPortugalHtml = getMatchDetailsHtml groupFHungaryVsPortugal
+let groupFIcelandVsAustriaHtml = getMatchDetailsHtml groupFIcelandVsAustria
+
 let groupDCroatiaVsSpainHtml = getMatchDetailsHtml groupDCroatiaVsSpain
 let groupDCzechRepublicVsTurkeyHtml = getMatchDetailsHtml groupDCzechRepublicVsTurkey
-
 let groupCNorthernIrelandVsGermanyHtml = getMatchDetailsHtml groupCNorthernIrelandVsGermany
 let groupCUkraineVsPolandHtml = getMatchDetailsHtml groupCUkraineVsPoland
 let groupBSlovakiaVsEnglandHtml = getMatchDetailsHtml groupBSlovakiaVsEngland
@@ -55,6 +57,24 @@ Latest news
 (*** include-value: indexSummaryAndLinksHtml ***)
 
 (*** include-value: upcomingFixturesHtml ***)
+
+(**
+## Wednesday 22nd June
+*)
+
+(*** include-value: groupFHungaryVsPortugalHtml ***)
+
+(*** include-value: groupFIcelandVsAustriaHtml ***)
+
+(**
+"He's almost like a hummingbird..."
+
+An eventful conclusion to group F finishes with yet another late goal, which means that England will play Iceland next Monday - and Croatia 
+will face Portugal on Saturday evening. Hungary top the group and will play Belgium, Ireland or Sweden; Austria are eliminated (as are 
+Albania); Turkey are still waiting to hear their fate.
+
+A bumper haul takes Will up to fourth, just two points behind Josh; Jem also keeps the top three in his sights; not a lot for anyone else.
+*)
 
 (**
 ## Tuesday 21st June
