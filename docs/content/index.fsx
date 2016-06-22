@@ -10,9 +10,11 @@ let lastUpdated = getLastUpdated ()
 let indexSummaryAndLinksHtml = getIndexSummaryAndLinksHtml ()
 let upcomingFixturesHtml = getUpcomingFixturesHtml 7
 
+let groupESwedenVsBelgiumHtml = getMatchDetailsHtml groupESwedenVsBelgium
+let groupEItalyVsRepublicOfIrelandHtml = getMatchDetailsHtml groupEItalyVsRepublicOfIreland
+
 let groupFHungaryVsPortugalHtml = getMatchDetailsHtml groupFHungaryVsPortugal
 let groupFIcelandVsAustriaHtml = getMatchDetailsHtml groupFIcelandVsAustria
-
 let groupDCroatiaVsSpainHtml = getMatchDetailsHtml groupDCroatiaVsSpain
 let groupDCzechRepublicVsTurkeyHtml = getMatchDetailsHtml groupDCzechRepublicVsTurkey
 let groupCNorthernIrelandVsGermanyHtml = getMatchDetailsHtml groupCNorthernIrelandVsGermany
@@ -60,6 +62,33 @@ Latest news
 
 (**
 ## Wednesday 22nd June
+*)
+
+(*** include-value: groupESwedenVsBelgiumHtml ***)
+
+(*** include-value: groupEItalyVsRepublicOfIrelandHtml ***)
+
+(**
+Even more late drama as Ireland join Belgium in the knockout phase, with Sweden and Turkey heading home. Steve M retakes the lead; Jem 
+returns to the top three; Rob continues his climb towards mid-table obscurity.
+
+So, with 36 games gone (and only 15 to go), Steve M leads Neph by 2 points at the top of the table, with defending champion Jem in third and 
+Josh and Will not far behind; Denis (who must be wishing he'd picked the Irish team rather than the Russian one), Hugh, Rob, Susie and Chris 
+will be hoping for better things over the coming fortnight; and Rosie leads Steve S by a solitary point in the battle to avoid the wooden 
+spoon.
+
+Only Josh and Denis have lost their coach/team so far (Austria and Russia respectively) - though with Switzerland vs Poland, Croatia vs 
+Portugal and Italy vs Spain coming up, at least three sweepstakers will be bereft before the quarter-finals. (And if Ireland, Slovakia, 
+Hungary and Iceland all win, only three sweepstakers will still have a coach/team; seems a tad unlikely, I'll admit.)
+
+And only Neph, Denis and Rob still have a full complement of players - but again, the picture will doubtless look very different by the time 
+the England vs Iceland match has finished next Monday evening.
+
+By the way, if you'd picked Wales (Chris Coleman), Yann Sommer (Switzerland), Wes Hoolahan (Ireland), Gareth McAuley (Northern Ireland), 
+Emanuele Giaccherini (Italy), Robbie Brady (Ireland), Axel Witsel (Belgium), Bogdan Stancu (Romania), Balazs Dzsudzsak (Hungary), Joe 
+Allen (Wales), Laszlo Kleinheisler (Hungary) and Kari Arnason (Iceland), you'd have amassed 305 points so far ;)
+
+Barring any squad changes, that's all until Saturday...
 *)
 
 (*** include-value: groupFHungaryVsPortugalHtml ***)
