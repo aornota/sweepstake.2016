@@ -10,9 +10,10 @@ let lastUpdated = getLastUpdated ()
 let indexSummaryAndLinksHtml = getIndexSummaryAndLinksHtml ()
 let upcomingFixturesHtml = getUpcomingFixturesHtml 7
 
+let match37SwitzerlandVsPolandHtml = getMatchDetailsHtml match37SwitzerlandVsPoland
+
 let groupESwedenVsBelgiumHtml = getMatchDetailsHtml groupESwedenVsBelgium
 let groupEItalyVsRepublicOfIrelandHtml = getMatchDetailsHtml groupEItalyVsRepublicOfIreland
-
 let groupFHungaryVsPortugalHtml = getMatchDetailsHtml groupFHungaryVsPortugal
 let groupFIcelandVsAustriaHtml = getMatchDetailsHtml groupFIcelandVsAustria
 let groupDCroatiaVsSpainHtml = getMatchDetailsHtml groupDCroatiaVsSpain
@@ -59,6 +60,17 @@ Latest news
 (*** include-value: indexSummaryAndLinksHtml ***)
 
 (*** include-value: upcomingFixturesHtml ***)
+
+(**
+## Saturday 25th June
+*)
+
+(*** include-value: match37SwitzerlandVsPolandHtml ***)
+
+(**
+Things looked ominous for Poland after a sublime goal from Xherdan Shaqiri - until an atrocious Granit Xhaka penalty, that is. Pretty much a 
+clean sweep for Denis, though the Polish win is enough to take Will third, just a point ahead of Denis. Hugh loses his coach/team.
+*)
 
 (**
 ## Wednesday 22nd June
