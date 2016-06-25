@@ -10,8 +10,9 @@ let lastUpdated = getLastUpdated ()
 let indexSummaryAndLinksHtml = getIndexSummaryAndLinksHtml ()
 let upcomingFixturesHtml = getUpcomingFixturesHtml 7
 
-let match37SwitzerlandVsPolandHtml = getMatchDetailsHtml match37SwitzerlandVsPoland
+let match38WalesVsNorthernIrelandHtml = getMatchDetailsHtml match38WalesVsNorthernIreland
 
+let match37SwitzerlandVsPolandHtml = getMatchDetailsHtml match37SwitzerlandVsPoland
 let groupESwedenVsBelgiumHtml = getMatchDetailsHtml groupESwedenVsBelgium
 let groupEItalyVsRepublicOfIrelandHtml = getMatchDetailsHtml groupEItalyVsRepublicOfIreland
 let groupFHungaryVsPortugalHtml = getMatchDetailsHtml groupFHungaryVsPortugal
@@ -63,6 +64,13 @@ Latest news
 
 (**
 ## Saturday 25th June
+*)
+
+(*** include-value: match38WalesVsNorthernIrelandHtml ***)
+
+(**
+Fuck all to say about that; terrible game. Josh splutters back into life and returns to the top three, although only 24 points separate the 
+top six.
 *)
 
 (*** include-value: match37SwitzerlandVsPolandHtml ***)
