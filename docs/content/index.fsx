@@ -10,8 +10,10 @@ let lastUpdated = getLastUpdated ()
 let indexSummaryAndLinksHtml = getIndexSummaryAndLinksHtml ()
 let upcomingFixturesHtml = getUpcomingFixturesHtml 7
 
-let match38WalesVsNorthernIrelandHtml = getMatchDetailsHtml match38WalesVsNorthernIreland
+let match40FranceVsRepublicOfIrelandHtml = getMatchDetailsHtml match40FranceVsRepublicOfIreland
 
+let match39CroatiaVsPortugalHtml = getMatchDetailsHtml match39CroatiaVsPortugal
+let match38WalesVsNorthernIrelandHtml = getMatchDetailsHtml match38WalesVsNorthernIreland
 let match37SwitzerlandVsPolandHtml = getMatchDetailsHtml match37SwitzerlandVsPoland
 let groupESwedenVsBelgiumHtml = getMatchDetailsHtml groupESwedenVsBelgium
 let groupEItalyVsRepublicOfIrelandHtml = getMatchDetailsHtml groupEItalyVsRepublicOfIreland
@@ -63,7 +65,26 @@ Latest news
 (*** include-value: upcomingFixturesHtml ***)
 
 (**
+## Sunday 26th June
+*)
+
+(*** include-value: match40FranceVsRepublicOfIrelandHtml ***)
+
+(**
+A game too far for Ireland as the hosts find their mojo in the second half to book a quarter-final against England or Iceland. Antoine 
+Griezmann helps Rosie get going at last; Jem joins Josh in fourth; scraps for Steve S and Denis; and a temporary setback for Rob.
+*)
+
+(**
 ## Saturday 25th June
+*)
+
+(*** include-value: match39CroatiaVsPortugalHtml ***)
+
+(**
+Another less than enthralling game, though credit to Fernando Santos for getting the tactics spot on and stifling Croatian exuberance. Will 
+moves up to second; Steve S climbs off the bottom; points also for Hugh and Rob. Neph loses his coach/team and several players (though Mario 
+Mandzukic is no great loss).
 *)
 
 (*** include-value: match38WalesVsNorthernIrelandHtml ***)
