@@ -10,8 +10,9 @@ let lastUpdated = getLastUpdated ()
 let indexSummaryAndLinksHtml = getIndexSummaryAndLinksHtml ()
 let upcomingFixturesHtml = getUpcomingFixturesHtml 7
 
-let match41GermanyVsSlovakiaHtml = getMatchDetailsHtml match41GermanyVsSlovakia
+let match42HungaryVsBelgiumHtml = getMatchDetailsHtml match42HungaryVsBelgium
 
+let match41GermanyVsSlovakiaHtml = getMatchDetailsHtml match41GermanyVsSlovakia
 let match40FranceVsRepublicOfIrelandHtml = getMatchDetailsHtml match40FranceVsRepublicOfIreland
 let match39CroatiaVsPortugalHtml = getMatchDetailsHtml match39CroatiaVsPortugal
 let match38WalesVsNorthernIrelandHtml = getMatchDetailsHtml match38WalesVsNorthernIreland
@@ -67,6 +68,13 @@ Latest news
 
 (**
 ## Sunday 26th June
+*)
+
+(*** include-value: match42HungaryVsBelgiumHtml ***)
+
+(**
+Three late goals make an impressive Belgian win look a little more one-sided than it was. The Hazard and De Bruyne show takes Jem to second 
+ahead of Josh; Steve M consolidates his lead; and Steve S and Rob grab useful points.
 *)
 
 (*** include-value: match41GermanyVsSlovakiaHtml ***)

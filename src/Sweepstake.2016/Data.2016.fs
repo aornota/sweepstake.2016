@@ -49,7 +49,7 @@ module ``Data 2016`` =
 
     let portugal = { Name = "Portugal"; Status = Active; Seeding = 4; Coach = "Fernando Santos" }
     let austria = { Name = "Austria"; Status = Eliminated; Seeding = 10; Coach = "Marcel Koller" }
-    let hungary = { Name = "Hungary"; Status = Active; Seeding = 18; Coach = "Bernd Storck" }
+    let hungary = { Name = "Hungary"; Status = Eliminated; Seeding = 18; Coach = "Bernd Storck" }
     let iceland = { Name = "Iceland"; Status = Active; Seeding = 21; Coach = "Lars Lagerbäck & Heimir Hallgrímsson" }
 
     // Group A.
@@ -1184,9 +1184,8 @@ module ``Data 2016`` =
     // Knockout matches: https://en.wikipedia.org/wiki/UEFA_Euro_2016#Knockout_phase.
 
     // TEMP: Placeholders until the actual teams are known...
-    let winnerMatch42 = { Name = "Winner match 42"; Status = Active; Seeding = 6; Coach = "Winner match 42" } 
-    let winnerMatch43 = { Name = "Winner match 43"; Status = Active; Seeding = 7; Coach = "Winner match 43" } 
-    let winnerMatch44 = { Name = "Winner match 44"; Status = Active; Seeding = 8; Coach = "Winner match 44" } 
+    let winnerMatch43 = { Name = "Winner match 43"; Status = Active; Seeding = 7; Coach = "Winner match 43" }
+    let winnerMatch44 = { Name = "Winner match 44"; Status = Active; Seeding = 8; Coach = "Winner match 44" }
 
     let winnerQF1 = { Name = "Winner QF1"; Status = Active; Seeding = 1; Coach = "Winner QF1" }
     let winnerQF2 = { Name = "Winner QF2"; Status = Active; Seeding = 2; Coach = "Winner QF2" }
@@ -1251,17 +1250,29 @@ module ``Data 2016`` =
                                                 YellowCard (skrtelMartin, Some 13<min>) (* slovakia *)
                                                 YellowCard (kuckaJuraj, Some 91<min>) ] }
 
-    let match42HungaryVsBelgium = { Team1Score = TeamMatchScore (hungary, 0<goal>, None); Team2Score = TeamMatchScore (belgium, 0<goal>, None)
+    let match42HungaryVsBelgium = { Team1Score = TeamMatchScore (hungary, 0<goal>, None); Team2Score = TeamMatchScore (belgium, 4<goal>, None)
                                     Number = 42; Stage = RoundOf16 42; KickOff = DateTime (2016, 06, 26, 20, 00, 00)
-                                    Events = [ (* ManOfTheMatch TBC *)
-                                                (* hungary *)
-                                               (* CleanSheet (kiralyGabor, None?) *)
-                                                (* belgium *)
-                                               (* CleanSheet (courtoisThibaut, None?) *) ] }
+                                    Events = [ ManOfTheMatch hazardEden
+                                               YellowCard (kadarTamas, Some 34<min>) (* hungary *)
+                                               YellowCard (langAdam, Some 47<min>)
+                                               YellowCard (elekAkos, Some 61<min>)
+                                               YellowCard (szalaiAdam, Some 92<min>)
+                                               Goal (alderweireldToby, Some 10<min>, Some deBruyneKevin) (* belgium *)
+                                               YellowCard (vermaelenThomas, Some 68<min>)
+                                               Goal (batshuayiMichy, Some 78<min>, Some hazardEden)
+                                               Goal (hazardEden, Some 80<min>, Some deBruyneKevin)
+                                               YellowCard (batshuayiMichy, Some 89<min>)
+                                               Goal (carrascoYannickFerreira, Some 91<min>, Some nainggolanRadja)
+                                               YellowCard (fellainiMarouane, Some 92<min>)
+                                               CleanSheet (courtoisThibaut, None) ] }
                          
     let match43ItalyVsSpain = { Team1Score = TeamMatchScore (italy, 0<goal>, None); Team2Score = TeamMatchScore (spain, 0<goal>, None)
                                 Number = 43; Stage = RoundOf16 43; KickOff = DateTime (2016, 06, 27, 17, 00, 00)
-                                Events = [ (* italy *) (* spain *) ] }
+                                Events = [ (* ManOfTheMatch TBC *)
+                                            (* italy *)
+                                           (* CleanSheet (TBC, None?) *)
+                                            (* spain *)
+                                           (* CleanSheet (TBC, None?) *) ] }
 
     let match44EnglandVsIceland = { Team1Score = TeamMatchScore (england, 0<goal>, None); Team2Score = TeamMatchScore (iceland, 0<goal>, None)
                                     Number = 44; Stage = RoundOf16 44; KickOff = DateTime (2016, 06, 27, 20, 00, 00)
@@ -1271,9 +1282,9 @@ module ``Data 2016`` =
                                           Number = 45; Stage = QuarterFinal 1; KickOff = DateTime (2016, 06, 30, 20, 00, 00)
                                           Events = [ (* poland *) (* portugal *) ] }
 
-    let quarterFinal2WalesVsY = { Team1Score = TeamMatchScore (wales, 0<goal>, None); Team2Score = TeamMatchScore (winnerMatch42, 0<goal>, None)
-                                  Number = 46; Stage = QuarterFinal 2; KickOff = DateTime (2016, 07, 01, 20, 00, 00)
-                                  Events = [ (* wales *) (* winnerMatch42 *) ] }
+    let quarterFinal2WalesVsBelgium = { Team1Score = TeamMatchScore (wales, 0<goal>, None); Team2Score = TeamMatchScore (belgium, 0<goal>, None)
+                                        Number = 46; Stage = QuarterFinal 2; KickOff = DateTime (2016, 07, 01, 20, 00, 00)
+                                        Events = [ (* wales *) (* belgium *) ] }
 
     let quarterFinal3GermanyVsY = { Team1Score = TeamMatchScore (germany, 0<goal>, None); Team2Score = TeamMatchScore (winnerMatch43, 0<goal>, None)
                                     Number = 47; Stage = QuarterFinal 3; KickOff = DateTime (2016, 07, 02, 20, 00, 00)
@@ -1296,7 +1307,7 @@ module ``Data 2016`` =
                       Events = [ (* winnerSF1 *) (* winnerSF2 *) ] }
 
     let private knockoutMatches = [ match37SwitzerlandVsPoland; match38WalesVsNorthernIreland; match39CroatiaVsPortugal; match40FranceVsRepublicOfIreland; match41GermanyVsSlovakia; match42HungaryVsBelgium; match43ItalyVsSpain; match44EnglandVsIceland
-                                    quarterFinal1PolandVsPortugal; quarterFinal2WalesVsY; quarterFinal3GermanyVsY; quarterFinal4FranceVsY
+                                    quarterFinal1PolandVsPortugal; quarterFinal2WalesVsBelgium; quarterFinal3GermanyVsY; quarterFinal4FranceVsY
                                     semiFinal1XVsY; semiFinal2XVsY
                                     finalXVsY ]
 
