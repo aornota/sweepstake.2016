@@ -10,8 +10,9 @@ let lastUpdated = getLastUpdated ()
 let indexSummaryAndLinksHtml = getIndexSummaryAndLinksHtml ()
 let upcomingFixturesHtml = getUpcomingFixturesHtml 7
 
-let match40FranceVsRepublicOfIrelandHtml = getMatchDetailsHtml match40FranceVsRepublicOfIreland
+let match41GermanyVsSlovakiaHtml = getMatchDetailsHtml match41GermanyVsSlovakia
 
+let match40FranceVsRepublicOfIrelandHtml = getMatchDetailsHtml match40FranceVsRepublicOfIreland
 let match39CroatiaVsPortugalHtml = getMatchDetailsHtml match39CroatiaVsPortugal
 let match38WalesVsNorthernIrelandHtml = getMatchDetailsHtml match38WalesVsNorthernIreland
 let match37SwitzerlandVsPolandHtml = getMatchDetailsHtml match37SwitzerlandVsPoland
@@ -66,6 +67,13 @@ Latest news
 
 (**
 ## Sunday 26th June
+*)
+
+(*** include-value: match41GermanyVsSlovakiaHtml ***)
+
+(**
+Three and easy for Germany. Steve M and Josh pull away from the pack; Denis benefits from yet another clean sheet for Manuel Neuer; Rosie 
+curses a lame penalty from Mesut Ozil.
 *)
 
 (*** include-value: match40FranceVsRepublicOfIrelandHtml ***)
