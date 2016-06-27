@@ -780,7 +780,7 @@ module DraftContent =
     let private popularPicksHtml ordinal drafts =
         let allPicks = drafts |> List.collect (fun draft -> draft.DraftPicks)
         let popularCoachTeamsHtml =
-            let popularCoachTeams = allPicks |> List.choose (fun pick -> match pick with | CoachTeam team -> Some pick | _ -> None)
+            let popularCoachTeams = allPicks |> List.choose (fun pick -> match pick with | CoachTeam _ -> Some pick | _ -> None)
                                              |> Seq.ofList
                                              |> Seq.groupBy (fun team -> team)
                                              |> Seq.map (fun (team, seq) -> team, seq |> Seq.length)

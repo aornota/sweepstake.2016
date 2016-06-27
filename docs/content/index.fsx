@@ -10,8 +10,9 @@ let lastUpdated = getLastUpdated ()
 let indexSummaryAndLinksHtml = getIndexSummaryAndLinksHtml ()
 let upcomingFixturesHtml = getUpcomingFixturesHtml 7
 
-let match43ItalyVsSpainHtml = getMatchDetailsHtml match43ItalyVsSpain
+let match44EnglandVsIcelandHtml = getMatchDetailsHtml match44EnglandVsIceland
 
+let match43ItalyVsSpainHtml = getMatchDetailsHtml match43ItalyVsSpain
 let match42HungaryVsBelgiumHtml = getMatchDetailsHtml match42HungaryVsBelgium
 let match41GermanyVsSlovakiaHtml = getMatchDetailsHtml match41GermanyVsSlovakia
 let match40FranceVsRepublicOfIrelandHtml = getMatchDetailsHtml match40FranceVsRepublicOfIreland
@@ -69,6 +70,21 @@ Latest news
 
 (**
 ## Monday 27th June
+*)
+
+(*** include-value: match44EnglandVsIcelandHtml ***)
+
+(**
+Clive Tyldesley, understated as ever: "...and the inquests may just overshadow everything else that's going on in the UK at the moment."
+
+(Or, to quote a random friend: Sigur Ros 2 - 1 Coldplay.)
+
+After the shock and chaos of the last few days, a Karmic fable for our troubled times as Iceland's newly-elected President is greeted by 
+a display of passion and guile whereas the English can add a bucket of pigshit to the plunging pound and expanding vacuum at the centre 
+of civic life. And in the light of the successful managerial partnership of Lars Lagerback and Heimir Hallgrimsson, is it too early to 
+suggest a Boris-and-Nigel "dream team" to follow Roy Hodgson?
+
+As for the sweepstake: Steve M moves further ahead; Susie climbs out of the bottom three; little of note for anyone else.
 *)
 
 (*** include-value: match43ItalyVsSpainHtml ***)
