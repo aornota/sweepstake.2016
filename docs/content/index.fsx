@@ -10,8 +10,9 @@ let lastUpdated = getLastUpdated ()
 let indexSummaryAndLinksHtml = getIndexSummaryAndLinksHtml ()
 let upcomingFixturesHtml = getUpcomingFixturesHtml 7
 
-let match42HungaryVsBelgiumHtml = getMatchDetailsHtml match42HungaryVsBelgium
+let match43ItalyVsSpainHtml = getMatchDetailsHtml match43ItalyVsSpain
 
+let match42HungaryVsBelgiumHtml = getMatchDetailsHtml match42HungaryVsBelgium
 let match41GermanyVsSlovakiaHtml = getMatchDetailsHtml match41GermanyVsSlovakia
 let match40FranceVsRepublicOfIrelandHtml = getMatchDetailsHtml match40FranceVsRepublicOfIreland
 let match39CroatiaVsPortugalHtml = getMatchDetailsHtml match39CroatiaVsPortugal
@@ -65,6 +66,17 @@ Latest news
 (*** include-value: indexSummaryAndLinksHtml ***)
 
 (*** include-value: upcomingFixturesHtml ***)
+
+(**
+## Monday 27th June
+*)
+
+(*** include-value: match43ItalyVsSpainHtml ***)
+
+(**
+An Italian performance full of commitment and camaraderie puts paid to Spanish hopes of a third successive title. Chris is now a clear 
+favourite for the coveted wooden spoon; Steve M extends his lead; Josh returns to second; points also for Susie and Hugh.
+*)
 
 (**
 ## Sunday 26th June
