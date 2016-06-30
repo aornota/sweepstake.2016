@@ -10,8 +10,9 @@ let lastUpdated = getLastUpdated ()
 let indexSummaryAndLinksHtml = getIndexSummaryAndLinksHtml ()
 let upcomingFixturesHtml = getUpcomingFixturesHtml 7
 
-let match44EnglandVsIcelandHtml = getMatchDetailsHtml match44EnglandVsIceland
+let quarterFinal1PolandVsPortugalHtml = getMatchDetailsHtml quarterFinal1PolandVsPortugal
 
+let match44EnglandVsIcelandHtml = getMatchDetailsHtml match44EnglandVsIceland
 let match43ItalyVsSpainHtml = getMatchDetailsHtml match43ItalyVsSpain
 let match42HungaryVsBelgiumHtml = getMatchDetailsHtml match42HungaryVsBelgium
 let match41GermanyVsSlovakiaHtml = getMatchDetailsHtml match41GermanyVsSlovakia
@@ -67,6 +68,19 @@ Latest news
 (*** include-value: indexSummaryAndLinksHtml ***)
 
 (*** include-value: upcomingFixturesHtml ***)
+
+(**
+## Thursday 30th June
+*)
+
+(*** include-value: quarterFinal1PolandVsPortugalHtml ***)
+
+(**
+Not quite as poor as the Wales vs Northern Ireland game - but close (especially during extra time) as an uninspired Poland fail to halt 
+the relentless trudge of a misfiring Portuguese team. Will loses his coach/team but narrows the gap to the top three thanks to the 
+industrious Renato Sanches; Hugh continues his slow climb to the top half of the table; points also for Steve S and Jem; and Rosie's 
+attempts to foul her way to the wooden spoon are helped by Bartosz Kapustka's third yellow card in four games.
+*)
 
 (**
 ## Monday 27th June

@@ -18,6 +18,9 @@ module Console =
         
         Console.WriteLine "Work in progress..."
 
+        (* let quarterFinal1PolandVsPortugalHtml = getMatchDetailsHtml quarterFinal1PolandVsPortugal
+        Console.WriteLine quarterFinal1PolandVsPortugalHtml *)
+
         (* let sweepstakers, processHtml = processDraft 1 draft1Seed sweepstakers draft1
         let postDraftHtml = sweepstakersPostDraftHtml 1 sweepstakers
 
