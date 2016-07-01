@@ -10,8 +10,9 @@ let lastUpdated = getLastUpdated ()
 let indexSummaryAndLinksHtml = getIndexSummaryAndLinksHtml ()
 let upcomingFixturesHtml = getUpcomingFixturesHtml 7
 
-let quarterFinal1PolandVsPortugalHtml = getMatchDetailsHtml quarterFinal1PolandVsPortugal
+let quarterFinal2WalesVsBelgiumHtml = getMatchDetailsHtml quarterFinal2WalesVsBelgium
 
+let quarterFinal1PolandVsPortugalHtml = getMatchDetailsHtml quarterFinal1PolandVsPortugal
 let match44EnglandVsIcelandHtml = getMatchDetailsHtml match44EnglandVsIceland
 let match43ItalyVsSpainHtml = getMatchDetailsHtml match43ItalyVsSpain
 let match42HungaryVsBelgiumHtml = getMatchDetailsHtml match42HungaryVsBelgium
@@ -68,6 +69,22 @@ Latest news
 (*** include-value: indexSummaryAndLinksHtml ***)
 
 (*** include-value: upcomingFixturesHtml ***)
+
+(**
+## Friday 1st July
+*)
+
+(*** include-value: quarterFinal2WalesVsBelgiumHtml ***)
+
+(**
+"Look at these bouncing, dancing, prancing Welshmen..."
+
+That's more like it. A purposeful Welsh team progresses to a showdown against Portugal next Wednesday as a weakened Belgian defense 
+leaks three goals to, uh, Ashley Williams, Hal Robson-Kanu and Sam Vokes. (Hell, even Neil Taylor nearly scored again.) Just a shame 
+about an unlucky yellow card that rules Aaron Ramsey out of the semi-final.
+
+More losers than winners on the sweepstake side of things: Jem draws level with Josh in second; Neph sneaks ahead of Denis.
+*)
 
 (**
 ## Thursday 30th June
