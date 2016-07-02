@@ -8,10 +8,11 @@ open AOrNotA.Sweepstake2016.IndexContent
 
 let lastUpdated = getLastUpdated ()
 let indexSummaryAndLinksHtml = getIndexSummaryAndLinksHtml ()
-let upcomingFixturesHtml = getUpcomingFixturesHtml 7
+let upcomingFixturesHtml = getUpcomingFixturesHtml 8
+
+let quarterFinal3GermanyVsItalyHtml = getMatchDetailsHtml quarterFinal3GermanyVsItaly
 
 let quarterFinal2WalesVsBelgiumHtml = getMatchDetailsHtml quarterFinal2WalesVsBelgium
-
 let quarterFinal1PolandVsPortugalHtml = getMatchDetailsHtml quarterFinal1PolandVsPortugal
 let match44EnglandVsIcelandHtml = getMatchDetailsHtml match44EnglandVsIceland
 let match43ItalyVsSpainHtml = getMatchDetailsHtml match43ItalyVsSpain
@@ -69,6 +70,23 @@ Latest news
 (*** include-value: indexSummaryAndLinksHtml ***)
 
 (*** include-value: upcomingFixturesHtml ***)
+
+(**
+## Saturday 2nd July
+*)
+
+(*** include-value: quarterFinal3GermanyVsItalyHtml ***)
+
+(**
+"The ball hasn't come down yet..."
+
+Germany finally get the better of Italy in a major tournament and go through to yet another semi-final. Thomas Muller not only missed 
+in the shootout but also clearly missed his calling as a mime artist - and lovers of dreadful penalties will be savouring the risible 
+efforts from Simone Zaza, Graziano Pelle and Bastian Schweinsteiger for years to come.
+
+Steve M picks up more points and will be hard to catch; Denis keeps alive his hopes of a top-three finish; Rosie gets a boost to her 
+chances of overhauling Hugh.
+*)
 
 (**
 ## Friday 1st July
