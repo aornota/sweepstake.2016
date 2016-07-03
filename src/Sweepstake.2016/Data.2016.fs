@@ -50,7 +50,7 @@ module ``Data 2016`` =
     let portugal = { Name = "Portugal"; Status = Active; Seeding = 4; Coach = "Fernando Santos" }
     let austria = { Name = "Austria"; Status = Eliminated; Seeding = 10; Coach = "Marcel Koller" }
     let hungary = { Name = "Hungary"; Status = Eliminated; Seeding = 18; Coach = "Bernd Storck" }
-    let iceland = { Name = "Iceland"; Status = Active; Seeding = 21; Coach = "Lars Lagerbäck & Heimir Hallgrímsson" }
+    let iceland = { Name = "Iceland"; Status = Eliminated; Seeding = 21; Coach = "Lars Lagerbäck & Heimir Hallgrímsson" }
 
     // Group A.
 
@@ -1181,7 +1181,7 @@ module ``Data 2016`` =
                                            
     let private groupFMatches = [ groupFAustriaVsHungary; groupFPortugalVsIceland; groupFIcelandVsHungary; groupFPortugalVsAustria; groupFIcelandVsAustria; groupFHungaryVsPortugal ]
 
-    // Knockout matches: https://en.wikipedia.org/wiki/UEFA_Euro_2016#Knockout_phase.
+    // Knockout matches: https://en.wikipedia.org/wiki/UEFA_Euro_2016_knockout_phase.
 
     let match37SwitzerlandVsPoland = { Team1Score = TeamMatchScore (switzerland, 1<goal>, Some 4<shootoutPenalty>); Team2Score = TeamMatchScore (poland, 1<goal>, Some 5<shootoutPenalty>)
                                        Number = 37; Stage = RoundOf16 37; KickOff = DateTime (2016, 06, 25, 14, 00, 00)
@@ -1314,28 +1314,34 @@ module ``Data 2016`` =
                                                    YellowCard (pelleGraciano, Some 91<min>)
                                                    YellowCard (giaccheriniEmanuele, Some 103<min>) ] }
 
-    let quarterFinal4FranceVsIceland = { Team1Score = TeamMatchScore (france, 0<goal>, None); Team2Score = TeamMatchScore (iceland, 0<goal>, None)
+    let quarterFinal4FranceVsIceland = { Team1Score = TeamMatchScore (france, 5<goal>, None); Team2Score = TeamMatchScore (iceland, 2<goal>, None)
                                          Number = 48; Stage = QuarterFinal 4; KickOff = DateTime (2016, 07, 03, 20, 00, 00)
-                                         Events = [ (* ManOfTheMatch TBC *)
-                                                     (* france *)
-                                                    (* CleanSheet (llorisHugo, None) *)
-                                                     (* iceland *)
-                                                    (* CleanSheet (halldorssonHannesThor, None) *) ] }
+                                         Events = [ ManOfTheMatch giroudOlivier
+                                                    Goal (giroudOlivier, Some 12<min>, Some matuidiBlaise) (* france *)
+                                                    Goal (pogbaPaul, Some 20<min>, Some griezmannAntoine)
+                                                    Goal (payetDimitri, Some 43<min>, Some griezmannAntoine)
+                                                    Goal (griezmannAntoine, Some 45<min>, Some giroudOlivier)
+                                                    Goal (giroudOlivier, Some 59<min>, Some payetDimitri)
+                                                    YellowCard (umtitiSamuel, Some 75<min>)
+                                                    Goal (sigthorssonKolbeinn, Some 56<min>, Some sigurdssonGylfi) (* iceland *)
+                                                    YellowCard (bjarnasonBirkir, Some 58<min>)
+                                                    Goal (bjarnasonBirkir, Some 84<min>, Some skulasonAriFreyr) ] }
 
     let semiFinal1PortugalVsWales = { Team1Score = TeamMatchScore (portugal, 0<goal>, None); Team2Score = TeamMatchScore (wales, 0<goal>, None)
                                       Number = 49; Stage = SemiFinal 1; KickOff = DateTime (2016, 07, 06, 20, 00, 00)
-                                      Events = [ (* ManOfTheMatch TBC *) (* portugal *) (* wales *) ] }
+                                      Events = [ (* ManOfTheMatch TBC *)
+                                                  (* portugal *)
+                                                 (* CleanSheet (patricioRui, None) *)
+                                                  (* wales *)
+                                                 (* CleanSheet (hennesseyWayne, None) *) ] }
+
+    let semiFinal2GermanyVsFrance = { Team1Score = TeamMatchScore (germany, 0<goal>, None); Team2Score = TeamMatchScore (france, 0<goal>, None)
+                                      Number = 50; Stage = SemiFinal 2; KickOff = DateTime (2016, 07, 07, 20, 00, 00)
+                                      Events = [ (* ManOfTheMatch TBC *) (* germany *) (* france *) ] }
 
     // TEMP: Placeholders until the actual teams are known...
-    let winnerQF4 = { Name = "Winner QF4"; Status = Active; Seeding = 4; Coach = "Winner QF4" }
-
     let winnerSF1 = { Name = "Winner SF1"; Status = Active; Seeding = 1; Coach = "Winner SF1" }
     let winnerSF2 = { Name = "Winner SF2"; Status = Active; Seeding = 2; Coach = "Winner SF2" }
-    // ...TEMP
-
-    let semiFinal2GermanyVsY = { Team1Score = TeamMatchScore (germany, 0<goal>, None); Team2Score = TeamMatchScore (winnerQF4, 0<goal>, None)
-                                 Number = 50; Stage = SemiFinal 2; KickOff = DateTime (2016, 07, 07, 20, 00, 00)
-                                 Events = [ (* ManOfTheMatch TBC *) (* germany *) (* winnerQF4 *) ] }
 
     let finalXVsY = { Team1Score = TeamMatchScore (winnerSF1, 0<goal>, None); Team2Score = TeamMatchScore (winnerSF2, 0<goal>, None)
                       Number = 51; Stage = Final; KickOff = DateTime (2016, 07, 10, 20, 00, 00)
@@ -1343,7 +1349,7 @@ module ``Data 2016`` =
 
     let private knockoutMatches = [ match37SwitzerlandVsPoland; match38WalesVsNorthernIreland; match39CroatiaVsPortugal; match40FranceVsRepublicOfIreland; match41GermanyVsSlovakia; match42HungaryVsBelgium; match43ItalyVsSpain; match44EnglandVsIceland
                                     quarterFinal1PolandVsPortugal; quarterFinal2WalesVsBelgium; quarterFinal3GermanyVsItaly; quarterFinal4FranceVsIceland
-                                    semiFinal1PortugalVsWales; semiFinal2GermanyVsY
+                                    semiFinal1PortugalVsWales; semiFinal2GermanyVsFrance
                                     finalXVsY ]
 
     let matches = groupAMatches @ groupBMatches @ groupCMatches @ groupDMatches @ groupEMatches @ groupFMatches @ knockoutMatches

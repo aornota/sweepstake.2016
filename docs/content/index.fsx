@@ -10,8 +10,9 @@ let lastUpdated = getLastUpdated ()
 let indexSummaryAndLinksHtml = getIndexSummaryAndLinksHtml ()
 let upcomingFixturesHtml = getUpcomingFixturesHtml 8
 
-let quarterFinal3GermanyVsItalyHtml = getMatchDetailsHtml quarterFinal3GermanyVsItaly
+let quarterFinal4FranceVsIcelandHtml = getMatchDetailsHtml quarterFinal4FranceVsIceland
 
+let quarterFinal3GermanyVsItalyHtml = getMatchDetailsHtml quarterFinal3GermanyVsItaly
 let quarterFinal2WalesVsBelgiumHtml = getMatchDetailsHtml quarterFinal2WalesVsBelgium
 let quarterFinal1PolandVsPortugalHtml = getMatchDetailsHtml quarterFinal1PolandVsPortugal
 let match44EnglandVsIcelandHtml = getMatchDetailsHtml match44EnglandVsIceland
@@ -70,6 +71,19 @@ Latest news
 (*** include-value: indexSummaryAndLinksHtml ***)
 
 (*** include-value: upcomingFixturesHtml ***)
+
+(**
+## Sunday 3rd July
+*)
+
+(*** include-value: quarterFinal4FranceVsIcelandHtml ***)
+
+(**
+"The word 'enigma' was almost invented for Olivier Giroud, wasn't it?" No. (And as for Glenn Hoddle's "fatigueness" neologism...)
+
+Impressive stuff from the French, though they still look shaky in defense. Lots of goals means lots of points: Steve S starts a late charge; 
+Steve M stretches his lead still further; Rosie overtakes Hugh; Jem and Will are now second and third respectively.
+*)
 
 (**
 ## Saturday 2nd July
