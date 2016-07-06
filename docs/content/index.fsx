@@ -10,8 +10,9 @@ let lastUpdated = getLastUpdated ()
 let indexSummaryAndLinksHtml = getIndexSummaryAndLinksHtml ()
 let upcomingFixturesHtml = getUpcomingFixturesHtml 8
 
-let quarterFinal4FranceVsIcelandHtml = getMatchDetailsHtml quarterFinal4FranceVsIceland
+let semiFinal1PortugalVsWalesHtml = getMatchDetailsHtml semiFinal1PortugalVsWales
 
+let quarterFinal4FranceVsIcelandHtml = getMatchDetailsHtml quarterFinal4FranceVsIceland
 let quarterFinal3GermanyVsItalyHtml = getMatchDetailsHtml quarterFinal3GermanyVsItaly
 let quarterFinal2WalesVsBelgiumHtml = getMatchDetailsHtml quarterFinal2WalesVsBelgium
 let quarterFinal1PolandVsPortugalHtml = getMatchDetailsHtml quarterFinal1PolandVsPortugal
@@ -71,6 +72,18 @@ Latest news
 (*** include-value: indexSummaryAndLinksHtml ***)
 
 (*** include-value: upcomingFixturesHtml ***)
+
+(**
+## Wednesday 6th July
+*)
+
+(*** include-value: semiFinal1PortugalVsWalesHtml ***)
+
+(**
+After finally managing to win a match in ninety minutes, a workmanlike Portugal team makes it through to Sunday's final; belated consolation 
+for Welsh fans as Ryan Giggs actually shows up for a game. Will and Jem close the gap at the top of the table (with the former moving into 
+second place); points also for Hugh and Steve S. 
+*)
 
 (**
 ## Sunday 3rd July
