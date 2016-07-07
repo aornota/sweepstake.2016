@@ -10,8 +10,9 @@ let lastUpdated = getLastUpdated ()
 let indexSummaryAndLinksHtml = getIndexSummaryAndLinksHtml ()
 let upcomingFixturesHtml = getUpcomingFixturesHtml 8
 
-let semiFinal1PortugalVsWalesHtml = getMatchDetailsHtml semiFinal1PortugalVsWales
+let semiFinal2GermanyVsFranceHtml = getMatchDetailsHtml semiFinal2GermanyVsFrance
 
+let semiFinal1PortugalVsWalesHtml = getMatchDetailsHtml semiFinal1PortugalVsWales
 let quarterFinal4FranceVsIcelandHtml = getMatchDetailsHtml quarterFinal4FranceVsIceland
 let quarterFinal3GermanyVsItalyHtml = getMatchDetailsHtml quarterFinal3GermanyVsItaly
 let quarterFinal2WalesVsBelgiumHtml = getMatchDetailsHtml quarterFinal2WalesVsBelgium
@@ -72,6 +73,25 @@ Latest news
 (*** include-value: indexSummaryAndLinksHtml ***)
 
 (*** include-value: upcomingFixturesHtml ***)
+
+(**
+## Thursday 7th July
+*)
+
+(*** include-value: semiFinal2GermanyVsFranceHtml ***)
+
+(**
+A fine first half - followed by a second half so dull that I spent most of it reading _Private Eye_ and listening to a wonderful Hungarian 
+jazz/folk cimbalom duo (the aptly-named Cimbalomduo, pop pickers) - sees France through to Sunday's final thanks to a rather questionable 
+penalty and a masterpiece of hubristic defending. (And, to be fair, a few world-class saves from Hugo Lloris - who is also the world's only 
+venomous goalkeeper...)
+
+On the sweepstake front, a classy performance from Antoine Griezmann sees Rosie leap into mid-table obscurity - and pretty much guaranteed 
+to finish above Hugh (unless Rui Patricio does something extraordinary). Jem reclaims second place and both him and Will look sure to finish 
+in the top three - and retain plausible hopes of beating Steve M to the title (and the big money). Everyone apart from Josh and Susie still 
+has players left; Rob somehow has six - but won't be able to prevent Chris from claiming the wooden spoon even if all of them get sent-off 
+in the final. (Well, unless Andre-Pierre Gignac scores some points. Which he won't.)
+*)
 
 (**
 ## Wednesday 6th July
