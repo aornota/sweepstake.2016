@@ -12,7 +12,7 @@ module ``Data 2016`` =
 
     // Group A.
 
-    let france = { Name = "France"; Status = Active; Seeding = 7; Coach = "Didier Deschamps" }
+    let france = { Name = "France"; Status = Eliminated; Seeding = 7; Coach = "Didier Deschamps" }
     let switzerland = { Name = "Switzerland"; Status = Eliminated; Seeding = 9; Coach = "Vladimir Petković" }
     let romania = { Name = "Romania"; Status = Eliminated; Seeding = 16; Coach = "Anghel Iordănescu" }
     let albania = { Name = "Albania"; Status = Eliminated; Seeding = 23; Coach = "Gianni De Biasi" }
@@ -47,7 +47,7 @@ module ``Data 2016`` =
 
     // Group F.
 
-    let portugal = { Name = "Portugal"; Status = Active; Seeding = 4; Coach = "Fernando Santos" }
+    let portugal = { Name = "Portugal"; Status = Eliminated; Seeding = 4; Coach = "Fernando Santos" }
     let austria = { Name = "Austria"; Status = Eliminated; Seeding = 10; Coach = "Marcel Koller" }
     let hungary = { Name = "Hungary"; Status = Eliminated; Seeding = 18; Coach = "Bernd Storck" }
     let iceland = { Name = "Iceland"; Status = Eliminated; Seeding = 21; Coach = "Lars Lagerbäck & Heimir Hallgrímsson" }
@@ -1352,18 +1352,26 @@ module ``Data 2016`` =
                                                  YellowCard (kanteNGolo, Some 75<min>)
                                                  CleanSheet (llorisHugo, None) ] }
 
-    let finalPortugalVsGermany = { Team1Score = TeamMatchScore (portugal, 0<goal>, None); Team2Score = TeamMatchScore (france, 0<goal>, None)
-                                   Number = 51; Stage = Final; KickOff = DateTime (2016, 07, 10, 20, 00, 00)
-                                   Events = [ (* ManOfTheMatch TBC *)
-                                               (* portugal *)
-                                              (* CleanSheet (patricioRui, None) *)
-                                               (* france *)
-                                              (* CleanSheet (llorisHugo, None) *) ] }
+    let finalPortugalVsFrance = { Team1Score = TeamMatchScore (portugal, 1<goal>, None); Team2Score = TeamMatchScore (france, 0<goal>, None)
+                                  Number = 51; Stage = Final; KickOff = DateTime (2016, 07, 10, 20, 00, 00)
+                                  Events = [ ManOfTheMatch pepe
+                                             YellowCard (cedric, Some 34<min>) (* portugal *)
+                                             YellowCard (marioJoao, Some 62<min>)
+                                             YellowCard (guerreiroRaphael, Some 95<min>)
+                                             YellowCard (carvalhoWilliam, Some 98<min>)
+                                             Goal (eder_Portugal, Some 109<min>, Some moutinhoJoao)
+                                             YellowCard (fonteJose, Some 119<min>)
+                                             YellowCard (patricioRui, Some 123<min>)
+                                             CleanSheet (patricioRui, None)
+                                             YellowCard (umtitiSamuel, Some 80<min>) (* france *)
+                                             YellowCard (matuidiBlaise, Some 97<min>)
+                                             YellowCard (koscielnyLaurent, Some 107<min>)
+                                             YellowCard (pogbaPaul, Some 115<min>) ] }
 
     let private knockoutMatches = [ match37SwitzerlandVsPoland; match38WalesVsNorthernIreland; match39CroatiaVsPortugal; match40FranceVsRepublicOfIreland; match41GermanyVsSlovakia; match42HungaryVsBelgium; match43ItalyVsSpain; match44EnglandVsIceland
                                     quarterFinal1PolandVsPortugal; quarterFinal2WalesVsBelgium; quarterFinal3GermanyVsItaly; quarterFinal4FranceVsIceland
                                     semiFinal1PortugalVsWales; semiFinal2GermanyVsFrance
-                                    finalPortugalVsGermany ]
+                                    finalPortugalVsFrance ]
 
     let matches = groupAMatches @ groupBMatches @ groupCMatches @ groupDMatches @ groupEMatches @ groupFMatches @ knockoutMatches
 

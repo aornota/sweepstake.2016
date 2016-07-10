@@ -8,10 +8,8 @@ open AOrNotA.Sweepstake2016.IndexContent
 
 let lastUpdated = getLastUpdated ()
 let indexSummaryAndLinksHtml = getIndexSummaryAndLinksHtml ()
-let upcomingFixturesHtml = getUpcomingFixturesHtml 8
-
+let finalPortugalVsFranceHtml = getMatchDetailsHtml finalPortugalVsFrance
 let semiFinal2GermanyVsFranceHtml = getMatchDetailsHtml semiFinal2GermanyVsFrance
-
 let semiFinal1PortugalVsWalesHtml = getMatchDetailsHtml semiFinal1PortugalVsWales
 let quarterFinal4FranceVsIcelandHtml = getMatchDetailsHtml quarterFinal4FranceVsIceland
 let quarterFinal3GermanyVsItalyHtml = getMatchDetailsHtml quarterFinal3GermanyVsItaly
@@ -72,7 +70,25 @@ Latest news
 
 (*** include-value: indexSummaryAndLinksHtml ***)
 
-(*** include-value: upcomingFixturesHtml ***)
+(**
+## Sunday 10th July
+*)
+
+(*** include-value: finalPortugalVsFranceHtml ***)
+
+(**
+"...pretty dull and pretty boring..." - and that's just Alan Shearer's assessment of his punditry.
+
+After 51 games, Euro 2016 peters out with a drab victory for Portugal over an off-key French team. It's probably not a good sign that my 
+favourite moment of the entire tournament was Simone Zaza's preposterous cat-on-a-hot-tin-roof run-up for his missed penalty in the shootout 
+against Germany.
+
+Anyhoo, although French indiscipline almost allowed Will to overhaul Jem, it's as-you-were at the top (and bottom) of the table, all of which 
+means that: debutant Steve M wins sixty quid for finishing in first place; defending champion Jem gets thirty quid for second; Will picks up 
+twenty quid for third; and Chris is awarded the wooden spoon (and gets his money back).
+
+Details of the collection and distribution of monies will follow in due course...
+*)
 
 (**
 ## Thursday 7th July
